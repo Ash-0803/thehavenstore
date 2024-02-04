@@ -1,3 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.card {
+  transition: all 150ms ease-in-out;
+}
+.card:hover {
+  transform: translate(-0.5rem, -0.5rem);
+  box-shadow: 0.25rem 0.25rem 0rem black;
+}
+.bordering {
+  border: 2px solid black;
+}

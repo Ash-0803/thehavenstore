@@ -5,6 +5,7 @@ import {
   XMarkIcon,
 } from "@heroicons/react/24/outline";
 import { Fragment } from "react";
+import { Link } from "react-router-dom";
 
 const user = {
   name: "Tom Cook",
@@ -68,8 +69,8 @@ export default function Navbar({ children }) {
                   </div>
                   <div className="hidden md:block">
                     <div className="ml-4 flex items-center md:ml-6">
-                      <button
-                        type="button"
+                      <Link
+                        to="cart"
                         className="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
                       >
                         <span className="absolute -inset-1.5" />
@@ -77,7 +78,8 @@ export default function Navbar({ children }) {
                           className="h-6 w-6"
                           aria-hidden="true"
                         />
-                      </button>
+                      </Link>
+                      {/* ITEMS IN CART */}
                       <span className="relative items-center rounded-full bg-gray-50 px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10 mb-7 -ml-3">
                         2
                       </span>
@@ -182,17 +184,17 @@ export default function Navbar({ children }) {
                         {user.email}
                       </div>
                     </div>
-                    <button
-                      type="button"
-                      className="relative ml-auto flex-shrink-0 rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+                    <Link
+                      to="cart"
+                      className="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
                     >
                       <span className="absolute -inset-1.5" />
                       <ShoppingCartIcon
                         className="h-6 w-6"
                         aria-hidden="true"
                       />
-                    </button>
-                    <span className="inline-flex items-center rounded-full bg-gray-50 px-2 py-1 text-xs font- mb-7 -ml-3 text-gray-600 ring-1 ring-inset ring-gray-500/10">
+                    </Link>
+                    <span className="relative items-center rounded-full bg-gray-50 px-2 py-1 text-xs font- mb-7 -ml-3 text-gray-600 ring-1 ring-inset ring-gray-500/10">
                       2
                     </span>
                   </div>
@@ -214,13 +216,6 @@ export default function Navbar({ children }) {
           )}
         </Disclosure>
 
-        <header className="bg-white shadow">
-          <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
-            <h1 className="text-3xl font-bold tracking-tight text-gray-900">
-              Dashboard
-            </h1>
-          </div>
-        </header>
         <main>
           <div className="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">
             {children}

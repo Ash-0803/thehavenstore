@@ -2,7 +2,14 @@
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      gridTemplateRows: {
+        "[auto,auto,1fr]": "auto auto 1fr",
+      },
+      boxShadow: {
+        custom: ".25rem .25rem 0rem black;",
+      },
+    },
   },
   plugins: [
     require("@tailwindcss/aspect-ratio"),
