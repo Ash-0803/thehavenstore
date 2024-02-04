@@ -397,7 +397,7 @@ function ProductGrid({ products }) {
                     className="card rounded-lg p-4 group relative bordering"
                   >
                     <div className=" ">
-                      <Link to="/product">
+                      <Link to={`/product/${product.id}`}>
                         <div className=" aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none  lg:h-60">
                           <img
                             src={product.thumbnail}
