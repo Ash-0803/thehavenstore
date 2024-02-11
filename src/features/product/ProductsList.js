@@ -343,6 +343,7 @@ function Pagination({ filter, handlePage, totalItems }) {
             {Array.from({ length: Math.ceil(totalItems / filter._limit) }).map(
               (el, index) => (
                 <div
+                  key={index}
                   onClick={() => handlePage(index + 1)}
                   aria-current="page"
                   className={`relative cursor-pointer z-10 inline-flex items-center ${

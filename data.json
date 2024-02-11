@@ -48,7 +48,9 @@
       "brand": "Samsung",
       "category": "smartphones",
       "thumbnail": "https://cdn.dummyjson.com/product-images/3/thumbnail.jpg",
-      "images": ["https://cdn.dummyjson.com/product-images/3/1.jpg"]
+      "images": [
+        "https://cdn.dummyjson.com/product-images/3/1.jpg"
+      ]
     },
     {
       "id": 4,
@@ -558,18 +560,48 @@
       "label": "smartphones",
       "checked": false
     },
-    { "id": 2, "value": "laptops", "label": "laptops", "checked": false },
-    { "id": 3, "value": "fragrances", "label": "fragrances", "checked": false },
-    { "id": 4, "value": "skincare", "label": "skincare", "checked": false },
-    { "id": 5, "value": "groceries", "label": "groceries", "checked": false },
+    {
+      "id": 2,
+      "value": "laptops",
+      "label": "laptops",
+      "checked": false
+    },
+    {
+      "id": 3,
+      "value": "fragrances",
+      "label": "fragrances",
+      "checked": false
+    },
+    {
+      "id": 4,
+      "value": "skincare",
+      "label": "skincare",
+      "checked": false
+    },
+    {
+      "id": 5,
+      "value": "groceries",
+      "label": "groceries",
+      "checked": false
+    },
     {
       "id": 6,
       "value": "home-decoration",
       "label": "home decoration",
       "checked": false
     },
-    { "id": 7, "value": "furniture", "label": "furniture", "checked": false },
-    { "id": 8, "value": "tops", "label": "tops", "checked": false },
+    {
+      "id": 7,
+      "value": "furniture",
+      "label": "furniture",
+      "checked": false
+    },
+    {
+      "id": 8,
+      "value": "tops",
+      "label": "tops",
+      "checked": false
+    },
     {
       "id": 9,
       "value": "womens-dresses",
@@ -636,20 +668,50 @@
       "label": "motorcycle",
       "checked": false
     },
-    { "id": 20, "value": "lighting", "label": "lighting", "checked": false }
+    {
+      "id": 20,
+      "value": "lighting",
+      "label": "lighting",
+      "checked": false
+    }
   ],
   "brands": [
-    { "id": 1, "value": "Apple", "label": "Apple", "checked": false },
-    { "id": 2, "value": "Samsung", "label": "Samsung", "checked": false },
-    { "id": 3, "value": "OPPO", "label": "OPPO", "checked": false },
-    { "id": 4, "value": "Huawei", "label": "Huawei", "checked": false },
+    {
+      "id": 1,
+      "value": "Apple",
+      "label": "Apple",
+      "checked": false
+    },
+    {
+      "id": 2,
+      "value": "Samsung",
+      "label": "Samsung",
+      "checked": false
+    },
+    {
+      "id": 3,
+      "value": "OPPO",
+      "label": "OPPO",
+      "checked": false
+    },
+    {
+      "id": 4,
+      "value": "Huawei",
+      "label": "Huawei",
+      "checked": false
+    },
     {
       "id": 5,
       "value": "Microsoft Surface",
       "label": "Microsoft Surface",
       "checked": false
     },
-    { "id": 6, "value": "Infinix", "label": "Infinix", "checked": false },
+    {
+      "id": 6,
+      "value": "Infinix",
+      "label": "Infinix",
+      "checked": false
+    },
     {
       "id": 7,
       "value": "HP Pavilion",
@@ -674,7 +736,12 @@
       "label": "Fog Scent Xpressio",
       "checked": false
     },
-    { "id": 11, "value": "Al Munakh", "label": "Al Munakh", "checked": false },
+    {
+      "id": 11,
+      "value": "Al Munakh",
+      "label": "Al Munakh",
+      "checked": false
+    },
     {
       "id": 12,
       "value": "Lord - Al-Rehab",
@@ -693,7 +760,12 @@
       "label": "Hemani Tea",
       "checked": false
     },
-    { "id": 15, "value": "Dermive", "label": "Dermive", "checked": false },
+    {
+      "id": 15,
+      "value": "Dermive",
+      "label": "Dermive",
+      "checked": false
+    },
     {
       "id": 16,
       "value": "ROREC White Rice",
@@ -724,8 +796,18 @@
       "label": "Baking Food Items",
       "checked": false
     },
-    { "id": 21, "value": "fauji", "label": "fauji", "checked": false },
-    { "id": 22, "value": "Dry Rose", "label": "Dry Rose", "checked": false },
+    {
+      "id": 21,
+      "value": "fauji",
+      "label": "fauji",
+      "checked": false
+    },
+    {
+      "id": 22,
+      "value": "Dry Rose",
+      "label": "Dry Rose",
+      "checked": false
+    },
     {
       "id": 23,
       "value": "Boho Decor",
@@ -750,7 +832,12 @@
       "label": "luxury palace",
       "checked": false
     },
-    { "id": 27, "value": "Golden", "label": "Golden", "checked": false },
+    {
+      "id": 27,
+      "value": "Golden",
+      "label": "Golden",
+      "checked": false
+    },
     {
       "id": 28,
       "value": "Furniture Bed Set",
@@ -775,7 +862,12 @@
       "label": "Multi Purpose",
       "checked": false
     },
-    { "id": 32, "value": "AmnaMart", "label": "AmnaMart", "checked": false },
+    {
+      "id": 32,
+      "value": "AmnaMart",
+      "label": "AmnaMart",
+      "checked": false
+    },
     {
       "id": 33,
       "value": "Professional Wear",
@@ -812,7 +904,12 @@
       "label": "Ghazi Fabric",
       "checked": false
     },
-    { "id": 39, "value": "IELGY", "label": "IELGY", "checked": false },
+    {
+      "id": 39,
+      "value": "IELGY",
+      "label": "IELGY",
+      "checked": false
+    },
     {
       "id": 40,
       "value": "IELGY fashion",
@@ -849,16 +946,36 @@
       "label": "Vintage Apparel",
       "checked": false
     },
-    { "id": 46, "value": "FREE FIRE", "label": "FREE FIRE", "checked": false },
+    {
+      "id": 46,
+      "value": "FREE FIRE",
+      "label": "FREE FIRE",
+      "checked": false
+    },
     {
       "id": 47,
       "value": "The Warehouse",
       "label": "The Warehouse",
       "checked": false
     },
-    { "id": 48, "value": "Sneakers", "label": "Sneakers", "checked": false },
-    { "id": 49, "value": "Rubber", "label": "Rubber", "checked": false },
-    { "id": 50, "value": "Naviforce", "label": "Naviforce", "checked": false },
+    {
+      "id": 48,
+      "value": "Sneakers",
+      "label": "Sneakers",
+      "checked": false
+    },
+    {
+      "id": 49,
+      "value": "Rubber",
+      "label": "Rubber",
+      "checked": false
+    },
+    {
+      "id": 50,
+      "value": "Naviforce",
+      "label": "Naviforce",
+      "checked": false
+    },
     {
       "id": 51,
       "value": "SKMEI 9117",
@@ -871,7 +988,12 @@
       "label": "Strap Skeleton",
       "checked": false
     },
-    { "id": 53, "value": "Stainless", "label": "Stainless", "checked": false },
+    {
+      "id": 53,
+      "value": "Stainless",
+      "label": "Stainless",
+      "checked": false
+    },
     {
       "id": 54,
       "value": "Eastern Watches",
@@ -890,8 +1012,18 @@
       "label": "Watch Pearls",
       "checked": false
     },
-    { "id": 57, "value": "Bracelet", "label": "Bracelet", "checked": false },
-    { "id": 58, "value": "LouisWill", "label": "LouisWill", "checked": false },
+    {
+      "id": 57,
+      "value": "Bracelet",
+      "label": "Bracelet",
+      "checked": false
+    },
+    {
+      "id": 58,
+      "value": "LouisWill",
+      "label": "LouisWill",
+      "checked": false
+    },
     {
       "id": 59,
       "value": "Copenhagen Luxe",
@@ -904,7 +1036,12 @@
       "label": "Steal Frame",
       "checked": false
     },
-    { "id": 61, "value": "Darojay", "label": "Darojay", "checked": false },
+    {
+      "id": 61,
+      "value": "Darojay",
+      "label": "Darojay",
+      "checked": false
+    },
     {
       "id": 62,
       "value": "Fashion Jewellery",
@@ -929,7 +1066,12 @@
       "label": "mastar watch",
       "checked": false
     },
-    { "id": 66, "value": "Car Aux", "label": "Car Aux", "checked": false },
+    {
+      "id": 66,
+      "value": "Car Aux",
+      "label": "Car Aux",
+      "checked": false
+    },
     {
       "id": 67,
       "value": "W1209 DC12V",
@@ -966,16 +1108,199 @@
       "label": "shock absorber",
       "checked": false
     },
-    { "id": 73, "value": "JIEPOLLY", "label": "JIEPOLLY", "checked": false },
-    { "id": 74, "value": "Xiangle", "label": "Xiangle", "checked": false },
+    {
+      "id": 73,
+      "value": "JIEPOLLY",
+      "label": "JIEPOLLY",
+      "checked": false
+    },
+    {
+      "id": 74,
+      "value": "Xiangle",
+      "label": "Xiangle",
+      "checked": false
+    },
     {
       "id": 75,
       "value": "lightingbrilliance",
       "label": "lightingbrilliance",
       "checked": false
     },
-    { "id": 76, "value": "Ifei Home", "label": "Ifei Home", "checked": false },
-    { "id": 77, "value": "DADAWU", "label": "DADAWU", "checked": false },
-    { "id": 78, "value": "YIOSI", "label": "YIOSI", "checked": false }
+    {
+      "id": 76,
+      "value": "Ifei Home",
+      "label": "Ifei Home",
+      "checked": false
+    },
+    {
+      "id": 77,
+      "value": "DADAWU",
+      "label": "DADAWU",
+      "checked": false
+    },
+    {
+      "id": 78,
+      "value": "YIOSI",
+      "label": "YIOSI",
+      "checked": false
+    }
+  ],
+  "users": [
+    {
+      "email": "test@gmail.com",
+      "password": "Qwerty123",
+      "id": 1
+    },
+    {
+      "email": "demo@gmail.com",
+      "password": "Qwerty123",
+      "id": 2
+    },
+    {
+      "email": "jatt221221@gmail.com",
+      "password": "Cashu@0919",
+      "id": 3
+    }
+  ],
+  "cart": [
+    {
+      "id": 3,
+      "title": "Samsung Universe 9",
+      "description": "Samsung's new variant which goes beyond Galaxy to the Universe",
+      "price": 1249,
+      "discountPercentage": 15.46,
+      "rating": 4.09,
+      "stock": 36,
+      "brand": "Samsung",
+      "category": "smartphones",
+      "thumbnail": "https://i.dummyjson.com/data/products/3/thumbnail.jpg",
+      "images": [
+        "https://i.dummyjson.com/data/products/3/1.jpg"
+      ],
+      "quantity": 1,
+      "user": 2
+    },
+    {
+      "id": 1,
+      "title": "iPhone 9",
+      "description": "An apple mobile which is nothing like apple",
+      "price": 549,
+      "discountPercentage": 12.96,
+      "rating": 4.69,
+      "stock": 94,
+      "brand": "Apple",
+      "category": "smartphones",
+      "thumbnail": "https://i.dummyjson.com/data/products/1/thumbnail.jpg",
+      "images": [
+        "https://i.dummyjson.com/data/products/1/1.jpg",
+        "https://i.dummyjson.com/data/products/1/2.jpg",
+        "https://i.dummyjson.com/data/products/1/3.jpg",
+        "https://i.dummyjson.com/data/products/1/4.jpg",
+        "https://i.dummyjson.com/data/products/1/thumbnail.jpg"
+      ],
+      "quantity": 1,
+      "user": 2
+    },
+    {
+      "id": 5,
+      "title": "Huawei P30",
+      "description": "Huawei’s re-badged P30 Pro New Edition was officially unveiled yesterday in Germany and now the device has made its way to the UK.",
+      "price": 499,
+      "discountPercentage": 10.58,
+      "rating": 4.09,
+      "stock": 32,
+      "brand": "Huawei",
+      "category": "smartphones",
+      "thumbnail": "https://i.dummyjson.com/data/products/5/thumbnail.jpg",
+      "images": [
+        "https://i.dummyjson.com/data/products/5/1.jpg",
+        "https://i.dummyjson.com/data/products/5/2.jpg",
+        "https://i.dummyjson.com/data/products/5/3.jpg"
+      ],
+      "quantity": 1,
+      "user": 2
+    },
+    {
+      "id": 6,
+      "title": "MacBook Pro",
+      "description": "MacBook Pro 2021 with mini-LED display may launch between September, November",
+      "price": 1749,
+      "discountPercentage": 11.02,
+      "rating": 4.57,
+      "stock": 83,
+      "brand": "Apple",
+      "category": "laptops",
+      "thumbnail": "https://i.dummyjson.com/data/products/6/thumbnail.png",
+      "images": [
+        "https://i.dummyjson.com/data/products/6/1.png",
+        "https://i.dummyjson.com/data/products/6/2.jpg",
+        "https://i.dummyjson.com/data/products/6/3.png",
+        "https://i.dummyjson.com/data/products/6/4.jpg"
+      ],
+      "quantity": 1,
+      "user": 2
+    },
+    {
+      "id": 4,
+      "title": "OPPOF19",
+      "description": "OPPO F19 is officially announced on April 2021.",
+      "price": 280,
+      "discountPercentage": 17.91,
+      "rating": 4.3,
+      "stock": 123,
+      "brand": "OPPO",
+      "category": "smartphones",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/4/thumbnail.jpg",
+      "images": [
+        "https://cdn.dummyjson.com/product-images/4/1.jpg",
+        "https://cdn.dummyjson.com/product-images/4/2.jpg",
+        "https://cdn.dummyjson.com/product-images/4/3.jpg",
+        "https://cdn.dummyjson.com/product-images/4/4.jpg",
+        "https://cdn.dummyjson.com/product-images/4/thumbnail.jpg"
+      ],
+      "quantity": 1,
+      "user": 3
+    },
+    {
+      "id": 10,
+      "title": "HP Pavilion 15-DK1056WM",
+      "description": "HP Pavilion 15-DK1056WM Gaming Laptop 10th Gen Core i5, 8GB, 256GB SSD, GTX 1650 4GB, Windows 10",
+      "price": 1099,
+      "discountPercentage": 6.18,
+      "rating": 4.43,
+      "stock": 89,
+      "brand": "HP Pavilion",
+      "category": "laptops",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/10/thumbnail.jpeg",
+      "images": [
+        "https://cdn.dummyjson.com/product-images/10/1.jpg",
+        "https://cdn.dummyjson.com/product-images/10/2.jpg",
+        "https://cdn.dummyjson.com/product-images/10/3.jpg",
+        "https://cdn.dummyjson.com/product-images/10/thumbnail.jpeg"
+      ],
+      "quantity": 1,
+      "user": 3
+    },
+    {
+      "id": 9,
+      "title": "Infinix INBOOK",
+      "description": "Infinix Inbook X1 Ci3 10th 8GB 256GB 14 Win10 Grey – 1 Year Warranty",
+      "price": 1099,
+      "discountPercentage": 11.83,
+      "rating": 4.54,
+      "stock": 96,
+      "brand": "Infinix",
+      "category": "laptops",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/9/thumbnail.jpg",
+      "images": [
+        "https://cdn.dummyjson.com/product-images/9/1.jpg",
+        "https://cdn.dummyjson.com/product-images/9/2.png",
+        "https://cdn.dummyjson.com/product-images/9/3.png",
+        "https://cdn.dummyjson.com/product-images/9/4.jpg",
+        "https://cdn.dummyjson.com/product-images/9/thumbnail.jpg"
+      ],
+      "quantity": 1,
+      "user": 3
+    }
   ]
 }

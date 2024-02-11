@@ -13,6 +13,7 @@ import {
   createRoutesFromElements,
 } from "react-router-dom";
 import "./App.css";
+import Protected from "./features/auth/components/Protected";
 import Cart from "./features/cart/Cart";
 import ProductDetail from "./features/product/ProductDetail";
 import Checkout from "./pages/Checkout";
@@ -24,8 +25,22 @@ const router = createBrowserRouter(
     <Route>
       <Route path="/" element={<App />}>
         <Route path="" element={<Home />} />
-        <Route path="/cart" element={<Cart />} />
-        <Route path="/checkout" element={<Checkout />} />
+        <Route
+          path="/cart"
+          element={
+            <Protected>
+              <Cart />
+            </Protected>
+          }
+        />
+        <Route
+          path="/checkout"
+          element={
+            <Protected>
+              <Checkout />
+            </Protected>
+          }
+        />
         <Route path="/product/:id" element={<ProductDetail />} />
       </Route>
       <Route path="/signup" element={<SignupPage />} />

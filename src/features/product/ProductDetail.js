@@ -1,9 +1,11 @@
-import { useState, useEffect } from "react";
-import { StarIcon } from "@heroicons/react/20/solid";
 import { RadioGroup } from "@headlessui/react";
+import { StarIcon } from "@heroicons/react/20/solid";
+import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { Navigate, useNavigate, useParams } from "react-router-dom";
+import { selectLoggedInUser } from "../auth/AuthSlice";
+import { addToCartAsync } from "../cart/CartSlice";
 import { fetchAllProductByIdAsync, selectProductById } from "./ProductSlice";
-import { useParams } from "react-router-dom";
 
 // TODO: In server data we will add colors, sizes , highlights. to each product
 
@@ -39,9 +41,22 @@ function classNames(...classes) {
 export default function ProductDetail() {
   const [selectedColor, setSelectedColor] = useState(colors[0]);
   const [selectedSize, setSelectedSize] = useState(sizes[2]);
+
   const product = useSelector(selectProductById);
   const dispatch = useDispatch();
   const params = useParams();
+
+  const user = useSelector(selectLoggedInUser);
+  const navigate = useNavigate();
+
+  const handleCart = (e) => {
+    e.preventDefault();
+    if (user) {
+      dispatch(addToCartAsync({ ...product, quantity: 1, user: user.id }));
+    } else {
+      return navigate("/login");
+    }
+  };
 
   useEffect(() => {
     dispatch(fetchAllProductByIdAsync(params.id));
@@ -288,6 +303,7 @@ export default function ProductDetail() {
 
                 <button
                   type="submit"
+                  onClick={handleCart}
                   className="mt-10 flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 px-8 py-3 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
                 >
                   Add to Cart
