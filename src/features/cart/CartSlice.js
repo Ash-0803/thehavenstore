@@ -9,6 +9,7 @@ import {
 const initialState = {
   status: "idle",
   items: [],
+  showDialog: false,
 };
 
 export const addToCartAsync = createAsyncThunk(
@@ -54,6 +55,9 @@ export const counterSlice = createSlice({
     increment: (state) => {
       state.value += 1;
     },
+    hideDialog: (state) => {
+      state.showDialog = false;
+    },
   },
   extraReducers: (builder) => {
     builder
@@ -63,6 +67,7 @@ export const counterSlice = createSlice({
       .addCase(addToCartAsync.fulfilled, (state, action) => {
         state.status = "idle";
         state.items.push(action.payload);
+        state.showDialog = true;
       })
       .addCase(fetchItemsByUserIdAsync.pending, (state) => {
         state.status = "loading";
@@ -94,8 +99,9 @@ export const counterSlice = createSlice({
   },
 });
 
-export const { increment } = counterSlice.actions;
+export const { increment, hideDialog } = counterSlice.actions;
 
 export const selectItems = (state) => state.cart.items;
+export const selectShowDialog = (state) => state.cart.showDialog;
 
 export default counterSlice.reducer;
