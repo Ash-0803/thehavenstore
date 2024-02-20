@@ -9,7 +9,7 @@ import {
   updateCartAsync,
 } from "./CartSlice";
 
-export default function Cart() {
+export default function Cart({ page }) {
   const dispatch = useDispatch();
   const user = useSelector(selectLoggedInUser);
   useEffect(() => {
@@ -54,12 +54,21 @@ export default function Cart() {
               Shipping and taxes calculated at checkout.
             </p>
             <div className="mt-6">
-              <Link
-                to="/checkout"
-                className="flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-indigo-700"
-              >
-                Checkout
-              </Link>
+              {page == "checkout" ? (
+                <Link
+                  to="/checkout"
+                  className="flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-indigo-700"
+                >
+                  Order Now
+                </Link>
+              ) : (
+                <Link
+                  to="/checkout"
+                  className="flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-indigo-700"
+                >
+                  Checkout
+                </Link>
+              )}
             </div>
             <div className="mt-6 flex justify-center text-center text-sm text-gray-500">
               <p>

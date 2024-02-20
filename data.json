@@ -1149,16 +1149,19 @@
     {
       "email": "test@gmail.com",
       "password": "Qwerty123",
+      "addresses": [],
       "id": 1
     },
     {
       "email": "demo@gmail.com",
       "password": "Qwerty123",
+      "addresses": [],
       "id": 2
     },
     {
       "email": "asdf@gmail.com",
       "password": "Asdf123123",
+      "addresses": [],
       "id": 3
     }
   ],
@@ -1198,7 +1201,20 @@
         "https://cdn.dummyjson.com/product-images/3/1.jpg"
       ],
       "quantity": 1,
-      "user": 3
+      "user": 3,
+      "email": "asdf@gmail.com",
+      "password": "Asdf123123",
+      "addresses": [
+        {
+          "name": "Ashish Chaudhary",
+          "email": "jatt221221@gmail.com",
+          "phone": "07505009701",
+          "street": "802, Olive, SVP Gulmohar Residency",
+          "city": "ghaziabad",
+          "state": "Uttar Pradesh",
+          "pinCode": "201014"
+        }
+      ]
     }
   ]
 }
