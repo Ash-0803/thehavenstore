@@ -2,20 +2,22 @@ import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { selectLoggedInUser } from "../auth/AuthSlice";
+import { createOrderAsync, selectOrder } from "../order/OrderSlice";
 import {
   deleteItemFromCartAsync,
   fetchItemsByUserIdAsync,
   selectItems,
   updateCartAsync,
 } from "./CartSlice";
-import { createOrderAsync } from "../order/OrderSlice";
 
 export default function Cart({ page }) {
   const dispatch = useDispatch();
   const user = useSelector(selectLoggedInUser);
+  const currentOrder = useSelector(selectOrder);
   useEffect(() => {
     dispatch(fetchItemsByUserIdAsync(user.id));
   }, []);
+
   const [open, setOpen] = useState(true);
 
   const items = useSelector(selectItems);
@@ -68,6 +70,8 @@ export default function Cart({ page }) {
             <div className="mt-6">
               {page == "checkout" ? (
                 <Link
+                  to={`/order-success/${currentOrder?.id}`}
+                  // FIXME: Proper ID needs tobe set
                   onClick={() => handleOrder()}
                   className="flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-indigo-700"
                 >

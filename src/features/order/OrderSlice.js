@@ -2,9 +2,9 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import { createOrder } from "./OrderAPI";
 
 const initialState = {
-  value: 0,
   orders: [],
   status: "idle",
+  currentOrder: null,
 };
 
 export const createOrderAsync = createAsyncThunk(
@@ -33,12 +33,13 @@ export const orderSlice = createSlice({
       .addCase(createOrderAsync.fulfilled, (state, action) => {
         state.status = "idle";
         state.orders.push(action.payload);
+        state.currentOrder = action.payload;
       });
   },
 });
 
 export const { order } = orderSlice.actions;
 
-export const selectOrder = (state) => state.order.value;
+export const selectOrder = (state) => state.order.currentOrder;
 
 export default orderSlice.reducer;

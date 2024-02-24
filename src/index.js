@@ -20,6 +20,8 @@ import Checkout from "./pages/Checkout";
 import Home from "./pages/Home";
 import LoginPage from "./pages/LoginPage";
 import SignupPage from "./pages/SignupPage";
+import PageNotFound from "./pages/404";
+import OrderSuccessPage from "./pages/OrderSuccessPage";
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route>
@@ -45,6 +47,8 @@ const router = createBrowserRouter(
       </Route>
       <Route path="/signup" element={<SignupPage />} />
       <Route path="/login" element={<LoginPage />} />
+      <Route path="/order-success/:id" element={<OrderSuccessPage />} />
+      <Route path="*" element={<PageNotFound />} />
     </Route>
   )
 );
