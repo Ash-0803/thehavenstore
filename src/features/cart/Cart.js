@@ -8,6 +8,7 @@ import {
   selectItems,
   updateCartAsync,
 } from "./CartSlice";
+import { createOrderAsync } from "../order/OrderSlice";
 
 export default function Cart({ page }) {
   const dispatch = useDispatch();
@@ -24,6 +25,17 @@ export default function Cart({ page }) {
   );
   const totalItems = items.reduce((total, item) => item.quantity + total, 0);
 
+  const handleOrder = () => {
+    const order = {
+      items,
+      totalAmount,
+      totalItems,
+      user,
+      // paymentMethod,
+      // selectedAddress,
+    };
+    dispatch(createOrderAsync(order));
+  };
   return (
     <>
       <div>
@@ -56,7 +68,7 @@ export default function Cart({ page }) {
             <div className="mt-6">
               {page == "checkout" ? (
                 <Link
-                  to="/checkout"
+                  onClick={() => handleOrder()}
                   className="flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-indigo-700"
                 >
                   Order Now

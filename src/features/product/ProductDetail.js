@@ -388,6 +388,9 @@ function CartDialogue(props) {
     message: "The cart is updated successfully!",
     cancelButton: cancelButton,
   };
+
+  // TODO: add a dialog for the user when Item is already present in the cart
+
   // console.log("dialog:", dialog.open);
   // props.isItem ??
   //   (dialog = {

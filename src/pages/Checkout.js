@@ -19,6 +19,7 @@ function Address({ addresses, handleAddress }) {
               onChange={() => handleAddress(item)}
               name="address"
               type="radio"
+              checked={index == 0}
               className="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-200"
             />
             <div className="min-w-0 flex-auto">
@@ -102,7 +103,7 @@ export default function Checkout() {
               </div>
               <div className="border-b border-gray-900/10 pb-12">
                 {/* add address section------ */}
-                <Dropdown register={register} />
+                <Dropdown addresses={user.addresses} register={register} />
 
                 <div className="mt-10 space-y-10 ">
                   <fieldset>
@@ -119,6 +120,7 @@ export default function Checkout() {
                           name="payments"
                           type="radio"
                           onChange={() => handlePayment("cash")}
+                          checked={paymentMethod === "cash"}
                           className="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600"
                         />
                         <label
@@ -173,7 +175,7 @@ export default function Checkout() {
   );
 }
 
-function Dropdown({ register }) {
+function Dropdown({ addresses, register }) {
   const [hidden, setHidden] = useState(true);
   return (
     <div className="border-b border-gray-900/10 pb-12">
@@ -192,8 +194,7 @@ function Dropdown({ register }) {
                   Use a permanent address where you can receive mail.
                 </p> */}
       </div>
-
-      {hidden && (
+      {!hidden | !addresses ? (
         <div>
           <div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
             <div className="sm:col-span-3">
@@ -340,6 +341,8 @@ function Dropdown({ register }) {
             </button>
           </div>
         </div>
+      ) : (
+        ""
       )}
     </div>
   );

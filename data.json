@@ -1161,7 +1161,17 @@
     {
       "email": "asdf@gmail.com",
       "password": "Asdf123123",
-      "addresses": [],
+      "addresses": [
+        {
+          "name": "Ashish Chaudhary",
+          "email": "jatt221221@gmail.com",
+          "phone": "07505009701",
+          "street": "42, Shankar Vihar Colony",
+          "city": "Aligarh",
+          "state": "Aligarh",
+          "pinCode": "202002"
+        }
+      ],
       "id": 3
     }
   ],
@@ -1209,12 +1219,87 @@
           "name": "Ashish Chaudhary",
           "email": "jatt221221@gmail.com",
           "phone": "07505009701",
-          "street": "802, Olive, SVP Gulmohar Residency",
-          "city": "ghaziabad",
-          "state": "Uttar Pradesh",
-          "pinCode": "201014"
+          "street": "42, Shankar Vihar Colony",
+          "city": "Aligarh",
+          "state": "Aligarh",
+          "pinCode": "202002"
         }
       ]
+    }
+  ],
+  "orders": [
+    {
+      "items": [
+        {
+          "id": 2,
+          "title": "iPhone X",
+          "description": "SIM-Free, Model A19211 6.5-inch Super Retina HD display with OLED technology A12 Bionic chip with ...",
+          "price": 899,
+          "discountPercentage": 17.94,
+          "rating": 4.44,
+          "stock": 34,
+          "brand": "Apple",
+          "category": "smartphones",
+          "thumbnail": "https://cdn.dummyjson.com/product-images/2/thumbnail.jpg",
+          "images": [
+            "https://cdn.dummyjson.com/product-images/2/1.jpg",
+            "https://cdn.dummyjson.com/product-images/2/2.jpg",
+            "https://cdn.dummyjson.com/product-images/2/3.jpg",
+            "https://cdn.dummyjson.com/product-images/2/thumbnail.jpg"
+          ],
+          "quantity": 1,
+          "user": 3
+        },
+        {
+          "id": 3,
+          "title": "Samsung Universe 9",
+          "description": "Samsung's new variant which goes beyond Galaxy to the Universe",
+          "price": 1249,
+          "discountPercentage": 15.46,
+          "rating": 4.09,
+          "stock": 36,
+          "brand": "Samsung",
+          "category": "smartphones",
+          "thumbnail": "https://cdn.dummyjson.com/product-images/3/thumbnail.jpg",
+          "images": [
+            "https://cdn.dummyjson.com/product-images/3/1.jpg"
+          ],
+          "quantity": 1,
+          "user": 3,
+          "email": "asdf@gmail.com",
+          "password": "Asdf123123",
+          "addresses": [
+            {
+              "name": "Ashish Chaudhary",
+              "email": "jatt221221@gmail.com",
+              "phone": "07505009701",
+              "street": "42, Shankar Vihar Colony",
+              "city": "Aligarh",
+              "state": "Aligarh",
+              "pinCode": "202002"
+            }
+          ]
+        }
+      ],
+      "totalAmount": 2148,
+      "totalItems": 2,
+      "user": {
+        "email": "asdf@gmail.com",
+        "password": "Asdf123123",
+        "addresses": [
+          {
+            "name": "Ashish Chaudhary",
+            "email": "jatt221221@gmail.com",
+            "phone": "07505009701",
+            "street": "42, Shankar Vihar Colony",
+            "city": "Aligarh",
+            "state": "Aligarh",
+            "pinCode": "202002"
+          }
+        ],
+        "id": 3
+      },
+      "id": 2
     }
   ]
 }
