@@ -14,12 +14,6 @@ export default function Cart({ page }) {
   const dispatch = useDispatch();
   const user = useSelector(selectLoggedInUser);
   const currentOrder = useSelector(selectOrder);
-  useEffect(() => {
-    dispatch(fetchItemsByUserIdAsync(user.id));
-  }, []);
-
-  const [open, setOpen] = useState(true);
-
   const items = useSelector(selectItems);
   const totalAmount = items.reduce(
     (amount, item) => item.price * item.quantity + amount,
@@ -38,6 +32,9 @@ export default function Cart({ page }) {
     };
     dispatch(createOrderAsync(order));
   };
+  useEffect(() => {
+    dispatch(fetchItemsByUserIdAsync(user.id));
+  }, []);
   return (
     <>
       <div>
