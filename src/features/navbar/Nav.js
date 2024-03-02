@@ -7,8 +7,8 @@ import {
 import { Fragment, useEffect } from "react";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import { selectItems } from "../cart/CartSlice";
 import { selectLoggedInUser } from "../auth/AuthSlice";
+import { selectItems } from "../cart/CartSlice";
 
 const user = {
   name: "Tom Cook",
@@ -22,8 +22,9 @@ const navigation = [
 ];
 const userNavigation = [
   { name: "Your Profile", href: "/profile" },
-  { name: "Settings", href: "/" },
-  { name: "Sign out", href: "/login" },
+  { name: "My Orders", href: "/orders" },
+  { name: "Login", href: "/login" },
+  { name: "Sign Out", href: "/logout" },
 ];
 
 function classNames(...classes) {
@@ -31,7 +32,7 @@ function classNames(...classes) {
 }
 
 export default function Navbar({ children }) {
-  const items = useSelector(selectItems);
+  const cartItems = useSelector(selectItems);
   const loguser = useSelector(selectLoggedInUser);
 
   useEffect(() => {
@@ -89,7 +90,7 @@ export default function Navbar({ children }) {
                       {/* ITEMS IN CART */}
 
                       <span className="relative items-center rounded-full bg-gray-50 px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10 mb-7 -ml-3">
-                        {items.length}
+                        {cartItems.length}
                       </span>
 
                       {/* Profile dropdown */}
@@ -115,21 +116,24 @@ export default function Navbar({ children }) {
                           leaveTo="transform opacity-0 scale-95"
                         >
                           <Menu.Items className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
-                            {userNavigation.map((item) => (
-                              <Menu.Item key={item.name}>
-                                {({ active }) => (
-                                  <a
-                                    href={item.href}
-                                    className={classNames(
-                                      active ? "bg-gray-100" : "",
-                                      "block px-4 py-2 text-sm text-gray-700"
+                            {userNavigation.map((item) => {
+                              if (item.href !== "/login" || !loguser)
+                                return (
+                                  <Menu.Item key={item.name}>
+                                    {({ active }) => (
+                                      <Link
+                                        to={item.href}
+                                        className={classNames(
+                                          active ? "bg-gray-100" : "",
+                                          "block px-4 py-2 text-sm text-gray-700"
+                                        )}
+                                      >
+                                        {item.name}
+                                      </Link>
                                     )}
-                                  >
-                                    {item.name}
-                                  </a>
-                                )}
-                              </Menu.Item>
-                            ))}
+                                  </Menu.Item>
+                                );
+                            })}
                           </Menu.Items>
                         </Transition>
                       </Menu>
@@ -202,23 +206,26 @@ export default function Navbar({ children }) {
                         aria-hidden="true"
                       />
                     </Link>
-                    {items.length > 0 ?? (
+                    {cartItems.length > 0 ?? (
                       <span className="relative items-center rounded-full bg-gray-50 px-2 py-1 text-xs font- mb-7 -ml-3 text-gray-600 ring-1 ring-inset ring-gray-500/10">
-                        {items.length}
+                        {cartItems.length}
                       </span>
                     )}
                   </div>
                   <div className="mt-3 space-y-1 px-2">
-                    {userNavigation.map((item) => (
-                      <Disclosure.Button
-                        key={item.name}
-                        as="a"
-                        href={item.href}
-                        className="block rounded-md px-3 py-2 text-base font-medium text-gray-400 hover:bg-gray-700 hover:text-white"
-                      >
-                        {item.name}
-                      </Disclosure.Button>
-                    ))}
+                    {userNavigation.map((item) => {
+                      if (item.href !== "/login" || !loguser)
+                        return (
+                          <Disclosure.Button
+                            key={item.name}
+                            as="a"
+                            href={item.href}
+                            className="block rounded-md px-3 py-2 text-base font-medium text-gray-400 hover:bg-gray-700 hover:text-white"
+                          >
+                            {item.name}
+                          </Disclosure.Button>
+                        );
+                    })}
                   </div>
                 </div>
               </Disclosure.Panel>

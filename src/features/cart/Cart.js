@@ -2,7 +2,12 @@ import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { selectLoggedInUser } from "../auth/AuthSlice";
-import { createOrderAsync, selectOrder } from "../order/OrderSlice";
+import {
+  createOrderAsync,
+  selectAddress,
+  selectOrder,
+  selectPaymentMethod,
+} from "../order/OrderSlice";
 import {
   deleteItemFromCartAsync,
   fetchItemsByUserIdAsync,
@@ -10,11 +15,15 @@ import {
   updateCartAsync,
 } from "./CartSlice";
 
-export default function Cart({ page }) {
+export default function Cart({ page, values = null }) {
   const dispatch = useDispatch();
   const user = useSelector(selectLoggedInUser);
   const currentOrder = useSelector(selectOrder);
   const items = useSelector(selectItems);
+
+  const selectedAddress = useSelector(selectAddress);
+  const paymentMethod = useSelector(selectPaymentMethod);
+
   const totalAmount = items.reduce(
     (amount, item) => item.price * item.quantity + amount,
     0
@@ -27,8 +36,8 @@ export default function Cart({ page }) {
       totalAmount,
       totalItems,
       user,
-      // paymentMethod,
-      // selectedAddress,
+      paymentMethod,
+      selectedAddress,
     };
     dispatch(createOrderAsync(order));
   };

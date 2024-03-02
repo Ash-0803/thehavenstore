@@ -5,6 +5,8 @@ const initialState = {
   orders: [],
   status: "idle",
   currentOrder: null,
+  selectedAddress: null,
+  paymentMethod: "cash",
 };
 
 export const createOrderAsync = createAsyncThunk(
@@ -27,6 +29,12 @@ export const orderSlice = createSlice({
     resetCurrentOrder: (state) => {
       state.currentOrder = null;
     },
+    setSelectedAddress: (state, action) => {
+      state.selectedAddress = action.payload;
+    },
+    setPaymentMethod: (state, action) => {
+      state.selectedAddress = action.payload;
+    },
   },
   extraReducers: (builder) => {
     builder
@@ -41,8 +49,11 @@ export const orderSlice = createSlice({
   },
 });
 
-export const { resetCurrentOrder } = orderSlice.actions;
+export const { resetCurrentOrder, setPaymentMethod, setSelectedAddress } =
+  orderSlice.actions;
 
 export const selectOrder = (state) => state.order.currentOrder;
+export const selectAddress = (state) => state.order.selectedAddress;
+export const selectPaymentMethod = (state) => state.order.paymentMethod;
 
 export default orderSlice.reducer;

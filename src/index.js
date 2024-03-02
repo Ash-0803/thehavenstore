@@ -13,15 +13,17 @@ import {
   createRoutesFromElements,
 } from "react-router-dom";
 import "./App.css";
+import UserOrders from "./features/User/components/UserOrders";
+import { UserProfile } from "./features/User/components/UserProfile";
 import Protected from "./features/auth/components/Protected";
 import Cart from "./features/cart/Cart";
 import ProductDetail from "./features/product/ProductDetail";
+import PageNotFound from "./pages/404";
 import Checkout from "./pages/Checkout";
 import Home from "./pages/Home";
 import LoginPage from "./pages/LoginPage";
-import SignupPage from "./pages/SignupPage";
-import PageNotFound from "./pages/404";
 import OrderSuccessPage from "./pages/OrderSuccessPage";
+import SignupPage from "./pages/SignupPage";
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route>
@@ -47,6 +49,22 @@ const router = createBrowserRouter(
       </Route>
       <Route path="/signup" element={<SignupPage />} />
       <Route path="/login" element={<LoginPage />} />
+      <Route
+        path="/orders"
+        element={
+          <Protected>
+            <UserOrders />
+          </Protected>
+        }
+      />
+      <Route
+        path="/profile"
+        element={
+          <Protected>
+            <UserProfile />
+          </Protected>
+        }
+      />
       <Route path="/order-success/:id" element={<OrderSuccessPage />} />
       <Route path="*" element={<PageNotFound />} />
     </Route>

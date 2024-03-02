@@ -7,70 +7,37 @@ import {
   updateUserAsync,
 } from "../features/auth/AuthSlice";
 import Cart from "../features/cart/Cart";
-
-function Address({ addresses, handleAddress }) {
-  return (
-    <ul role="list" className="divide-y divide-gray-100">
-      {addresses.map((item, index) => (
-        <li key={index} className="flex justify-between gap-x-6 py-5">
-          <div className="flex min-w-0 gap-x-4">
-            <input
-              id={index}
-              onChange={() => handleAddress(item)}
-              name="address"
-              type="radio"
-              checked={index == 0}
-              className="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-200"
-            />
-            <div className="min-w-0 flex-auto">
-              <p className="text-sm font-semibold leading-6 text-gray-900">
-                {item.name}
-              </p>
-              <p className="mt-1 truncate text-xs leading-5 text-gray-500">
-                {item.houseNo}
-              </p>
-              <p className="mt-1 truncate text-xs leading-5 text-gray-500">
-                {item.street}
-              </p>
-              <p className="mt-1 truncate text-xs leading-5 text-gray-500">
-                {item.city},{item.state}
-              </p>
-            </div>
-          </div>
-          <div className="hidden shrink-0 sm:flex sm:flex-col sm:items-end">
-            <p className="text-sm leading-6 text-gray-900">
-              Phone: {item.phone}
-            </p>
-            <p className="text-sm leading-6 text-gray-900">
-              Pincode: {item.pincode}
-            </p>
-          </div>
-        </li>
-      ))}
-    </ul>
-  );
-}
+import {
+  selectAddress,
+  selectPaymentMethod,
+  setPaymentMethod,
+  setSelectedAddress,
+} from "../features/order/OrderSlice";
 
 export default function Checkout() {
-  const [selectedAddress, setSelectedAddress] = useState(null);
-  const [paymentMethod, setPaymentMethod] = useState("cash");
+  // const [selectedAddress, setSelectedAddress] = useState(null);
+  // const [paymentMethod, setPaymentMethod] = useState("cash");
+  const user = useSelector(selectLoggedInUser);
+  const dispatch = useDispatch();
+  const paymentMethod = useSelector(selectPaymentMethod);
+
   const {
     register,
     handleSubmit,
     reset,
     formState: { errors },
   } = useForm();
-  const user = useSelector(selectLoggedInUser);
-  const dispatch = useDispatch();
 
   function handleAddress(add) {
-    setSelectedAddress(add);
+    dispatch(setSelectedAddress(add));
     console.log(add);
   }
   function handlePayment(method) {
-    setPaymentMethod(method);
+    dispatch(setPaymentMethod(method));
     console.log(method);
   }
+  // FIXME:Order should not be placed if cart is empty
+  // TODO:Edit Address Option functionality
   return (
     <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <div className="grid grid-cols-1 gap-x-8 gap-y-10 lg:grid-cols-5">
@@ -172,6 +139,49 @@ export default function Checkout() {
         </div>
       </div>
     </div>
+  );
+}
+
+function Address({ addresses, handleAddress }) {
+  return (
+    <ul role="list" className="divide-y divide-gray-100">
+      {addresses.map((item, index) => (
+        <li key={index} className="flex justify-between gap-x-6 py-5">
+          <div className="flex min-w-0 gap-x-4">
+            <input
+              id={index}
+              onChange={() => handleAddress(item)}
+              name="address"
+              type="radio"
+              checked={index == 0}
+              className="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-200"
+            />
+            <div className="min-w-0 flex-auto">
+              <p className="text-sm font-semibold leading-6 text-gray-900">
+                {item.name}
+              </p>
+              <p className="mt-1 truncate text-xs leading-5 text-gray-500">
+                {item.houseNo}
+              </p>
+              <p className="mt-1 truncate text-xs leading-5 text-gray-500">
+                {item.street}
+              </p>
+              <p className="mt-1 truncate text-xs leading-5 text-gray-500">
+                {item.city},{item.state}
+              </p>
+            </div>
+          </div>
+          <div className="hidden shrink-0 sm:flex sm:flex-col sm:items-end">
+            <p className="text-sm leading-6 text-gray-900">
+              Phone: {item.phone}
+            </p>
+            <p className="text-sm leading-6 text-gray-900">
+              Pincode: {item.pincode}
+            </p>
+          </div>
+        </li>
+      ))}
+    </ul>
   );
 }
 

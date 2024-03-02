@@ -1,23 +1,40 @@
 import { useForm } from "react-hook-form";
 import { useDispatch, useSelector } from "react-redux";
-import { Link, Navigate } from "react-router-dom";
+import { Link, Navigate, useLocation, useNavigate } from "react-router-dom";
 import { checkUserAsync, selectError, selectLoggedInUser } from "../AuthSlice";
+import { useEffect, useState } from "react";
 
 export default function Login() {
   const error = useSelector(selectError);
   const user = useSelector(selectLoggedInUser);
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
 
-  console.log(errors);
+  const location = useLocation();
+  const [lastVisitedUrl, setLastVisitedUrl] = useState("");
+
+  useEffect(() => {
+    setLastVisitedUrl(location.pathname);
+  }, [location.pathname]);
+
+  const redirectToLastVisited = () => {
+    if (lastVisitedUrl) {
+      console.log(lastVisitedUrl);
+      navigate(lastVisitedUrl);
+    }
+    console.log("/home");
+    navigate("/");
+  };
   return (
     <>
       {/* FIXME: make this such that the page reloads by not changing the url. */}
-      {user && <Navigate to={`/?random=${Date.now()}`} replace={true} />}
+      {/* {user && <Navigate to={`/?random=${Date.now()}`} replace={true} />} */}
+      {user && redirectToLastVisited()}
       <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
         <div className="sm:mx-auto sm:w-full sm:max-w-sm">
           <img
