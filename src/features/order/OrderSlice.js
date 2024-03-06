@@ -33,7 +33,7 @@ export const orderSlice = createSlice({
       state.selectedAddress = action.payload;
     },
     setPaymentMethod: (state, action) => {
-      state.selectedAddress = action.payload;
+      state.paymentMethod = action.payload;
     },
   },
   extraReducers: (builder) => {

@@ -1,15 +1,16 @@
 import { default as React, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import { selectLoggedInUser } from "../../auth/AuthSlice";
 import {
   fetchUserOrdersAsync,
+  selectUserInfo,
   // selectUser,
   selectUserOrders,
 } from "../UserSlice";
+import Address from "../../checkout/Address";
 
 export default function UserOrders() {
-  const user = useSelector(selectLoggedInUser);
+  const user = useSelector(selectUserInfo);
   const orders = useSelector(selectUserOrders);
   const dispatch = useDispatch();
   useEffect(() => {
@@ -56,7 +57,7 @@ function Order({ order }) {
               <p>Total Items ordered</p>
               <p>{order.totalItems} items</p>
             </div>
-            <Address address={order.user.addresses[0]}></Address>
+            <Address address={order.user.addresses[0]} />
             <div className="mt-6 flex justify-center text-center text-sm text-gray-500">
               <p>
                 <Link to="/">
@@ -113,38 +114,5 @@ function CartItem({ item }) {
         </div>
       </div>
     </li>
-  );
-}
-
-export function Address({ address }) {
-  return (
-    <ul role="list" className="divide-y divide-gray-100">
-      <li className="flex justify-between gap-x-6 py-5">
-        <div className="flex min-w-0 gap-x-4">
-          <div className="min-w-0 flex-auto">
-            <p className="text-sm font-semibold leading-6 text-gray-900">
-              {address.name}
-            </p>
-            <p className="mt-1 truncate text-xs leading-5 text-gray-500">
-              {address.houseNo}
-            </p>
-            <p className="mt-1 truncate text-xs leading-5 text-gray-500">
-              {address.street}
-            </p>
-            <p className="mt-1 truncate text-xs leading-5 text-gray-500">
-              {address.city},{address.state}
-            </p>
-          </div>
-        </div>
-        <div className="hidden shrink-0 sm:flex sm:flex-col sm:items-end">
-          <p className="text-sm leading-6 text-gray-900">
-            Phone: {address.phone}
-          </p>
-          <p className="text-sm leading-6 text-gray-900">
-            Pincode: {address.pincode}
-          </p>
-        </div>
-      </li>
-    </ul>
   );
 }

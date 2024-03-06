@@ -1,6 +1,6 @@
-import { RadioGroup } from "@headlessui/react";
+import { Dialog, RadioGroup, Transition } from "@headlessui/react";
 import { StarIcon } from "@heroicons/react/20/solid";
-import { useEffect, useState } from "react";
+import { Fragment, useEffect, useRef, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate, useParams } from "react-router-dom";
 import { selectLoggedInUser } from "../auth/AuthSlice";
@@ -11,9 +11,6 @@ import {
   selectShowDialog,
 } from "../cart/CartSlice";
 import { fetchAllProductByIdAsync, selectProductById } from "./ProductSlice";
-
-import { Dialog, Transition } from "@headlessui/react";
-import { Fragment, useRef } from "react";
 // TODO: In server data we will add colors, sizes , highlights. to each product
 
 const colors = [
