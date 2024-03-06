@@ -61,9 +61,6 @@ export const counterSlice = createSlice({
   name: "cart",
   initialState,
   reducers: {
-    increment: (state) => {
-      state.value += 1;
-    },
     hideDialog: (state) => {
       state.showDialog = false;
     },
@@ -115,7 +112,7 @@ export const counterSlice = createSlice({
   },
 });
 
-export const { increment, hideDialog } = counterSlice.actions;
+export const { hideDialog } = counterSlice.actions;
 
 export const selectItems = (state) => state.cart.items;
 export const selectShowDialog = (state) => state.cart.showDialog;

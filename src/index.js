@@ -13,8 +13,6 @@ import {
   createRoutesFromElements,
 } from "react-router-dom";
 import "./App.css";
-import UserOrders from "./features/User/components/UserOrders";
-import UserProfile from "./features/User/components/UserProfile";
 import Protected from "./features/auth/components/Protected";
 import Cart from "./features/cart/Cart";
 import ProductDetail from "./features/product/ProductDetail";
@@ -24,6 +22,10 @@ import Home from "./pages/Home";
 import LoginPage from "./pages/LoginPage";
 import OrderSuccessPage from "./pages/OrderSuccessPage";
 import SignupPage from "./pages/SignupPage";
+import Logout from "./features/auth/components/Logout";
+import ForgotPasswordPage from "./pages/ForgotPasswordPage";
+import UserOrdersPage from "./pages/UserOrdersPage";
+import UserProfilePage from "./pages/UserProfilePage";
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route>
@@ -50,7 +52,7 @@ const router = createBrowserRouter(
           path="/orders"
           element={
             <Protected>
-              <UserOrders />
+              <UserOrdersPage />
             </Protected>
           }
         />
@@ -58,7 +60,7 @@ const router = createBrowserRouter(
           path="/profile"
           element={
             <Protected>
-              <UserProfile />
+              <UserProfilePage />
             </Protected>
           }
         />
@@ -66,6 +68,8 @@ const router = createBrowserRouter(
       </Route>
       <Route path="/signup" element={<SignupPage />} />
       <Route path="/login" element={<LoginPage />} />
+      <Route path="/logout" element={<Logout />} />
+      <Route path="/forgot-password" element={<ForgotPasswordPage />} />
       <Route path="*" element={<PageNotFound />} />
     </Route>
   )

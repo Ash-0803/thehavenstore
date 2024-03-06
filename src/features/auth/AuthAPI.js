@@ -10,6 +10,12 @@ export function createUser(userData) {
     resolve({ data });
   });
 }
+export function logoutUser(userId) {
+  return new Promise(async (resolve) => {
+    resolve({ data: "success" });
+    // TODO: on server we will remove user session
+  });
+}
 
 export function checkUser(loginInfo) {
   return new Promise(async (resolve, reject) => {

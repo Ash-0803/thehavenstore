@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { selectLoggedInUser } from "../auth/AuthSlice";
@@ -53,7 +53,7 @@ export default function Cart({ page, values = null }) {
               Cart
             </h1>
             <div className="flow-root">
-              <ul role="list" className="-my-6 divide-y divide-gray-200">
+              <ul className="-my-6 divide-y divide-gray-200">
                 {items.map((item, index) => (
                   <CartItem key={index} item={item} />
                 ))}

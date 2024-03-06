@@ -29,9 +29,6 @@ export const userSlice = createSlice({
   initialState,
 
   reducers: {
-    increment: (state) => {
-      state.userInfo += 1;
-    },
   },
   extraReducers: (builder) => {
     builder
