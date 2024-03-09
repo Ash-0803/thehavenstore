@@ -20,7 +20,6 @@ export default function UserOrders() {
   return (
     <div>
       {orders.map((order) => {
-        console.log(order);
         return <Order key={order.id} order={order} />;
       })}
     </div>

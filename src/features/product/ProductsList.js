@@ -13,7 +13,7 @@ import {
   Squares2X2Icon,
 } from "@heroicons/react/20/solid";
 import { XMarkIcon } from "@heroicons/react/24/outline";
-import  { Fragment, useEffect, useState } from "react";
+import { Fragment, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 import { useDispatch, useSelector } from "react-redux";
@@ -39,7 +39,6 @@ export default function ProductsList() {
   const totalItems = useSelector(selectTotalItems);
   const [filter, setFilter] = useState({ _page: 1, _limit: ITEMS_PER_PAGE });
   function handleFilter(e, section, option) {
-    console.log("checking option:", e);
     e.target.checked
       ? setFilter({
           ...filter,
@@ -53,7 +52,6 @@ export default function ProductsList() {
           const copy = { ...current };
           delete copy[section.id][option.id];
           copy._page = 1;
-          console.log(copy);
           return copy;
         });
   }
@@ -71,7 +69,6 @@ export default function ProductsList() {
   }
 
   useEffect(() => {
-    console.log("filterdispatch", filter);
     dispatch(fetchAllProductsByFiltersAsync(filter));
   }, [filter]);
 
@@ -390,7 +387,6 @@ function ProductGrid({ products }) {
       <div className="bg-white">
         <div className="mx-auto max-w-2xl px-4 py-0 sm:px-6 sm:py-0 lg:max-w-7xl lg:px-8">
           <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:gap-x-8">
-            {console.log(products)}
             {products.length > 0 && products
               ? products.map((product) => (
                   <div

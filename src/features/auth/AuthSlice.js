@@ -20,7 +20,7 @@ export const createUserAsync = createAsyncThunk(
 export const logoutUserAsync = createAsyncThunk(
   "user/logoutUser",
   async (userId) => {
-    const response = await logoutUser(userData);
+    const response = await logoutUser(userId);
     // The value we return becomes the `fulfilled` action payload
     return response.data;
   }

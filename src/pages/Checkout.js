@@ -29,11 +29,9 @@ export default function Checkout() {
 
   function handleAddress(add) {
     dispatch(setSelectedAddress(add));
-    console.log(add);
   }
   function handlePayment(method) {
     dispatch(setPaymentMethod(method));
-    console.log(paymentMethod);
   }
   // FIXME:Order should not be placed if cart is empty or address is empty
   // TODO:Edit Address Option functionality

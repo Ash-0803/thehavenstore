@@ -26,7 +26,7 @@ export default function Signup() {
         </div>
 
         <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
-          < form
+          <form
             className="space-y-6"
             noValidate
             onSubmit={handleSubmit((data) => {
@@ -37,7 +37,6 @@ export default function Signup() {
                   addresses: [],
                 })
               );
-              console.log(data);
             })}
           >
             <div>
@@ -132,7 +131,7 @@ export default function Signup() {
                 Sign Up
               </button>
             </div>
-          <form/>
+          </form>
 
           <p className="mt-10 text-center text-sm text-gray-500">
             Already a member?{" "}

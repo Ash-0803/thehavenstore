@@ -35,10 +35,6 @@ export default function Navbar({ children }) {
   const cartItems = useSelector(selectItems);
   const loguser = useSelector(selectLoggedInUser);
 
-  useEffect(() => {
-    console.log("do this", loguser);
-  }, [loguser]);
-
   return (
     <>
       <div className="min-h-full">

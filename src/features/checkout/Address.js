@@ -1,6 +1,9 @@
-import { useDispatch, useSelector } from "react-redux";
-import { selectUserInfo } from "../User/UserSlice";
-import { updateUserAsync } from "../auth/AuthSlice";
+// import { useDispatch, useSelector } from "react-redux";
+// import { selectUserInfo } from "../User/UserSlice";
+// import { updateUserAsync } from "../auth/AuthSlice";
+
+import { useSelector } from "react-redux";
+import { selectAddress } from "../order/OrderSlice";
 
 export default function Address({
   addresses,
@@ -30,6 +33,7 @@ export default function Address({
   //   newUser.addresses.splice(index, 1);
   //   dispatch(updateUserAsync(newUser));
   // };
+  const selectedAddress = useSelector(selectAddress);
   return (
     <ul role="list" className="border-2 rounded-md px-2">
       {addresses.map((item, index) => (
