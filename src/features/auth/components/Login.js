@@ -1,8 +1,8 @@
+import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { useDispatch, useSelector } from "react-redux";
-import { Link, Navigate, useLocation, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { checkUserAsync, selectError, selectLoggedInUser } from "../AuthSlice";
-import { useEffect, useState } from "react";
 
 export default function Login() {
   const error = useSelector(selectError);
@@ -32,6 +32,7 @@ export default function Login() {
   };
   return (
     <>
+      {/* DOUBT: navigation */}
       {/* FIXME: make this such that the page reloads by not changing the url. */}
       {/* {user && <Navigate to={`/?random=${Date.now()}`} replace={true} />} */}
       {user && redirectToLastVisited()}

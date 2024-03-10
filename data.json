@@ -48,9 +48,7 @@
       "brand": "Samsung",
       "category": "smartphones",
       "thumbnail": "https://cdn.dummyjson.com/product-images/3/thumbnail.jpg",
-      "images": [
-        "https://cdn.dummyjson.com/product-images/3/1.jpg"
-      ]
+      "images": ["https://cdn.dummyjson.com/product-images/3/1.jpg"]
     },
     {
       "id": 4,
@@ -1150,13 +1148,15 @@
       "email": "test@gmail.com",
       "password": "Qwerty123",
       "addresses": [],
-      "id": 1
+      "id": 1,
+      "role": "user"
     },
     {
       "email": "demo@gmail.com",
       "password": "Qwerty123",
       "addresses": [],
-      "id": 2
+      "id": 2,
+      "role": "admin"
     },
     {
       "email": "asdf@gmail.com",
@@ -1190,7 +1190,8 @@
           "pinCode": "023402"
         }
       ],
-      "id": 3
+      "id": 3,
+      "role": "user"
     }
   ],
   "cart": [
@@ -1304,9 +1305,7 @@
           "brand": "Samsung",
           "category": "smartphones",
           "thumbnail": "https://cdn.dummyjson.com/product-images/3/thumbnail.jpg",
-          "images": [
-            "https://cdn.dummyjson.com/product-images/3/1.jpg"
-          ],
+          "images": ["https://cdn.dummyjson.com/product-images/3/1.jpg"],
           "quantity": 1,
           "user": 3
         },

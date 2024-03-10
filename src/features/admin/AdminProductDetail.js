@@ -9,8 +9,11 @@ import {
   hideDialog,
   selectItems,
   selectShowDialog,
-} from "../cart/CartSlice";
-import { fetchProductByIdAsync, selectProductById } from "./ProductSlice";
+} from "./../cart/CartSlice";
+import {
+  fetchAllProductByIdAsync,
+  selectProductById,
+} from "./../product/ProductSlice";
 // TODO: In server data we will add colors, sizes , highlights. to each product
 
 const colors = [
@@ -42,7 +45,7 @@ function classNames(...classes) {
 
 // TODO : Loading UI
 
-export default function ProductDetail() {
+export default function AdminProductDetail() {
   const [selectedColor, setSelectedColor] = useState(colors[0]);
   const [selectedSize, setSelectedSize] = useState(sizes[2]);
   const [isItem, setIsItem] = useState(false);
@@ -68,7 +71,7 @@ export default function ProductDetail() {
   };
 
   useEffect(() => {
-    dispatch(fetchProductByIdAsync(params.id));
+    dispatch(fetchAllProductByIdAsync(params.id));
   }, [dispatch, params.id]);
 
   return (

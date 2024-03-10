@@ -13,19 +13,24 @@ import {
   createRoutesFromElements,
 } from "react-router-dom";
 import "./App.css";
+import Logout from "./features/auth/components/Logout";
 import Protected from "./features/auth/components/Protected";
-import Cart from "./features/cart/Cart";
-import ProductDetail from "./features/product/ProductDetail";
+import ProtectedAdmin from "./features/auth/components/ProtectedAdmin";
 import PageNotFound from "./pages/404";
+import AdminHomePage from "./pages/AdminHomePage";
+import AdminProductFormPage from "./pages/AdminProductFormPage";
+import AdminProductPage from "./pages/AdminProductPage";
+import Cart from "./pages/CartPage";
 import Checkout from "./pages/Checkout";
+import ForgotPasswordPage from "./pages/ForgotPasswordPage";
 import Home from "./pages/Home";
 import LoginPage from "./pages/LoginPage";
 import OrderSuccessPage from "./pages/OrderSuccessPage";
+import ProductPage from "./pages/ProductPage";
 import SignupPage from "./pages/SignupPage";
-import Logout from "./features/auth/components/Logout";
-import ForgotPasswordPage from "./pages/ForgotPasswordPage";
 import UserOrdersPage from "./pages/UserOrdersPage";
 import UserProfilePage from "./pages/UserProfilePage";
+
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route>
@@ -40,6 +45,38 @@ const router = createBrowserRouter(
           }
         />
         <Route
+          path="/admin-product"
+          element={
+            <ProtectedAdmin>
+              <AdminProductPage />
+            </ProtectedAdmin>
+          }
+        />
+        <Route
+          path="/admin"
+          element={
+            <ProtectedAdmin>
+              <AdminHomePage />
+            </ProtectedAdmin>
+          }
+        />
+        <Route
+          path="/admin/product-form"
+          element={
+            <ProtectedAdmin>
+              <AdminProductFormPage />
+            </ProtectedAdmin>
+          }
+        />
+        <Route
+          path="/admin/product-form/edit/:id"
+          element={
+            <ProtectedAdmin>
+              <AdminProductFormPage></AdminProductFormPage>
+            </ProtectedAdmin>
+          }
+        />
+        <Route
           path="/checkout"
           element={
             <Protected>
@@ -47,7 +84,7 @@ const router = createBrowserRouter(
             </Protected>
           }
         />
-        <Route path="/product/:id" element={<ProductDetail />} />
+        <Route path="/product/:id" element={<ProductPage />} />
         <Route
           path="/orders"
           element={

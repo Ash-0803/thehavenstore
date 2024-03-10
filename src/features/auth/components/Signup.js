@@ -35,6 +35,8 @@ export default function Signup() {
                   email: data.email,
                   password: data.password,
                   addresses: [],
+                  role: "user",
+                  // TODO: role will be handled in backend
                 })
               );
             })}
