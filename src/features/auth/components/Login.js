@@ -1,7 +1,6 @@
-import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { useDispatch, useSelector } from "react-redux";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { checkUserAsync, selectError, selectLoggedInUser } from "../AuthSlice";
 
 export default function Login() {
@@ -15,27 +14,10 @@ export default function Login() {
     formState: { errors },
   } = useForm();
 
-  const location = useLocation();
-  const [lastVisitedUrl, setLastVisitedUrl] = useState("");
-
-  useEffect(() => {
-    setLastVisitedUrl(location.pathname);
-  }, [location.pathname]);
-
-  const redirectToLastVisited = () => {
-    if (lastVisitedUrl) {
-      console.log(lastVisitedUrl);
-      navigate(lastVisitedUrl);
-    }
-    console.log("/home");
-    navigate("/");
-  };
   return (
     <>
-      {/* DOUBT: navigation */}
-      {/* FIXME: make this such that the page reloads by not changing the url. */}
-      {/* {user && <Navigate to={`/?random=${Date.now()}`} replace={true} />} */}
-      {user && redirectToLastVisited()}
+      {/* DOUBT: how to navigate such that it uses recommeded useEffect Method */}
+      {user && navigate(-1)}
       <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
         <div className="sm:mx-auto sm:w-full sm:max-w-sm">
           <img

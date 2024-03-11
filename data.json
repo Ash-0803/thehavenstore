@@ -48,7 +48,9 @@
       "brand": "Samsung",
       "category": "smartphones",
       "thumbnail": "https://cdn.dummyjson.com/product-images/3/thumbnail.jpg",
-      "images": ["https://cdn.dummyjson.com/product-images/3/1.jpg"]
+      "images": [
+        "https://cdn.dummyjson.com/product-images/3/1.jpg"
+      ]
     },
     {
       "id": 4,
@@ -1194,28 +1196,7 @@
       "role": "user"
     }
   ],
-  "cart": [
-    {
-      "id": 10,
-      "title": "HP Pavilion 15-DK1056WM",
-      "description": "HP Pavilion 15-DK1056WM Gaming Laptop 10th Gen Core i5, 8GB, 256GB SSD, GTX 1650 4GB, Windows 10",
-      "price": 1099,
-      "discountPercentage": 6.18,
-      "rating": 4.43,
-      "stock": 89,
-      "brand": "HP Pavilion",
-      "category": "laptops",
-      "thumbnail": "https://cdn.dummyjson.com/product-images/10/thumbnail.jpeg",
-      "images": [
-        "https://cdn.dummyjson.com/product-images/10/1.jpg",
-        "https://cdn.dummyjson.com/product-images/10/2.jpg",
-        "https://cdn.dummyjson.com/product-images/10/3.jpg",
-        "https://cdn.dummyjson.com/product-images/10/thumbnail.jpeg"
-      ],
-      "quantity": 1,
-      "user": 3
-    }
-  ],
+  "cart": [],
   "orders": [
     {
       "items": [
@@ -1239,30 +1220,10 @@
           ],
           "quantity": 1,
           "user": 3
-        },
-        {
-          "id": 2,
-          "title": "iPhone X",
-          "description": "SIM-Free, Model A19211 6.5-inch Super Retina HD display with OLED technology A12 Bionic chip with ...",
-          "price": 899,
-          "discountPercentage": 17.94,
-          "rating": 4.44,
-          "stock": 34,
-          "brand": "Apple",
-          "category": "smartphones",
-          "thumbnail": "https://cdn.dummyjson.com/product-images/2/thumbnail.jpg",
-          "images": [
-            "https://cdn.dummyjson.com/product-images/2/1.jpg",
-            "https://cdn.dummyjson.com/product-images/2/2.jpg",
-            "https://cdn.dummyjson.com/product-images/2/3.jpg",
-            "https://cdn.dummyjson.com/product-images/2/thumbnail.jpg"
-          ],
-          "quantity": 1,
-          "user": 3
         }
       ],
-      "totalAmount": 1448,
-      "totalItems": 2,
+      "totalAmount": 478,
+      "totalItems": 1,
       "user": {
         "email": "asdf@gmail.com",
         "password": "Asdf123123",
@@ -1270,80 +1231,11 @@
           {
             "name": "Ashish Chaudhary",
             "email": "jatt221221@gmail.com",
-            "phone": "07505009701",
-            "street": "42, Shankar Vihar Colony",
             "city": "Aligarh",
             "state": "Aligarh",
-            "pinCode": "202002"
-          },
-          {
-            "name": "Ashish Chaudhary",
-            "email": "jatt221221@gmail.com",
+            "pinCode": "202002",
             "phone": "07505009701",
-            "street": "802, Olive, SVP Gulmohar Residency",
-            "city": "ghaziabad",
-            "state": "Uttar Pradesh",
-            "pinCode": "201014"
-          }
-        ],
-        "id": 3
-      },
-      "paymentMethod": "cash",
-      "selectedAddress": null,
-      "id": 2
-    },
-    {
-      "items": [
-        {
-          "id": 3,
-          "title": "Samsung Universe 9",
-          "description": "Samsung's new variant which goes beyond Galaxy to the Universe",
-          "price": 1249,
-          "discountPercentage": 15.46,
-          "rating": 4.09,
-          "stock": 36,
-          "brand": "Samsung",
-          "category": "smartphones",
-          "thumbnail": "https://cdn.dummyjson.com/product-images/3/thumbnail.jpg",
-          "images": ["https://cdn.dummyjson.com/product-images/3/1.jpg"],
-          "quantity": 1,
-          "user": 3
-        },
-        {
-          "id": 2,
-          "title": "iPhone X",
-          "description": "SIM-Free, Model A19211 6.5-inch Super Retina HD display with OLED technology A12 Bionic chip with ...",
-          "price": 899,
-          "discountPercentage": 17.94,
-          "rating": 4.44,
-          "stock": 34,
-          "brand": "Apple",
-          "category": "smartphones",
-          "thumbnail": "https://cdn.dummyjson.com/product-images/2/thumbnail.jpg",
-          "images": [
-            "https://cdn.dummyjson.com/product-images/2/1.jpg",
-            "https://cdn.dummyjson.com/product-images/2/2.jpg",
-            "https://cdn.dummyjson.com/product-images/2/3.jpg",
-            "https://cdn.dummyjson.com/product-images/2/thumbnail.jpg"
-          ],
-          "quantity": 1,
-          "user": 3
-        }
-      ],
-      "totalAmount": 2148,
-      "totalItems": 2,
-      "user": {
-        "email": "asdf@gmail.com",
-        "password": "Asdf123123",
-        "addresses": [
-          {
-            "name": "Ashish Chaudhary",
-            "email": "jatt221221@gmail.com",
-            "phone": "07505009701",
-            "street": "42, Shankar Vihar Colony",
-            "city": "Aligarh",
-            "state": "Aligarh",
-            "pinCode": "202002"
+            "street": "42, Shankar Vihar Colony"
           },
           {
             "name": "Ashish Chaudhary",
@@ -1355,20 +1247,30 @@
             "pinCode": "201014"
           },
           {
-            "name": "naruto uzumaki",
+            "name": "naruto",
             "email": "naruto10@gmail.com",
-            "phone": "Japan",
-            "street": "2nd street, right to hokage's house",
+            "phone": "823523562",
+            "street": "hokage's mansion",
             "city": "Konoha",
             "state": "Hidden Leaf",
-            "pinCode": "000000"
+            "pinCode": "023402"
           }
         ],
-        "id": 3
+        "id": 3,
+        "role": "user"
       },
       "paymentMethod": "cash",
-      "selectedAddress": null,
-      "id": 3
+      "selectedAddress": {
+        "name": "Ashish Chaudhary",
+        "email": "jatt221221@gmail.com",
+        "city": "Aligarh",
+        "state": "Aligarh",
+        "pinCode": "202002",
+        "phone": "07505009701",
+        "street": "42, Shankar Vihar Colony"
+      },
+      "id": 1,
+      "status": "dispatched"
     }
   ]
 }

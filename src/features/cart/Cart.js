@@ -14,6 +14,7 @@ import {
   selectItems,
   updateCartAsync,
 } from "./CartSlice";
+import { discountedPrice } from "../../app/constants";
 
 export default function Cart({ page, values = null }) {
   const dispatch = useDispatch();
@@ -25,7 +26,7 @@ export default function Cart({ page, values = null }) {
   const paymentMethod = useSelector(selectPaymentMethod);
 
   const totalAmount = items.reduce(
-    (amount, item) => item.price * item.quantity + amount,
+    (amount, item) => discountedPrice(item) * item.quantity + amount,
     0
   );
   const totalItems = items.reduce((total, item) => item.quantity + total, 0);
@@ -39,7 +40,7 @@ export default function Cart({ page, values = null }) {
       paymentMethod,
       selectedAddress,
     };
-    dispatch(createOrderAsync(order));
+    selectedAddress && paymentMethod && dispatch(createOrderAsync(order));
   };
   useEffect(() => {
     dispatch(fetchItemsByUserIdAsync(user.id));
@@ -146,7 +147,7 @@ function CartItem({ item }) {
             <h3>
               <a href={item.href}>{item.title}</a>
             </h3>
-            <p className="ml-4">${item.price}</p>
+            <p className="ml-4">${discountedPrice(item)}</p>
           </div>
           <p className="mt-1 text-sm text-gray-500">{item.brand}</p>
         </div>

@@ -1,4 +1,7 @@
+import { useEffect } from "react";
+import { useForm } from "react-hook-form";
 import { useDispatch, useSelector } from "react-redux";
+import { useParams } from "react-router-dom";
 import {
   clearSelectedProduct,
   createProductAsync,
@@ -8,9 +11,6 @@ import {
   selectProductById,
   updateProductAsync,
 } from "../product/ProductSlice";
-import { useForm } from "react-hook-form";
-import { useParams } from "react-router-dom";
-import { useEffect } from "react";
 
 function ProductForm() {
   const {
@@ -155,7 +155,9 @@ function ProductForm() {
                 >
                   <option value="">--choose brand--</option>
                   {brands.map((brand) => (
-                    <option value={brand.value}>{brand.label}</option>
+                    <option key={brand.label} value={brand.value}>
+                      {brand.label}
+                    </option>
                   ))}
                 </select>
               </div>
@@ -176,7 +178,9 @@ function ProductForm() {
                 >
                   <option value="">--choose category--</option>
                   {categories.map((category) => (
-                    <option value={category.value}>{category.label}</option>
+                    <option key={category.label} value={category.value}>
+                      {category.label}
+                    </option>
                   ))}
                 </select>
               </div>

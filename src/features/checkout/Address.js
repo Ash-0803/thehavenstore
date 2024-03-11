@@ -2,18 +2,15 @@
 // import { selectUserInfo } from "../User/UserSlice";
 // import { updateUserAsync } from "../auth/AuthSlice";
 
+// DOUBT: Should I necessarily make reusable components even if the code is too complex
 import { useSelector } from "react-redux";
 import { selectAddress } from "../order/OrderSlice";
 
-export default function Address({
-  addresses,
-  handleAddress,
-  // DOUBT: Should I necessarily make reusable components even if the code is too complex
+export default function Address({ addresses, handleAddress }) {
   // page,
   // addressIndex,
   // setValue,
   // setSelectedEditIndex,
-}) {
   // const dispatch = useDispatch();
   // const user = useSelector(selectUserInfo);
   // const handleEditForm = (index) => {

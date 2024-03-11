@@ -1,14 +1,14 @@
 import { default as React, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import { discountedPrice } from "../../../app/constants";
+import Address from "../../checkout/Address";
 import {
   fetchUserOrdersAsync,
   selectUserInfo,
   // selectUser,
   selectUserOrders,
 } from "../UserSlice";
-import Address from "../../checkout/Address";
-
 export default function UserOrders() {
   const user = useSelector(selectUserInfo);
   const orders = useSelector(selectUserOrders);
@@ -56,7 +56,7 @@ function Order({ order }) {
               <p>Total Items ordered</p>
               <p>{order.totalItems} items</p>
             </div>
-            <Address address={order.user.addresses[0]} />
+            <Address addresses={[order.selectedAddress]} />
             <div className="mt-6 flex justify-center text-center text-sm text-gray-500">
               <p>
                 <Link to="/">
@@ -94,7 +94,7 @@ function CartItem({ item }) {
             <h3>
               <a href={item.href}>{item.title}</a>
             </h3>
-            <p className="ml-4">${item.price}</p>
+            <p className="ml-4">${discountedPrice(item)}</p>
           </div>
           <p className="mt-1 text-sm text-gray-500">{item.brand}</p>
         </div>

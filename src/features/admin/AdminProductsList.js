@@ -17,7 +17,7 @@ import { Fragment, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 import { useDispatch, useSelector } from "react-redux";
-import { ITEMS_PER_PAGE } from "../../app/constants";
+import { ITEMS_PER_PAGE, discountedPrice } from "../../app/constants";
 import {
   fetchAllProductsAsync,
   fetchAllProductsByFiltersAsync,
@@ -425,11 +425,7 @@ function ProductGrid({ products }) {
                           </div>
                           <div>
                             <p className="text-sm font-medium text-gray-900">
-                              $
-                              {Math.round(
-                                product.price *
-                                  (1 - product.discountPercentage / 100)
-                              )}
+                              ${discountedPrice(product)}
                             </p>
                             <p className="text-sm font-medium text-gray-400 line-through">
                               ${product.price}

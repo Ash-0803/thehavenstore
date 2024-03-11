@@ -1,17 +1,16 @@
-import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { useDispatch, useSelector } from "react-redux";
-import { selectUserInfo } from "../features/User/UserSlice";
-import { updateUserAsync } from "../features/auth/AuthSlice";
-import Cart from "../features/cart/Cart";
+import { selectUserInfo } from "../User/UserSlice";
+import { updateUserAsync } from "../auth/AuthSlice";
+import Cart from "../cart/Cart";
 import {
   selectPaymentMethod,
   setPaymentMethod,
   setSelectedAddress,
-} from "../features/order/OrderSlice";
-import PaymentOptions from "../features/checkout/PaymentOptions";
-import AddressDropdown from "../features/checkout/AddressDropdown";
-import Address from "../features/checkout/Address";
+} from "../order/OrderSlice";
+import Address from "./Address";
+import AddressDropdown from "./AddressDropdown";
+import PaymentOptions from "./PaymentOptions";
 
 export default function Checkout() {
   // const [selectedAddress, setSelectedAddress] = useState(null);

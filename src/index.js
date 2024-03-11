@@ -18,10 +18,11 @@ import Protected from "./features/auth/components/Protected";
 import ProtectedAdmin from "./features/auth/components/ProtectedAdmin";
 import PageNotFound from "./pages/404";
 import AdminHomePage from "./pages/AdminHomePage";
+import AdminOrdersPage from "./pages/AdminOrdersPage";
 import AdminProductFormPage from "./pages/AdminProductFormPage";
 import AdminProductPage from "./pages/AdminProductPage";
 import Cart from "./pages/CartPage";
-import Checkout from "./pages/Checkout";
+import CheckoutPage from "./pages/CheckoutPage";
 import ForgotPasswordPage from "./pages/ForgotPasswordPage";
 import Home from "./pages/Home";
 import LoginPage from "./pages/LoginPage";
@@ -69,6 +70,14 @@ const router = createBrowserRouter(
           }
         />
         <Route
+          path="/admin/orders"
+          element={
+            <ProtectedAdmin>
+              <AdminOrdersPage />
+            </ProtectedAdmin>
+          }
+        />
+        <Route
           path="/admin/product-form/edit/:id"
           element={
             <ProtectedAdmin>
@@ -80,7 +89,7 @@ const router = createBrowserRouter(
           path="/checkout"
           element={
             <Protected>
-              <Checkout />
+              <CheckoutPage />
             </Protected>
           }
         />
