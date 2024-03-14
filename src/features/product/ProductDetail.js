@@ -1,8 +1,11 @@
 import { Dialog, RadioGroup, Transition } from "@headlessui/react";
 import { StarIcon } from "@heroicons/react/20/solid";
 import { Fragment, useEffect, useRef, useState } from "react";
+// import { Grid } from "react-loader-spinner";
+
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate, useParams } from "react-router-dom";
+import { discountedPrice } from "../../app/constants";
 import { selectLoggedInUser } from "../auth/AuthSlice";
 import {
   addToCartAsync,
@@ -10,8 +13,11 @@ import {
   selectItems,
   selectShowDialog,
 } from "../cart/CartSlice";
-import { fetchProductByIdAsync, selectProductById } from "./ProductSlice";
-import { discountedPrice } from "../../app/constants";
+import {
+  fetchProductByIdAsync,
+  selectProductById,
+  selectProductListStatus,
+} from "./ProductSlice";
 
 // TODO: In server data we will add colors, sizes , highlights. to each product
 
@@ -51,21 +57,37 @@ export default function ProductDetail() {
   const product = useSelector(selectProductById);
   const dialog = useSelector(selectShowDialog);
   const cartItems = useSelector(selectItems);
+  const user = useSelector(selectLoggedInUser);
+  const status = useSelector(selectProductListStatus);
 
   const dispatch = useDispatch();
   const params = useParams();
 
-  const user = useSelector(selectLoggedInUser);
   const navigate = useNavigate();
-
   const handleCart = (e) => {
     e.preventDefault();
-    if (user) {
-      !cartItems.some((obj) => obj.id == product.id && obj.size == product.size)
-        ? dispatch(addToCartAsync({ ...product, quantity: 1, user: user.id }))
-        : setIsItem(true);
-    } else {
-      return navigate("/login");
+    // if (user) {
+    //   !cartItems.some((obj) => obj.id == product.id && obj.size == product.size)
+    //     ? dispatch(addToCartAsync({ ...product, quantity: 1, user: user.id }))
+    //     : setIsItem(true);
+    // } else {
+    // }
+    if (!user) navigate("/login");
+    else {
+      if (cartItems.findIndex((item) => item.productId === product.id) < 0) {
+        console.log({ cartItems, product });
+        const newItem = {
+          ...product,
+          productId: product.id,
+          quantity: 1,
+          user: user.id,
+        };
+        delete newItem["id"];
+        dispatch(addToCartAsync(newItem));
+        // TODO: it will be based on server response of backend
+      } else {
+        alert("Item Already added");
+      }
     }
   };
 
@@ -75,6 +97,18 @@ export default function ProductDetail() {
 
   return (
     <div className="bg-white">
+      {/* {status === "loading" ? (
+        <Grid
+          height="80"
+          width="80"
+          color="rgb(79, 70, 229) "
+          ariaLabel="grid-loading"
+          radius="12.5"
+          wrapperStyle={{}}
+          wrapperClass=""
+          visible={true}
+        />
+      ) : null} */}
       {dialog && <CartDialogue dialog={dialog} />}
       {isItem && <CartDialogue isItem={isItem} setIsItem={setIsItem} />}
       {product && (

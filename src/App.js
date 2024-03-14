@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { Outlet } from "react-router-dom";
 import Navbar from "./features/common/Nav";
+import Footer from "./features/common/Footer";
 
 import { selectLoggedInUser } from "./features/auth/AuthSlice";
 import { fetchLoggedInUserAsync } from "./features/User/UserSlice";
@@ -21,6 +22,7 @@ function App() {
       <Navbar>
         <Outlet />
       </Navbar>
+      <Footer />
     </div>
   );
 }

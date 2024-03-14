@@ -1,7 +1,10 @@
 import { useEffect, useState } from "react";
+import { InfinitySpin } from "react-loader-spinner";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import { discountedPrice } from "../../app/constants";
 import { selectLoggedInUser } from "../auth/AuthSlice";
+import Modal from "../common/Modal";
 import {
   createOrderAsync,
   selectAddress,
@@ -11,10 +14,10 @@ import {
 import {
   deleteItemFromCartAsync,
   fetchItemsByUserIdAsync,
+  selectCartStatus,
   selectItems,
   updateCartAsync,
 } from "./CartSlice";
-import { discountedPrice } from "../../app/constants";
 
 export default function Cart({ page, values = null }) {
   const dispatch = useDispatch();
@@ -24,6 +27,7 @@ export default function Cart({ page, values = null }) {
 
   const selectedAddress = useSelector(selectAddress);
   const paymentMethod = useSelector(selectPaymentMethod);
+  const status = useSelector(selectCartStatus);
 
   const totalAmount = items.reduce(
     (amount, item) => discountedPrice(item) * item.quantity + amount,
@@ -54,6 +58,14 @@ export default function Cart({ page, values = null }) {
               Cart
             </h1>
             <div className="flow-root">
+              {status === "loading" ? (
+                <InfinitySpin
+                  visible={true}
+                  width="200"
+                  color="rgb(79, 70, 229)"
+                  ariaLabel="infinity-spin-loading"
+                />
+              ) : null}
               <ul className="-my-6 divide-y divide-gray-200">
                 {items.map((item, index) => (
                   <CartItem key={index} item={item} />
@@ -116,6 +128,8 @@ export default function Cart({ page, values = null }) {
 
 function CartItem({ item }) {
   const [qty, setQty] = useState(1);
+
+  const [openModal, setOpenModal] = useState(null);
   const dispatch = useDispatch();
 
   function incrementQty() {
@@ -177,8 +191,19 @@ function CartItem({ item }) {
           </div>
 
           <div className="flex">
+            <Modal
+              title={`Delete ${item.title}`}
+              message="Are you sure you want to delete this Cart item ?"
+              dangerOption="Delete"
+              cancelOption="Cancel"
+              dangerAction={(e) => handleRemove(e, item.id)}
+              cancelAction={() => setOpenModal(null)}
+              showModal={openModal === item.id}
+            />
             <button
-              onClick={(e) => handleRemove(e, item.id)}
+              onClick={(e) => {
+                setOpenModal(item.id);
+              }}
               type="button"
               className="font-medium text-indigo-600 hover:text-indigo-500"
             >

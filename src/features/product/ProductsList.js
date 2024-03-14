@@ -1,23 +1,20 @@
 import { Dialog, Disclosure, Menu, Transition } from "@headlessui/react";
 import {
-  ChevronLeftIcon,
-  ChevronRightIcon,
-  StarIcon,
-} from "@heroicons/react/20/solid";
-
-import {
   ChevronDownIcon,
   FunnelIcon,
   MinusIcon,
   PlusIcon,
   Squares2X2Icon,
+  StarIcon,
 } from "@heroicons/react/20/solid";
 import { XMarkIcon } from "@heroicons/react/24/outline";
 import { Fragment, useEffect, useState } from "react";
+import { InfinitySpin } from "react-loader-spinner";
 import { Link } from "react-router-dom";
 
 import { useDispatch, useSelector } from "react-redux";
 import { ITEMS_PER_PAGE, discountedPrice } from "../../app/constants";
+import Pagination from "../common/Pagination";
 import {
   fetchAllProductsAsync,
   fetchAllProductsByFiltersAsync,
@@ -26,9 +23,9 @@ import {
   selectAllProducts,
   selectBrands,
   selectCategories,
+  selectProductListStatus,
   selectTotalItems,
 } from "./ProductSlice";
-import Pagination from "../common/Pagination";
 
 export default function ProductsList() {
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
@@ -36,7 +33,7 @@ export default function ProductsList() {
   const products = useSelector(selectAllProducts);
   const brands = useSelector(selectBrands);
   const categories = useSelector(selectCategories);
-
+  const status = useSelector(selectProductListStatus);
   const totalItems = useSelector(selectTotalItems);
   const [filter, setFilter] = useState({ _page: 1, _limit: ITEMS_PER_PAGE });
   function handleFilter(e, section, option) {
@@ -73,30 +70,7 @@ export default function ProductsList() {
     dispatch(fetchAllProductsByFiltersAsync(filter));
   }, [filter]);
 
-  // const [products, setProducts] = useState([
-  //   {
-  //     id: 1,
-  //     name: "Basic Tee",
-  //     href: "#",
-  //     imageSrc:
-  //       "https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg",
-  //     imageAlt: "Front of men's Basic Tee in black.",
-  //     price: "$35",
-  //     color: "Black",
-  //   },
-  //   // More products...
-  // ]);
   useEffect(() => {
-    // const getData = async () => {
-    //   try {
-    //     const response = await axios.get("https://dummyjson.com/products");
-    //     console.log(response.data.products);
-    //     setProducts(response.data.products);
-    //   } catch (error) {
-    //     console.log(error);
-    //   }
-    // };
-    // getData();
     dispatch(fetchBrandsAsync());
     dispatch(fetchCategoriesAsync());
     dispatch(fetchAllProductsAsync());
@@ -246,7 +220,7 @@ export default function ProductsList() {
               />
 
               {/* Product grid */}
-              <ProductGrid products={products} />
+              <ProductGrid products={products} status={status} />
               {/* Products grid end */}
             </div>
           </section>
@@ -261,12 +235,20 @@ export default function ProductsList() {
   );
 }
 
-function ProductGrid({ products }) {
+function ProductGrid({ products, status }) {
   return (
     <div className="lg:col-span-3">
       <div className="bg-white">
         <div className="mx-auto max-w-2xl px-4 py-0 sm:px-6 sm:py-0 lg:max-w-7xl lg:px-8">
           <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:gap-x-8">
+            {status === "loading" ? (
+              <InfinitySpin
+                visible={true}
+                width="200"
+                color="rgb(79, 70, 229)"
+                ariaLabel="infinity-spin-loading"
+              />
+            ) : null}
             {products.length > 0 && products
               ? products.map((product) => (
                   <div
@@ -304,6 +286,9 @@ function ProductGrid({ products }) {
                             </p>
                           </div>
                         </div>
+                        {product.stock <= 0 && (
+                          <p className="text-sm text-red-400">out of stock</p>
+                        )}
                       </Link>
                     </div>
                   </div>

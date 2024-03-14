@@ -116,5 +116,6 @@ export const { hideDialog } = counterSlice.actions;
 
 export const selectItems = (state) => state.cart.items;
 export const selectShowDialog = (state) => state.cart.showDialog;
+export const selectCartStatus = (state) => state.cart.status;
 
 export default counterSlice.reducer;
