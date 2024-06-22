@@ -1,9 +1,9 @@
+import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, Navigate, useParams } from "react-router-dom";
 import { selectLoggedInUser } from "../features/auth/AuthSlice";
-import { resetCurrentOrder, selectOrder } from "../features/order/OrderSlice";
 import { resetCartAsync } from "../features/cart/CartSlice";
-import { useEffect } from "react";
+import { resetCurrentOrder, selectOrder } from "../features/order/OrderSlice";
 
 export default function OrderSuccessPage() {
   const currentOrder = useSelector(selectOrder);
@@ -36,9 +36,9 @@ export default function OrderSuccessPage() {
               Go back home
             </Link>
             {/* todo: add contact support */}
-            <a href="#" className="text-sm font-semibold text-gray-900">
+            <Link to="#" className="text-sm font-semibold text-gray-900">
               Contact support <span aria-hidden="true">&rarr;</span>
-            </a>
+            </Link>
           </div>
         </div>
       </main>

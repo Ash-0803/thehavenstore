@@ -515,9 +515,9 @@ function MobileFilter({
                 <ul role="list" className="px-2 py-3 font-medium text-gray-900">
                   {subCategories.map((category) => (
                     <li key={category.name}>
-                      <a href={category.href} className="block px-2 py-3">
+                      <Link to={category.href} className="block px-2 py-3">
                         {category.name}
-                      </a>
+                      </Link>
                     </li>
                   ))}
                 </ul>
@@ -600,7 +600,7 @@ function DesktopFilter({ filters, handleFilter, subCategories }) {
       >
         {subCategories.map((category) => (
           <li key={category.name}>
-            <a href={category.href}>{category.name}</a>
+            <Link to={category.href}>{category.name}</Link>
           </li>
         ))}
       </ul>

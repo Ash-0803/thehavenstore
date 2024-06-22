@@ -34,6 +34,9 @@ export default function Cart({ page, values = null }) {
     0
   );
   const totalItems = items.reduce((total, item) => item.quantity + total, 0);
+  // const handleQuantity = (e, item) => {
+  //   dispatch(updateCartAsync({ ...item, quantity: +e.target.value }));
+  // };
 
   const handleOrder = () => {
     const order = {
@@ -159,7 +162,7 @@ function CartItem({ item }) {
         <div>
           <div className="flex justify-between text-base font-medium text-gray-900">
             <h3>
-              <a href={item.href}>{item.title}</a>
+              <Link to={item.href}>{item.title}</Link>
             </h3>
             <p className="ml-4">${discountedPrice(item)}</p>
           </div>

@@ -3,8 +3,8 @@ import { StarIcon } from "@heroicons/react/20/solid";
 import { Fragment, useEffect, useRef, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate, useParams } from "react-router-dom";
-import { selectLoggedInUser } from "../auth/AuthSlice";
 import { discountedPrice } from "../../app/constants";
+import { selectLoggedInUser } from "../auth/AuthSlice";
 import {
   addToCartAsync,
   hideDialog,
@@ -90,12 +90,12 @@ export default function AdminProductDetail() {
                 product.breadcrumbs.map((breadcrumb) => (
                   <li key={breadcrumb.id}>
                     <div className="flex items-center">
-                      <a
+                      <Link
                         href={breadcrumb.href}
                         className="mr-2 text-sm font-medium text-gray-900"
                       >
                         {breadcrumb.name}
-                      </a>
+                      </Link>
                       <svg
                         width={16}
                         height={20}
@@ -110,13 +110,13 @@ export default function AdminProductDetail() {
                   </li>
                 ))}
               <li className="text-sm">
-                <a
+                <Link
                   href={product.href}
                   aria-current="page"
                   className="font-medium text-gray-500 hover:text-gray-600"
                 >
                   {product.title}
-                </a>
+                </Link>
               </li>
             </ol>
           </nav>
@@ -242,12 +242,12 @@ export default function AdminProductDetail() {
                 <div className="mt-10">
                   <div className="flex items-center justify-between">
                     <h3 className="text-sm font-medium text-gray-900">Size</h3>
-                    <a
+                    <Link
                       href="#"
                       className="text-sm font-medium text-indigo-600 hover:text-indigo-500"
                     >
                       Size guide
-                    </a>
+                    </Link>
                   </div>
 
                   <RadioGroup

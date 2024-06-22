@@ -5,7 +5,7 @@ import { updateUser } from "../User/UserApi";
 const initialState = {
   value: 0,
   status: "idle",
-  loggedInUser: null,
+  loggedInUser: null, // this should only contain user identity => 'id'/'role'
   error: "",
 };
 

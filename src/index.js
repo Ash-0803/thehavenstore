@@ -110,7 +110,14 @@ const router = createBrowserRouter(
             </Protected>
           }
         />
-        <Route path="/order-success/:id" element={<OrderSuccessPage />} />
+        <Route
+          path="/order-success/:id"
+          element={
+            <Protected>
+              <OrderSuccessPage />
+            </Protected>
+          }
+        />
       </Route>
       <Route path="/signup" element={<SignupPage />} />
       <Route path="/login" element={<LoginPage />} />

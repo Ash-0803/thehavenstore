@@ -48,7 +48,7 @@ export default function ProductsList() {
         })
       : setFilter((current) => {
           const copy = { ...current };
-          delete copy[section.id][option.id];
+          if (copy[section.id]) delete copy[section.id][option.id];
           copy._page = 1;
           return copy;
         });
@@ -73,7 +73,6 @@ export default function ProductsList() {
   useEffect(() => {
     dispatch(fetchBrandsAsync());
     dispatch(fetchCategoriesAsync());
-    dispatch(fetchAllProductsAsync());
   }, [dispatch]);
 
   const sortOptions = [
@@ -139,7 +138,7 @@ export default function ProductsList() {
         <main className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex items-baseline justify-between border-b border-gray-200 pb-6 pt-6">
             <h1 className="text-4xl font-bold tracking-tight text-gray-900">
-              New Arrivals
+              <span className="text-coral-red">New</span> Arrivals
             </h1>
 
             <div className="flex items-center">
@@ -220,7 +219,11 @@ export default function ProductsList() {
               />
 
               {/* Product grid */}
-              <ProductGrid products={products} status={status} />
+              <ProductGrid
+                products={products}
+                status={status}
+                totalItems={totalItems}
+              />
               {/* Products grid end */}
             </div>
           </section>
@@ -235,7 +238,7 @@ export default function ProductsList() {
   );
 }
 
-function ProductGrid({ products, status }) {
+function ProductGrid({ products, status, totalItems }) {
   return (
     <div className="lg:col-span-3">
       <div className="bg-white">
@@ -249,58 +252,62 @@ function ProductGrid({ products, status }) {
                 ariaLabel="infinity-spin-loading"
               />
             ) : null}
-            {products.length > 0 && products
+            {products.length > 0 && products && !totalItems
               ? products.map((product) => (
-                  <div
-                    key={product.id}
-                    className="card rounded-lg p-4 group relative bordering"
-                  >
-                    <div className=" ">
-                      <Link to={`/product/${product.id}`}>
-                        <div className=" aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none  lg:h-60">
-                          <img
-                            src={product.thumbnail}
-                            alt={product.title}
-                            className="h-full w-full object-cover object-center lg:h-full lg:w-full"
-                          />
-                        </div>
-                        <div className="mt-4 flex justify-between">
-                          <div>
-                            <h3 className="text-sm text-gray-700">
-                              <span aria-hidden="true" className="absolute" />
-                              {product.title}
-                            </h3>
-                            <p className="mt-1 text-sm text-gray-500">
-                              <StarIcon className="w-5 h-5 inline" />
-                              <span className="align-bottom pl-2">
-                                {product.rating}
-                              </span>
-                            </p>
-                          </div>
-                          <div>
-                            <p className="text-sm font-medium text-gray-900">
-                              ${discountedPrice(product)}
-                            </p>
-                            <p className="text-sm font-medium text-gray-400 line-through">
-                              ${product.price}
-                            </p>
-                          </div>
-                        </div>
-                        {product.stock <= 0 && (
-                          <p className="text-sm text-red-400">out of stock</p>
-                        )}
-                      </Link>
-                    </div>
-                  </div>
+                  <ProductCard key={product.id} product={product} />
                 ))
-              : "Loading"}
+              : "No Product found."}
           </div>
         </div>
       </div>
     </div>
   );
 }
-
+export function ProductCard({ product }) {
+  return (
+    <div
+      key={product.id}
+      className="card rounded-lg p-4 group relative bordering bg-coral-light"
+    >
+      <div className=" ">
+        <Link to={`/product/${product.id}`}>
+          <div className=" aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none  lg:h-60">
+            <img
+              src={product.thumbnail}
+              alt={product.title}
+              className="h-full w-full object-cover object-center lg:h-full lg:w-full"
+            />
+          </div>
+          <div className="mt-4 flex justify-between">
+            <div>
+              <h3 className="text-sm text-white">
+                <span aria-hidden="true" className="absolute" />
+                {product.title}
+              </h3>
+              <p className="mt-1 text-sm text-white-400">
+                <StarIcon className="w-5 h-5 inline" />
+                <span className="align-bottom pl-2">{product.rating}</span>
+              </p>
+            </div>
+            <div>
+              <p className="text-sm font-medium text-white">
+                ${discountedPrice(product)}
+              </p>
+              <p className="text-sm font-medium text-white-400 line-through">
+                ${product.price}
+              </p>
+            </div>
+          </div>
+          {product.stock <= 0 && (
+            <p className="text-sm text-center text-white-400 bg-gray-700 mt-2 py-1 rounded-md">
+              out of stock
+            </p>
+          )}
+        </Link>
+      </div>
+    </div>
+  );
+}
 function MobileFilter({
   filters,
   handleFilter,
@@ -356,9 +363,9 @@ function MobileFilter({
                 <ul role="list" className="px-2 py-3 font-medium text-gray-900">
                   {subCategories.map((category) => (
                     <li key={category.name}>
-                      <a href={category.href} className="block px-2 py-3">
+                      <Link to={category.href} className="block px-2 py-3">
                         {category.name}
-                      </a>
+                      </Link>
                     </li>
                   ))}
                 </ul>
@@ -441,7 +448,7 @@ function DesktopFilter({ filters, handleFilter, subCategories }) {
       >
         {subCategories.map((category) => (
           <li key={category.name}>
-            <a href={category.href}>{category.name}</a>
+            <Link to={category.href}>{category.name}</Link>
           </li>
         ))}
       </ul>

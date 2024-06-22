@@ -15,9 +15,10 @@ export function fetchAllProductsByFilters(filter) {
         for (const multiple in filter[key]) {
           queryString += `${key}=${filter[key][multiple]}&`;
         }
-      } else if (typeof filter[key] == "string") {
-        queryString += `${key}=${filter[key]}&`;
-      } else if (typeof filter[key] == "number") {
+      } else if (
+        typeof filter[key] == "string" ||
+        typeof filter[key] == "number"
+      ) {
         queryString += `${key}=${filter[key]}&`;
       }
   }
@@ -28,7 +29,6 @@ export function fetchAllProductsByFilters(filter) {
     const response = await fetch(url);
     const data = await response.json();
     const totalItems = await response.headers.get("X-Total-Count");
-
     resolve({ data: { products: data, totalItems: totalItems } });
   });
 }

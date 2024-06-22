@@ -92,7 +92,7 @@ function CartItem({ item }) {
         <div>
           <div className="flex justify-between text-base font-medium text-gray-900">
             <h3>
-              <a href={item.href}>{item.title}</a>
+              <Link to={item.href}>{item.title}</Link>
             </h3>
             <p className="ml-4">${discountedPrice(item)}</p>
           </div>

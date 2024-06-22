@@ -37,41 +37,46 @@ export default function Navbar({ children }) {
   return (
     <>
       <div className="min-h-full">
-        <Disclosure as="nav" className="bg-gray-800">
+        <Disclosure as="nav" className="">
           {({ open }) => (
             <>
               <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                 <div className="flex h-16 items-center justify-between">
-                  <div className="flex items-center">
-                    <div className="flex-shrink-0">
-                      <img
-                        className="h-8 w-8"
-                        src="/thehaven-circle.png"
-                        alt="Your Company"
-                      />
-                    </div>
-                    <div className="hidden md:block">
-                      <div className="ml-10 flex items-baseline space-x-4">
-                        {navigation.map((item) =>
-                          item[user.role] ? (
-                            <Link
-                              key={item.name}
-                              to={item.href}
-                              className={classNames(
-                                item.current
-                                  ? "bg-gray-900 text-white"
-                                  : "text-gray-300 hover:bg-gray-700 hover:text-white",
-                                "rounded-md px-3 py-2 text-sm font-medium"
-                              )}
-                              aria-current={item.current ? "page" : undefined}
-                            >
-                              {item.name}
-                            </Link>
-                          ) : null
-                        )}
-                      </div>
+                  <Link
+                    to="/"
+                    className="flex-shrink-0 flex flex-row items-center "
+                  >
+                    <img
+                      className="m-0 h-[29px]"
+                      src="/logo-trans.png"
+                      alt="Your Company"
+                    />
+                    <span className=" font-poiret text-2xl pl-2 font-bold">
+                      TheHavenStore
+                    </span>
+                  </Link>
+                  <div className="hidden md:block">
+                    <div className="ml-10 flex items-baseline space-x-4">
+                      {navigation.map((item) =>
+                        item[user.role] ? (
+                          <Link
+                            key={item.name}
+                            to={item.href}
+                            className={classNames(
+                              item.current
+                                ? "bg-gray-900 text-white"
+                                : " text-slate-gray card-small",
+                              "rounded-md px-5 text-xl leading-loose font-normal"
+                            )}
+                            aria-current={item.current ? "page" : undefined}
+                          >
+                            {item.name}
+                          </Link>
+                        ) : null
+                      )}
                     </div>
                   </div>
+
                   <div className="hidden md:block">
                     <div className="ml-4 flex items-center md:ml-6">
                       <Link
@@ -228,9 +233,9 @@ export default function Navbar({ children }) {
         </Disclosure>
 
         <main>
-          <div className="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">
-            {children}
-          </div>
+          {/* <div className="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8"/> */}
+
+          {children}
         </main>
       </div>
     </>

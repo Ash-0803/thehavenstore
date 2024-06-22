@@ -1,49 +1,74 @@
-function Footer() {
+import { Link } from "react-router-dom";
+import { footerLinks, socialMedia } from "../../app/constants";
+import { copyrightSign } from "../../assets/icons";
+import { footerLogo } from "../../assets/images";
+
+const Footer = () => {
   return (
-    <>
-      <div className=" bg-gray-900">
-        <div className="max-w-2xl mx-auto text-white py-10">
-          <div className="text-center">
-            <h3 className="text-3xl mb-3"> Download our Ecommerce App </h3>
-            <p> Buy what you want. </p>
-            <div className="flex justify-center my-10">
-              <div className="flex items-center border w-auto rounded-lg px-4 py-2 mx-2">
-                <img
-                  src="https://cdn-icons-png.flaticon.com/512/888/888857.png"
-                  className="w-7 md:w-8"
-                />
-                <div className="text-left ml-3">
-                  <p className="text-xs text-gray-200">Download on </p>
-                  <p className="text-sm md:text-base"> Google Play Store </p>
-                </div>
+    <footer className="max-container">
+      <div className="flex justify-between items-start gap-20 flex-wrap max-lg:flex-col">
+        <div className="flex flex-col items-start">
+          <Link to="/">
+            <img
+              src={footerLogo}
+              alt="logo"
+              width={150}
+              height={46}
+              className="m-0"
+            />
+          </Link>
+          <p className="mt-6 text-base leading-7 font-montserrat text-white-400 sm:max-w-sm">
+            Get shoes ready for the new term at your nearest Nike store. Find
+            Your perfect Size In Store. Get Rewards
+          </p>
+          <div className="flex items-center gap-5 mt-8">
+            {socialMedia.map((icon) => (
+              <div
+                className="flex justify-center items-center w-12 h-12 bg-white rounded-full"
+                key={icon.alt}
+              >
+                <img src={icon.src} alt={icon.alt} width={24} height={24} />
               </div>
-              <div className="flex items-center border w-auto rounded-lg px-4 py-2  mx-2">
-                <img
-                  src="https://cdn-icons-png.flaticon.com/512/888/888841.png"
-                  className="w-7 md:w-8"
-                />
-                <div className="text-left ml-3">
-                  <p className="text-xs text-gray-200">Download on </p>
-                  <p className="text-sm md:text-base"> Apple Store </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="mt-28 flex flex-col md:flex-row md:justify-between items-center text-sm text-gray-400">
-            <p className="order-2 md:order-1 mt-8 md:mt-0">
-              {" "}
-              © CoderDost, 2023.{" "}
-            </p>
-            <div className="order-1 md:order-2">
-              <span className="px-2">About us</span>
-              <span className="px-2 border-l">Contact us</span>
-              <span className="px-2 border-l">Privacy Policy</span>
-            </div>
+            ))}
           </div>
         </div>
+
+        <div className="flex flex-1 justify-between lg:gap-10 gap-20 flex-wrap">
+          {footerLinks.map((section) => (
+            <div key={section.title}>
+              <h4 className="font-montserrat text-2xl leading-normal font-medium mb-6 text-white">
+                {section.title}
+              </h4>
+              <ul>
+                {section.links.map((link) => (
+                  <li
+                    className="mt-3 font-montserrat text-base leading-normal text-white-400 hover:text-slate-gray"
+                    key={link.name}
+                  >
+                    <Link to={link.link}>{link.name}</Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
       </div>
-    </>
+
+      <div className="flex justify-between text-white-400 mt-24 max-sm:flex-col max-sm:items-center">
+        <div className="flex flex-1 justify-start items-center gap-2 font-montserrat cursor-pointer">
+          <img
+            src={copyrightSign}
+            alt="copyright sign"
+            width={20}
+            height={20}
+            className="rounded-full m-0"
+          />
+          <p>Copyright. All rights reserved.</p>
+        </div>
+        <p className="font-montserrat cursor-pointer">Terms & Conditions</p>
+      </div>
+    </footer>
   );
-}
+};
 
 export default Footer;
