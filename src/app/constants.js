@@ -1,83 +1,16 @@
-import {
-  facebook,
-  instagram,
-  shieldTick,
-  support,
-  truckFast,
-  twitter,
-} from "../assets/icons";
-import {
-  bigShoe1,
-  bigShoe2,
-  bigShoe3,
-  tshirtYellow,
-  tshirtBlack,
-  tshirtWhite,
-  customer1,
-  customer2,
-  shoe4,
-  shoe5,
-  shoe6,
-  shoe7,
-  thumbnailShoe1,
-  thumbnailShoe2,
-  thumbnailShoe3,
-} from "../assets/images";
+import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { shieldTick, support, truckFast } from "../assets/icons";
+import { customer1, customer2 } from "../assets/images";
 
 export const ITEMS_PER_PAGE = 9;
 export function discountedPrice(item) {
   return Math.round(item.price * (1 - item.discountPercentage / 100), 2);
 }
 
-export const navLinks = [
-  { href: "#home", label: "Home" },
-  { href: "#about-us", label: "About Us" },
-  { href: "#products", label: "Products" },
-  { href: "#contact-us", label: "Contact Us" },
-];
-
-export const shoes = [
-  {
-    thumbnail: tshirtBlack,
-    bigShoe: tshirtBlack,
-  },
-  {
-    thumbnail: tshirtYellow,
-    bigShoe: tshirtYellow,
-  },
-  {
-    thumbnail: tshirtWhite,
-    bigShoe: tshirtWhite,
-  },
-];
-
 export const statistics = [
   { value: "1k+", label: "Brands" },
   { value: "500+", label: "Shops" },
   { value: "250k+", label: "Customers" },
-];
-
-export const products = [
-  {
-    imgURL: shoe4,
-    name: "Nike Air Jordan-01",
-    price: "$200.20",
-  },
-  {
-    imgURL: shoe5,
-    name: "Nike Air Jordan-10",
-    price: "$210.20",
-  },
-  {
-    imgURL: shoe6,
-    name: "Nike Air Jordan-100",
-    price: "$220.20",
-  },
-  {
-    imgURL: shoe7,
-    name: "Nike Air Jordan-001",
-    price: "$230.20",
-  },
 ];
 
 export const services = [
@@ -120,35 +53,41 @@ export const footerLinks = [
   {
     title: "Products",
     links: [
-      { name: "Air Force 1", link: "/" },
-      { name: "Air Max 1", link: "/" },
-      { name: "Air Jordan 1", link: "/" },
-      { name: "Air Force 2", link: "/" },
-      { name: "Nike Waffle Racer", link: "/" },
-      { name: "Nike Cortez", link: "/" },
-    ],
-  },
-  {
-    title: "Help",
-    links: [
-      { name: "About us", link: "/" },
-      { name: "FAQs", link: "/" },
-      { name: "How it works", link: "/" },
-      { name: "Privacy policy", link: "/" },
-      { name: "Payment policy", link: "/" },
+      {
+        name: "TailwindCSS",
+        link: "https://tailwindcss.com/docs/installation",
+      },
+      { name: "TailwindComponents", link: "https://tailwindui.com/" },
+      { name: "Github Copilot", link: "https://github.com/features/copilot" },
+      {
+        name: "Design inspiration",
+        link: "https://github.com/PranabKumarSahoo/nike-landing-page-react",
+      },
     ],
   },
   {
     title: "Get in touch",
     links: [
-      { name: "customer@nike.com", link: "mailto:customer@nike.com" },
-      { name: "+92554862354", link: "tel:+92554862354" },
+      { name: "ashish080303@gmail.com", link: "mailto:ashish080303@gmail.com" },
+      { name: "+91 7505009701", link: "tel:+917505009701" },
     ],
   },
 ];
 
 export const socialMedia = [
-  { src: facebook, alt: "facebook logo" },
-  { src: twitter, alt: "twitter logo" },
-  { src: instagram, alt: "instagram logo" },
+  {
+    src: <FaGithub />,
+    alt: "Github logo",
+    link: "https://github.com/Ash-0803",
+  },
+  {
+    src: <FaTwitter />,
+    alt: "twitter logo",
+    link: "https://twitter.com/ashx083",
+  },
+  {
+    src: <FaLinkedin />,
+    alt: "Linkedin logo",
+    link: "https://www.linkedin.com/in/ashx083",
+  },
 ];

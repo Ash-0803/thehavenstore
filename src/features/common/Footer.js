@@ -1,7 +1,6 @@
+import { FaCopyright } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { footerLinks, socialMedia } from "../../app/constants";
-import { copyrightSign } from "../../assets/icons";
-import { footerLogo } from "../../assets/images";
 
 const Footer = () => {
   return (
@@ -10,11 +9,11 @@ const Footer = () => {
         <div className="flex flex-col items-start">
           <Link to="/">
             <img
-              src={footerLogo}
+              src="/logo-trans.png"
               alt="logo"
               width={150}
               height={46}
-              className="m-0"
+              className="m-0 grayscale "
             />
           </Link>
           <p className="mt-6 text-base leading-7 font-montserrat text-white-400 sm:max-w-sm">
@@ -23,17 +22,19 @@ const Footer = () => {
           </p>
           <div className="flex items-center gap-5 mt-8">
             {socialMedia.map((icon) => (
-              <div
-                className="flex justify-center items-center w-12 h-12 bg-white rounded-full"
+              <Link
+                to={icon.link}
+                target="_blank"
+                className="flex justify-center items-center w-12 h-12 bg-white rounded-full text-2xl"
                 key={icon.alt}
               >
-                <img src={icon.src} alt={icon.alt} width={24} height={24} />
-              </div>
+                {icon.src}
+              </Link>
             ))}
           </div>
         </div>
 
-        <div className="flex flex-1 justify-between lg:gap-10 gap-20 flex-wrap">
+        <div className="flex flex-1 justify-around  lg:gap-10 gap-20 flex-wrap">
           {footerLinks.map((section) => (
             <div key={section.title}>
               <h4 className="font-montserrat text-2xl leading-normal font-medium mb-6 text-white">
@@ -56,13 +57,8 @@ const Footer = () => {
 
       <div className="flex justify-between text-white-400 mt-24 max-sm:flex-col max-sm:items-center">
         <div className="flex flex-1 justify-start items-center gap-2 font-montserrat cursor-pointer">
-          <img
-            src={copyrightSign}
-            alt="copyright sign"
-            width={20}
-            height={20}
-            className="rounded-full m-0"
-          />
+          <FaCopyright className="text-xl" />
+
           <p>Copyright. All rights reserved.</p>
         </div>
         <p className="font-montserrat cursor-pointer">Terms & Conditions</p>
