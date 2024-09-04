@@ -1,6 +1,8 @@
+import { BACKEND_URL } from "../../app/constants";
+
 export function createUser(userData) {
   return new Promise(async (resolve) => {
-    const response = await fetch("http://localhost:8080/users", {
+    const response = await fetch(`${BACKEND_URL}/auth/signup`, {
       method: "POST",
       body: JSON.stringify(userData),
       headers: { "content-type": "application/json" },
@@ -21,7 +23,7 @@ export function checkUser(loginInfo) {
   return new Promise(async (resolve, reject) => {
     const email = loginInfo.email;
     const password = loginInfo.password;
-    const response = await fetch("http://localhost:8080/users?email=" + email);
+    const response = await fetch(`${BACKEND_URL}/users?email=` + email);
     const data = await response.json();
     if (data.length) {
       if (password === data[0].password) {

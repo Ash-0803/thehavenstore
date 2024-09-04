@@ -2,6 +2,7 @@ import { Disclosure, Menu, Transition } from "@headlessui/react";
 import {
   Bars3Icon,
   ShoppingCartIcon,
+  UserCircleIcon,
   XMarkIcon,
 } from "@heroicons/react/24/outline";
 import { Fragment } from "react";
@@ -11,17 +12,12 @@ import { selectLoggedInUser } from "../auth/AuthSlice";
 import { selectItems } from "../cart/CartSlice";
 
 const navigation = [
-  { name: "Home", href: "/", user: true },
-  { name: "Team", href: "#", user: true },
-  { name: "Admin", href: "/admin", admin: true },
-  { name: "Orders", href: "/admin/orders", admin: true },
+  { name: "HOME", href: "/", user: true },
+  { name: "TEAM", href: "#", user: true },
+  { name: "ADMIN", href: "/admin", admin: true },
+  { name: "ORDERS", href: "/admin/orders", admin: true },
 ];
-const userNavigation = [
-  { name: "Your Profile", href: "/profile" },
-  { name: "My Orders", href: "/orders" },
-  { name: "Login", href: "/login" },
-  { name: "Sign Out", href: "/logout" },
-];
+var userNavigation = [];
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
@@ -30,43 +26,75 @@ function classNames(...classes) {
 export default function Navbar({ children }) {
   const cartItems = useSelector(selectItems);
   var user = useSelector(selectLoggedInUser); // FIXME: this user should be const rather than a variable
+  console.log(user);
   if (user == null) {
     user = {};
     user.role = "user";
+    userNavigation = [
+      { name: "Your Profile", href: "/profile" },
+      { name: "My Orders", href: "/orders" },
+      { name: "Login", href: "/login" },
+    ];
   } // FIXME: this is a temporary method to solve the new user's navigation problem.
+  else {
+    userNavigation = [
+      { name: "Your Profile", href: "/profile" },
+      { name: "My Orders", href: "/orders" },
+      { name: "Sign Out", href: "/logout" },
+    ];
+  }
+  console.log(userNavigation);
   return (
     <>
-      <div className="min-h-full">
+      <div className="min-h-full bg-pale-blue border-black border-b bordering sticky top-0 z-50">
         <Disclosure as="nav" className="">
           {({ open }) => (
             <>
-              <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+              <div className="min-w-full  px-4 sm:px-6 lg:px-8">
                 <div className="flex h-16 items-center justify-between">
                   <Link
                     to="/"
                     className="flex-shrink-0 flex flex-row items-center "
                   >
                     <img
-                      className="m-0 h-[29px]"
+                      className="m-0 h-[29px] grayscale"
                       src="/logo-trans.png"
                       alt="Your Company"
                     />
-                    <span className=" font-poiret text-2xl pl-2 font-bold">
-                      TheHavenStore
+                    <span className=" font-poiret text-3xl pl-2 font-bold hover:text-gray-900 transition-all ease-in-out">
+                      The
+                      <span className="text-coral-red hover:text-inherit">
+                        Haven
+                      </span>
+                      Store
                     </span>
                   </Link>
                   <div className="hidden md:block">
                     <div className="ml-10 flex items-baseline space-x-4">
                       {navigation.map((item) =>
-                        item[user.role] ? (
+                        user.role == "admin" ? (
                           <Link
                             key={item.name}
                             to={item.href}
                             className={classNames(
                               item.current
-                                ? "bg-gray-900 text-white"
-                                : " text-slate-gray card-small",
-                              "rounded-md px-5 text-xl leading-loose font-normal"
+                                ? "bg-gray-900 text-white hover:shadow-white"
+                                : " text-gray-800 card-small",
+                              "rounded-md px-5 leading-loose text-xl tracking-wide font-normal "
+                            )}
+                            aria-current={item.current ? "page" : undefined}
+                          >
+                            {item.name}
+                          </Link>
+                        ) : item.user ? (
+                          <Link
+                            key={item.name}
+                            to={item.href}
+                            className={classNames(
+                              item.current
+                                ? "bg-gray-900 text-white hover:shadow-white"
+                                : " text-gray-800 card-small",
+                              "rounded-md px-5 leading-loose text-xl tracking-wide font-normal "
                             )}
                             aria-current={item.current ? "page" : undefined}
                           >
@@ -81,7 +109,7 @@ export default function Navbar({ children }) {
                     <div className="ml-4 flex items-center md:ml-6">
                       <Link
                         to="cart"
-                        className="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+                        className="relative rounded-full  p-1 text-gray-900 hover:text-coral-red focus:bg-coral-red focus:text-white"
                       >
                         <span className="absolute -inset-1.5" />
                         <ShoppingCartIcon
@@ -91,7 +119,7 @@ export default function Navbar({ children }) {
                       </Link>
                       {/* ITEMS IN CART */}
 
-                      <span className="relative items-center rounded-full bg-gray-50 px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10 mb-7 -ml-3">
+                      <span className="relative items-center bg-white rounded-full px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-inset ring-coral-light mb-7 -ml-3">
                         {cartItems.length}
                       </span>
 
@@ -101,11 +129,15 @@ export default function Navbar({ children }) {
                           <Menu.Button className="relative flex max-w-xs items-center rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
                             <span className="absolute -inset-1.5" />
                             <span className="sr-only">Open user menu</span>
-                            <img
-                              className="h-8 w-8 rounded-full"
-                              src={user && user.imageUrl}
-                              alt=""
-                            />
+                            {user && user.imageUrl ? (
+                              <img
+                                className="h-8 w-8 rounded-full"
+                                src={user.imageUrl}
+                                alt=""
+                              />
+                            ) : (
+                              <UserCircleIcon className="text-white text-xl p-5" />
+                            )}
                           </Menu.Button>
                         </div>
                         <Transition
@@ -119,22 +151,21 @@ export default function Navbar({ children }) {
                         >
                           <Menu.Items className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
                             {userNavigation.map((item) => {
-                              if (item.href !== "/login" || !user)
-                                return (
-                                  <Menu.Item key={item.name}>
-                                    {({ active }) => (
-                                      <Link
-                                        to={item.href}
-                                        className={classNames(
-                                          active ? "bg-gray-100" : "",
-                                          "block px-4 py-2 text-sm text-gray-700"
-                                        )}
-                                      >
-                                        {item.name}
-                                      </Link>
-                                    )}
-                                  </Menu.Item>
-                                );
+                              return (
+                                <Menu.Item key={item.name}>
+                                  {({ active }) => (
+                                    <Link
+                                      to={item.href}
+                                      className={classNames(
+                                        active ? "bg-gray-100" : "",
+                                        "block px-4 py-2 text-sm text-gray-700"
+                                      )}
+                                    >
+                                      {item.name}
+                                    </Link>
+                                  )}
+                                </Menu.Item>
+                              );
                             })}
                           </Menu.Items>
                         </Transition>
@@ -213,17 +244,16 @@ export default function Navbar({ children }) {
                   </div>
                   <div className="mt-3 space-y-1 px-2">
                     {userNavigation.map((item) => {
-                      if (item.href !== "/login" || !user)
-                        return (
-                          <Disclosure.Button
-                            key={item.name}
-                            as="a"
-                            href={item.href}
-                            className="block rounded-md px-3 py-2 text-base font-medium text-gray-400 hover:bg-gray-700 hover:text-white"
-                          >
-                            {item.name}
-                          </Disclosure.Button>
-                        );
+                      return (
+                        <Disclosure.Button
+                          key={item.name}
+                          as="a"
+                          href={item.href}
+                          className="block rounded-md px-3 py-2 text-base font-medium text-gray-400 hover:bg-gray-700 hover:text-white"
+                        >
+                          {item.name}
+                        </Disclosure.Button>
+                      );
                     })}
                   </div>
                 </div>

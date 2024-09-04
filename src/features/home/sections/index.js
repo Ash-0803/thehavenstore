@@ -11,7 +11,6 @@ import {
 } from "../extra slices/PopularProductsSlice";
 import { ProductCard } from "../../product/ProductsList";
 import { reviews, services } from "../../../app/constants";
-import { ArrowRightCircleIcon } from "@heroicons/react/20/solid";
 
 const CustomerReviews = () => {
   return (

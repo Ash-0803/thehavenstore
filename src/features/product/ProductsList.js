@@ -16,7 +16,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { ITEMS_PER_PAGE, discountedPrice } from "../../app/constants";
 import Pagination from "../common/Pagination";
 import {
-  fetchAllProductsAsync,
   fetchAllProductsByFiltersAsync,
   fetchBrandsAsync,
   fetchCategoriesAsync,
@@ -136,7 +135,7 @@ export default function ProductsList() {
         />
 
         <main className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="flex items-baseline justify-between border-b border-gray-200 pb-6 pt-6">
+          <div className="flex items-baseline justify-between border-b border-gray-400 py-6">
             <h1 className="text-4xl font-bold tracking-tight text-gray-900">
               <span className="text-coral-red">New</span> Arrivals
             </h1>
@@ -147,7 +146,7 @@ export default function ProductsList() {
                   <Menu.Button className="group inline-flex justify-center text-sm font-medium text-gray-700 hover:text-gray-900">
                     Sort
                     <ChevronDownIcon
-                      className="-mr-1 ml-1 h-5 w-5 flex-shrink-0 text-gray-400 group-hover:text-gray-500"
+                      className="-mr-1 ml-1 h-5 w-5 flex-shrink-0 text-gray-400 group-hover:text-coral-light"
                       aria-hidden="true"
                     />
                   </Menu.Button>
@@ -189,7 +188,7 @@ export default function ProductsList() {
 
               <button
                 type="button"
-                className="-m-2 ml-5 p-2 text-gray-400 hover:text-gray-500 sm:ml-7"
+                className="-m-2 ml-5 p-2 text-gray-400 hover:text-coral-light sm:ml-7"
               >
                 <span className="sr-only">View grid</span>
                 <Squares2X2Icon className="h-5 w-5" aria-hidden="true" />
@@ -252,7 +251,7 @@ function ProductGrid({ products, status, totalItems }) {
                 ariaLabel="infinity-spin-loading"
               />
             ) : null}
-            {products.length > 0 && products && !totalItems
+            {products.length > 0 && products
               ? products.map((product) => (
                   <ProductCard key={product.id} product={product} />
                 ))
@@ -267,7 +266,7 @@ export function ProductCard({ product }) {
   return (
     <div
       key={product.id}
-      className="card rounded-lg p-4 group relative bordering bg-coral-light"
+      className="card rounded-lg p-4 group relative border-gray-400 border-2 bg-pale-blue"
     >
       <div className=" ">
         <Link to={`/product/${product.id}`}>
@@ -280,20 +279,20 @@ export function ProductCard({ product }) {
           </div>
           <div className="mt-4 flex justify-between">
             <div>
-              <h3 className="text-sm text-white">
+              <h3 className="text-sm text-gray-900">
                 <span aria-hidden="true" className="absolute" />
                 {product.title}
               </h3>
-              <p className="mt-1 text-sm text-white-400">
+              <p className="mt-1 text-sm text-gray-700">
                 <StarIcon className="w-5 h-5 inline" />
                 <span className="align-bottom pl-2">{product.rating}</span>
               </p>
             </div>
             <div>
-              <p className="text-sm font-medium text-white">
+              <p className="text-sm font-medium text-gray-900">
                 ${discountedPrice(product)}
               </p>
-              <p className="text-sm font-medium text-white-400 line-through">
+              <p className="text-sm font-medium text-gray-400 line-through">
                 ${product.price}
               </p>
             </div>

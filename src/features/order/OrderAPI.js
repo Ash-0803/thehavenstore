@@ -1,6 +1,8 @@
+import { BACKEND_URL } from "../../app/constants";
+
 export function createOrder(item) {
   return new Promise(async (resolve) => {
-    const response = await fetch("http://localhost:8080/orders", {
+    const response = await fetch(`${BACKEND_URL}/orders`, {
       method: "POST",
       body: JSON.stringify(item),
       headers: { "content-type": "application/json" },
@@ -12,7 +14,7 @@ export function createOrder(item) {
 }
 export function updateOrder(order) {
   return new Promise(async (resolve) => {
-    const response = await fetch("http://localhost:8080/orders/" + order.id, {
+    const response = await fetch(`${BACKEND_URL}/orders/` + order.id, {
       method: "PATCH",
       body: JSON.stringify(order),
       headers: { "content-type": "application/json" },
@@ -34,7 +36,7 @@ export function fetchAllOrders(sort, pagination) {
 
   return new Promise(async (resolve) => {
     //TODO: we will not hard-code server URL here
-    const response = await fetch("http://localhost:8080/orders?" + queryString);
+    const response = await fetch(`${BACKEND_URL}/orders?` + queryString);
     const data = await response.json();
     const totalOrders = await response.headers.get("X-Total-Count");
     resolve({ data: { orders: data, totalOrders: +totalOrders } });

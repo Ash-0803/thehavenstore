@@ -12,15 +12,12 @@
   transform: translate(-0.5rem, -0.5rem);
   box-shadow: 0.25rem 0.25rem 0rem black;
 }
-.bordering {
-  border: 2px solid black;
-}
 
 .card-small {
   transition: all 150ms ease-in-out;
 }
 .card-small:hover {
-  box-shadow: 0.15rem 0.15rem 0rem black;
+  box-shadow: 0.15rem 0.15rem 0rem theme("colors.slate-gray");
 }
 
 * {

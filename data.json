@@ -1,7 +1,7 @@
 {
   "products": [
     {
-      "id": 1,
+      "id": "1",
       "title": "iPhone 9",
       "description": "An apple mobile which is nothing like apple",
       "price": 549,
@@ -20,7 +20,7 @@
       "deleted": true
     },
     {
-      "id": 2,
+      "id": "2",
       "title": "iPhone X",
       "description": "SIM-Free, Model A19211 6.5-inch Super Retina HD display with OLED technology A12 Bionic chip with ...",
       "price": 899,
@@ -38,7 +38,7 @@
       ]
     },
     {
-      "id": 3,
+      "id": "3",
       "title": "Samsung Universe 9",
       "description": "Samsung's new variant which goes beyond Galaxy to the Universe",
       "price": 1249,
@@ -48,10 +48,12 @@
       "brand": "Samsung",
       "category": "smartphones",
       "thumbnail": "https://cdn.dummyjson.com/product-images/3/thumbnail.jpg",
-      "images": ["https://cdn.dummyjson.com/product-images/3/1.jpg"]
+      "images": [
+        "https://cdn.dummyjson.com/product-images/3/1.jpg"
+      ]
     },
     {
-      "id": 4,
+      "id": "4",
       "title": "OPPOF19",
       "description": "OPPO F19 is officially announced on April 2021.",
       "price": 280,
@@ -70,7 +72,7 @@
       ]
     },
     {
-      "id": 5,
+      "id": "5",
       "title": "Huawei P30",
       "description": "Huawei’s re-badged P30 Pro New Edition was officially unveiled yesterday in Germany and now the device has made its way to the UK.",
       "price": 499,
@@ -87,7 +89,7 @@
       ]
     },
     {
-      "id": 6,
+      "id": "6",
       "title": "MacBook Pro",
       "description": "MacBook Pro 2021 with mini-LED display may launch between September, November",
       "price": 1749,
@@ -105,7 +107,7 @@
       ]
     },
     {
-      "id": 7,
+      "id": "7",
       "title": "Samsung Galaxy Book",
       "description": "Samsung Galaxy Book S (2020) Laptop With Intel Lakefield Chip, 8GB of RAM Launched",
       "price": 1499,
@@ -123,7 +125,7 @@
       ]
     },
     {
-      "id": 8,
+      "id": "8",
       "title": "Microsoft Surface Laptop 4",
       "description": "Style and speed. Stand out on HD video calls backed by Studio Mics. Capture ideas on the vibrant touchscreen.",
       "price": 1499,
@@ -142,7 +144,7 @@
       ]
     },
     {
-      "id": 9,
+      "id": "9",
       "title": "Infinix INBOOK",
       "description": "Infinix Inbook X1 Ci3 10th 8GB 256GB 14 Win10 Grey – 1 Year Warranty",
       "price": 1099,
@@ -161,7 +163,7 @@
       ]
     },
     {
-      "id": 10,
+      "id": "10",
       "title": "HP Pavilion 15-DK1056WM",
       "description": "HP Pavilion 15-DK1056WM Gaming Laptop 10th Gen Core i5, 8GB, 256GB SSD, GTX 1650 4GB, Windows 10",
       "price": 1099,
@@ -179,7 +181,7 @@
       ]
     },
     {
-      "id": 11,
+      "id": "11",
       "title": "perfume Oil",
       "description": "Mega Discount, Impression of Acqua Di Gio by GiorgioArmani concentrated attar perfume Oil",
       "price": 13,
@@ -197,7 +199,7 @@
       ]
     },
     {
-      "id": 12,
+      "id": "12",
       "title": "Brown Perfume",
       "description": "Royal_Mirage Sport Brown Perfume for Men & Women - 120ml",
       "price": 40,
@@ -216,7 +218,7 @@
       ]
     },
     {
-      "id": 13,
+      "id": "13",
       "title": "Fog Scent Xpressio Perfume",
       "description": "Product details of Best Fog Scent Xpressio Perfume 100ml For Men cool long lasting perfumes for Men",
       "price": 13,
@@ -235,7 +237,7 @@
       ]
     },
     {
-      "id": 14,
+      "id": "14",
       "title": "Non-Alcoholic Concentrated Perfume Oil",
       "description": "Original Al Munakh® by Mahal Al Musk | Our Impression of Climate | 6ml Non-Alcoholic Concentrated Perfume Oil",
       "price": 120,
@@ -253,7 +255,7 @@
       ]
     },
     {
-      "id": 15,
+      "id": "15",
       "title": "Eau De Perfume Spray",
       "description": "Genuine Al-Rehab spray perfume from UAE/Saudi Arabia/Yemen High Quality",
       "price": 30,
@@ -272,7 +274,7 @@
       ]
     },
     {
-      "id": 16,
+      "id": "16",
       "title": "Hyaluronic Acid Serum",
       "description": "L'OrÃ©al Paris introduces Hyaluron Expert Replumping Serum formulated with 1.5% Hyaluronic Acid",
       "price": 19,
@@ -291,7 +293,7 @@
       ]
     },
     {
-      "id": 17,
+      "id": "17",
       "title": "Tree Oil 30ml",
       "description": "Tea tree oil contains a number of compounds, including terpinen-4-ol, that have been shown to kill certain bacteria,",
       "price": 12,
@@ -309,7 +311,7 @@
       ]
     },
     {
-      "id": 18,
+      "id": "18",
       "title": "Oil Free Moisturizer 100ml",
       "description": "Dermive Oil Free Moisturizer with SPF 20 is specifically formulated with ceramides, hyaluronic acid & sunscreen.",
       "price": 40,
@@ -328,7 +330,7 @@
       ]
     },
     {
-      "id": 19,
+      "id": "19",
       "title": "Skin Beauty Serum.",
       "description": "Product name: rorec collagen hyaluronic acid white face serum riceNet weight: 15 m",
       "price": 46,
@@ -346,7 +348,7 @@
       ]
     },
     {
-      "id": 20,
+      "id": "20",
       "title": "Freckle Treatment Cream- 15gm",
       "description": "Fair & Clear is Pakistan's only pure Freckle cream which helpsfade Freckles, Darkspots and pigments. Mercury level is 0%, so there are no side effects.",
       "price": 70,
@@ -365,7 +367,7 @@
       ]
     },
     {
-      "id": 21,
+      "id": "21",
       "title": "- Daal Masoor 500 grams",
       "description": "Fine quality Branded Product Keep in a cool and dry place",
       "price": 20,
@@ -382,7 +384,7 @@
       ]
     },
     {
-      "id": 22,
+      "id": "22",
       "title": "Elbow Macaroni - 400 gm",
       "description": "Product details of Bake Parlor Big Elbow Macaroni - 400 gm",
       "price": 14,
@@ -399,7 +401,7 @@
       ]
     },
     {
-      "id": 23,
+      "id": "23",
       "title": "Orange Essence Food Flavou",
       "description": "Specifications of Orange Essence Food Flavour For Cakes and Baking Food Item",
       "price": 14,
@@ -418,7 +420,7 @@
       ]
     },
     {
-      "id": 24,
+      "id": "24",
       "title": "cereals muesli fruit nuts",
       "description": "original fauji cereal muesli 250gm box pack original fauji cereals muesli fruit nuts flakes breakfast cereal break fast faujicereals cerels cerel foji fouji",
       "price": 46,
@@ -437,7 +439,7 @@
       ]
     },
     {
-      "id": 25,
+      "id": "25",
       "title": "Gulab Powder 50 Gram",
       "description": "Dry Rose Flower Powder Gulab Powder 50 Gram • Treats Wounds",
       "price": 70,
@@ -456,7 +458,7 @@
       ]
     },
     {
-      "id": 26,
+      "id": "26",
       "title": "Plant Hanger For Home",
       "description": "Boho Decor Plant Hanger For Home Wall Decoration Macrame Wall Hanging Shelf",
       "price": 41,
@@ -476,7 +478,7 @@
       ]
     },
     {
-      "id": 27,
+      "id": "27",
       "title": "Flying Wooden Bird",
       "description": "Package Include 6 Birds with Adhesive Tape Shape: 3D Shaped Wooden Birds Material: Wooden MDF, Laminated 3.5mm",
       "price": 51,
@@ -495,7 +497,7 @@
       ]
     },
     {
-      "id": 28,
+      "id": "28",
       "title": "3D Embellishment Art Lamp",
       "description": "3D led lamp sticker Wall sticker 3d wall art light on/off button cell operated (included)",
       "price": 20,
@@ -514,7 +516,7 @@
       ]
     },
     {
-      "id": 29,
+      "id": "29",
       "title": "Handcraft Chinese style",
       "description": "Handcraft Chinese style art luxury palace hotel villa mansion home decor ceramic vase with brass fruit plate",
       "price": 60,
@@ -533,7 +535,7 @@
       ]
     },
     {
-      "id": 30,
+      "id": "30",
       "title": "Key Holder",
       "description": "Attractive DesignMetallic materialFour key hooksReliable & DurablePremium Quality",
       "price": 30,
@@ -553,121 +555,121 @@
   ],
   "categories": [
     {
-      "id": 1,
+      "id": "1",
       "value": "smartphones",
       "label": "smartphones",
       "checked": false
     },
     {
-      "id": 2,
+      "id": "2",
       "value": "laptops",
       "label": "laptops",
       "checked": false
     },
     {
-      "id": 3,
+      "id": "3",
       "value": "fragrances",
       "label": "fragrances",
       "checked": false
     },
     {
-      "id": 4,
+      "id": "4",
       "value": "skincare",
       "label": "skincare",
       "checked": false
     },
     {
-      "id": 5,
+      "id": "5",
       "value": "groceries",
       "label": "groceries",
       "checked": false
     },
     {
-      "id": 6,
+      "id": "6",
       "value": "home-decoration",
       "label": "home decoration",
       "checked": false
     },
     {
-      "id": 7,
+      "id": "7",
       "value": "furniture",
       "label": "furniture",
       "checked": false
     },
     {
-      "id": 8,
+      "id": "8",
       "value": "tops",
       "label": "tops",
       "checked": false
     },
     {
-      "id": 9,
+      "id": "9",
       "value": "womens-dresses",
       "label": "womens dresses",
       "checked": false
     },
     {
-      "id": 10,
+      "id": "10",
       "value": "womens-shoes",
       "label": "womens shoes",
       "checked": false
     },
     {
-      "id": 11,
+      "id": "11",
       "value": "mens-shirts",
       "label": "mens shirts",
       "checked": false
     },
     {
-      "id": 12,
+      "id": "12",
       "value": "mens-shoes",
       "label": "mens shoes",
       "checked": false
     },
     {
-      "id": 13,
+      "id": "13",
       "value": "mens-watches",
       "label": "mens watches",
       "checked": false
     },
     {
-      "id": 14,
+      "id": "14",
       "value": "womens-watches",
       "label": "womens watches",
       "checked": false
     },
     {
-      "id": 15,
+      "id": "15",
       "value": "womens-bags",
       "label": "womens bags",
       "checked": false
     },
     {
-      "id": 16,
+      "id": "16",
       "value": "womens-jewellery",
       "label": "womens jewellery",
       "checked": false
     },
     {
-      "id": 17,
+      "id": "17",
       "value": "sunglasses",
       "label": "sunglasses",
       "checked": false
     },
     {
-      "id": 18,
+      "id": "18",
       "value": "automotive",
       "label": "automotive",
       "checked": false
     },
     {
-      "id": 19,
+      "id": "19",
       "value": "motorcycle",
       "label": "motorcycle",
       "checked": false
     },
     {
-      "id": 20,
+      "id": "20",
       "value": "lighting",
       "label": "lighting",
       "checked": false
@@ -675,475 +677,475 @@
   ],
   "brands": [
     {
-      "id": 1,
+      "id": "1",
       "value": "Apple",
       "label": "Apple",
       "checked": false
     },
     {
-      "id": 2,
+      "id": "2",
       "value": "Samsung",
       "label": "Samsung",
       "checked": false
     },
     {
-      "id": 3,
+      "id": "3",
       "value": "OPPO",
       "label": "OPPO",
       "checked": false
     },
     {
-      "id": 4,
+      "id": "4",
       "value": "Huawei",
       "label": "Huawei",
       "checked": false
     },
     {
-      "id": 5,
+      "id": "5",
       "value": "Microsoft Surface",
       "label": "Microsoft Surface",
       "checked": false
     },
     {
-      "id": 6,
+      "id": "6",
       "value": "Infinix",
       "label": "Infinix",
       "checked": false
     },
     {
-      "id": 7,
+      "id": "7",
       "value": "HP Pavilion",
       "label": "HP Pavilion",
       "checked": false
     },
     {
-      "id": 8,
+      "id": "8",
       "value": "Impression of Acqua Di Gio",
       "label": "Impression of Acqua Di Gio",
       "checked": false
     },
     {
-      "id": 9,
+      "id": "9",
       "value": "Royal_Mirage",
       "label": "Royal_Mirage",
       "checked": false
     },
     {
-      "id": 10,
+      "id": "10",
       "value": "Fog Scent Xpressio",
       "label": "Fog Scent Xpressio",
       "checked": false
     },
     {
-      "id": 11,
+      "id": "11",
       "value": "Al Munakh",
       "label": "Al Munakh",
       "checked": false
     },
     {
-      "id": 12,
+      "id": "12",
       "value": "Lord - Al-Rehab",
       "label": "Lord   Al Rehab",
       "checked": false
     },
     {
-      "id": 13,
+      "id": "13",
       "value": "L'Oreal Paris",
       "label": "L'Oreal Paris",
       "checked": false
     },
     {
-      "id": 14,
+      "id": "14",
       "value": "Hemani Tea",
       "label": "Hemani Tea",
       "checked": false
     },
     {
-      "id": 15,
+      "id": "15",
       "value": "Dermive",
       "label": "Dermive",
       "checked": false
     },
     {
-      "id": 16,
+      "id": "16",
       "value": "ROREC White Rice",
       "label": "ROREC White Rice",
       "checked": false
     },
     {
-      "id": 17,
+      "id": "17",
       "value": "Fair & Clear",
       "label": "Fair & Clear",
       "checked": false
     },
     {
-      "id": 18,
+      "id": "18",
       "value": "Saaf & Khaas",
       "label": "Saaf & Khaas",
       "checked": false
     },
     {
-      "id": 19,
+      "id": "19",
       "value": "Bake Parlor Big",
       "label": "Bake Parlor Big",
       "checked": false
     },
     {
-      "id": 20,
+      "id": "20",
       "value": "Baking Food Items",
       "label": "Baking Food Items",
       "checked": false
     },
     {
-      "id": 21,
+      "id": "21",
       "value": "fauji",
       "label": "fauji",
       "checked": false
     },
     {
-      "id": 22,
+      "id": "22",
       "value": "Dry Rose",
       "label": "Dry Rose",
       "checked": false
     },
     {
-      "id": 23,
+      "id": "23",
       "value": "Boho Decor",
       "label": "Boho Decor",
       "checked": false
     },
     {
-      "id": 24,
+      "id": "24",
       "value": "Flying Wooden",
       "label": "Flying Wooden",
       "checked": false
     },
     {
-      "id": 25,
+      "id": "25",
       "value": "LED Lights",
       "label": "LED Lights",
       "checked": false
     },
     {
-      "id": 26,
+      "id": "26",
       "value": "luxury palace",
       "label": "luxury palace",
       "checked": false
     },
     {
-      "id": 27,
+      "id": "27",
       "value": "Golden",
       "label": "Golden",
       "checked": false
     },
     {
-      "id": 28,
+      "id": "28",
       "value": "Furniture Bed Set",
       "label": "Furniture Bed Set",
       "checked": false
     },
     {
-      "id": 29,
+      "id": "29",
       "value": "Ratttan Outdoor",
       "label": "Ratttan Outdoor",
       "checked": false
     },
     {
-      "id": 30,
+      "id": "30",
       "value": "Kitchen Shelf",
       "label": "Kitchen Shelf",
       "checked": false
     },
     {
-      "id": 31,
+      "id": "31",
       "value": "Multi Purpose",
       "label": "Multi Purpose",
       "checked": false
     },
     {
-      "id": 32,
+      "id": "32",
       "value": "AmnaMart",
       "label": "AmnaMart",
       "checked": false
     },
     {
-      "id": 33,
+      "id": "33",
       "value": "Professional Wear",
       "label": "Professional Wear",
       "checked": false
     },
     {
-      "id": 34,
+      "id": "34",
       "value": "Soft Cotton",
       "label": "Soft Cotton",
       "checked": false
     },
     {
-      "id": 35,
+      "id": "35",
       "value": "Top Sweater",
       "label": "Top Sweater",
       "checked": false
     },
     {
-      "id": 36,
+      "id": "36",
       "value": "RED MICKY MOUSE..",
       "label": "RED MICKY MOUSE..",
       "checked": false
     },
     {
-      "id": 37,
+      "id": "37",
       "value": "Digital Printed",
       "label": "Digital Printed",
       "checked": false
     },
     {
-      "id": 38,
+      "id": "38",
       "value": "Ghazi Fabric",
       "label": "Ghazi Fabric",
       "checked": false
     },
     {
-      "id": 39,
+      "id": "39",
       "value": "IELGY",
       "label": "IELGY",
       "checked": false
     },
     {
-      "id": 40,
+      "id": "40",
       "value": "IELGY fashion",
       "label": "IELGY fashion",
       "checked": false
     },
     {
-      "id": 41,
+      "id": "41",
       "value": "Synthetic Leather",
       "label": "Synthetic Leather",
       "checked": false
     },
     {
-      "id": 42,
+      "id": "42",
       "value": "Sandals Flip Flops",
       "label": "Sandals Flip Flops",
       "checked": false
     },
     {
-      "id": 43,
+      "id": "43",
       "value": "Maasai Sandals",
       "label": "Maasai Sandals",
       "checked": false
     },
     {
-      "id": 44,
+      "id": "44",
       "value": "Arrivals Genuine",
       "label": "Arrivals Genuine",
       "checked": false
     },
     {
-      "id": 45,
+      "id": "45",
       "value": "Vintage Apparel",
       "label": "Vintage Apparel",
       "checked": false
     },
     {
-      "id": 46,
+      "id": "46",
       "value": "FREE FIRE",
       "label": "FREE FIRE",
       "checked": false
     },
     {
-      "id": 47,
+      "id": "47",
       "value": "The Warehouse",
       "label": "The Warehouse",
       "checked": false
     },
     {
-      "id": 48,
+      "id": "48",
       "value": "Sneakers",
       "label": "Sneakers",
       "checked": false
     },
     {
-      "id": 49,
+      "id": "49",
       "value": "Rubber",
       "label": "Rubber",
       "checked": false
     },
     {
-      "id": 50,
+      "id": "50",
       "value": "Naviforce",
       "label": "Naviforce",
       "checked": false
     },
     {
-      "id": 51,
+      "id": "51",
       "value": "SKMEI 9117",
       "label": "SKMEI 9117",
       "checked": false
     },
     {
-      "id": 52,
+      "id": "52",
       "value": "Strap Skeleton",
       "label": "Strap Skeleton",
       "checked": false
     },
     {
-      "id": 53,
+      "id": "53",
       "value": "Stainless",
       "label": "Stainless",
       "checked": false
     },
     {
-      "id": 54,
+      "id": "54",
       "value": "Eastern Watches",
       "label": "Eastern Watches",
       "checked": false
     },
     {
-      "id": 55,
+      "id": "55",
       "value": "Luxury Digital",
       "label": "Luxury Digital",
       "checked": false
     },
     {
-      "id": 56,
+      "id": "56",
       "value": "Watch Pearls",
       "label": "Watch Pearls",
       "checked": false
     },
     {
-      "id": 57,
+      "id": "57",
       "value": "Bracelet",
       "label": "Bracelet",
       "checked": false
     },
     {
-      "id": 58,
+      "id": "58",
       "value": "LouisWill",
       "label": "LouisWill",
       "checked": false
     },
     {
-      "id": 59,
+      "id": "59",
       "value": "Copenhagen Luxe",
       "label": "Copenhagen Luxe",
       "checked": false
     },
     {
-      "id": 60,
+      "id": "60",
       "value": "Steal Frame",
       "label": "Steal Frame",
       "checked": false
     },
     {
-      "id": 61,
+      "id": "61",
       "value": "Darojay",
       "label": "Darojay",
       "checked": false
     },
     {
-      "id": 62,
+      "id": "62",
       "value": "Fashion Jewellery",
       "label": "Fashion Jewellery",
       "checked": false
     },
     {
-      "id": 63,
+      "id": "63",
       "value": "Cuff Butterfly",
       "label": "Cuff Butterfly",
       "checked": false
     },
     {
-      "id": 64,
+      "id": "64",
       "value": "Designer Sun Glasses",
       "label": "Designer Sun Glasses",
       "checked": false
     },
     {
-      "id": 65,
+      "id": "65",
       "value": "mastar watch",
       "label": "mastar watch",
       "checked": false
     },
     {
-      "id": 66,
+      "id": "66",
       "value": "Car Aux",
       "label": "Car Aux",
       "checked": false
     },
     {
-      "id": 67,
+      "id": "67",
       "value": "W1209 DC12V",
       "label": "W1209 DC12V",
       "checked": false
     },
     {
-      "id": 68,
+      "id": "68",
       "value": "TC Reusable",
       "label": "TC Reusable",
       "checked": false
     },
     {
-      "id": 69,
+      "id": "69",
       "value": "Neon LED Light",
       "label": "Neon LED Light",
       "checked": false
     },
     {
-      "id": 70,
+      "id": "70",
       "value": "METRO 70cc Motorcycle - MR70",
       "label": "METRO 70cc Motorcycle   MR70",
       "checked": false
     },
     {
-      "id": 71,
+      "id": "71",
       "value": "BRAVE BULL",
       "label": "BRAVE BULL",
       "checked": false
     },
     {
-      "id": 72,
+      "id": "72",
       "value": "shock absorber",
       "label": "shock absorber",
       "checked": false
     },
     {
-      "id": 73,
+      "id": "73",
       "value": "JIEPOLLY",
       "label": "JIEPOLLY",
       "checked": false
     },
     {
-      "id": 74,
+      "id": "74",
       "value": "Xiangle",
       "label": "Xiangle",
       "checked": false
     },
     {
-      "id": 75,
+      "id": "75",
       "value": "lightingbrilliance",
       "label": "lightingbrilliance",
       "checked": false
     },
     {
-      "id": 76,
+      "id": "76",
       "value": "Ifei Home",
       "label": "Ifei Home",
       "checked": false
     },
     {
-      "id": 77,
+      "id": "77",
       "value": "DADAWU",
       "label": "DADAWU",
       "checked": false
     },
     {
-      "id": 78,
+      "id": "78",
       "value": "YIOSI",
       "label": "YIOSI",
       "checked": false
     },
     {
-      "id": 79,
+      "id": "79",
       "value": "yios",
       "label": "yios",
       "checked": false
@@ -1154,14 +1156,14 @@
       "email": "test@gmail.com",
       "password": "Qwerty123",
       "addresses": [],
-      "id": 1,
+      "id": "1",
       "role": "user"
     },
     {
       "email": "demo@gmail.com",
       "password": "Qwerty123",
       "addresses": [],
-      "id": 2,
+      "id": "2",
       "role": "admin"
     },
     {
@@ -1196,7 +1198,7 @@
           "pinCode": "023402"
         }
       ],
-      "id": 3,
+      "id": "3",
       "role": "user"
     }
   ],
@@ -1273,7 +1275,7 @@
         "phone": "07505009701",
         "street": "42, Shankar Vihar Colony"
       },
-      "id": 1,
+      "id": "1",
       "status": "dispatched"
     },
     {
@@ -1390,7 +1392,7 @@
         "phone": "07505009701",
         "street": "42, Shankar Vihar Colony"
       },
-      "id": 2
+      "id": "2"
     }
   ]
 }

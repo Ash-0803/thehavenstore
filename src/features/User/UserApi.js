@@ -1,22 +1,22 @@
+import { BACKEND_URL } from "../../app/constants";
+
 export function fetchLoggedInUser(userId) {
   return new Promise(async (resolve) => {
-    const response = await fetch("http://localhost:8080/users/" + userId);
+    const response = await fetch(`${BACKEND_URL}/users/` + userId);
     const data = await response.json();
     resolve({ data });
   });
 }
 export function fetchUserOrders(userId) {
   return new Promise(async (resolve) => {
-    const response = await fetch(
-      "http://localhost:8080/orders?user.id=" + userId
-    );
+    const response = await fetch(`${BACKEND_URL}/orders?user.id=` + userId);
     const data = await response.json();
     resolve({ data });
   });
 }
 export function updateUser(update) {
   return new Promise(async (resolve) => {
-    const response = await fetch("http://localhost:8080/users/" + update.id, {
+    const response = await fetch(`${BACKEND_URL}/users/` + update.id, {
       method: "PATCH",
       body: JSON.stringify(update),
       headers: { "content-type": "application/json" },

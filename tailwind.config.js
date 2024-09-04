@@ -19,7 +19,8 @@ module.exports = {
         "[auto,auto,1fr]": "auto auto 1fr",
       },
       boxShadow: {
-        custom: ".25rem .25rem 0rem black;",
+        custom: ".25rem .25rem 0rem coral-red;",
+        xs: "0 10px 40px coral-red",
       },
       fontFamily: {
         palanquin: ["Palanquin", "sans-serif"],
@@ -33,9 +34,6 @@ module.exports = {
         "slate-gray": "#6D6D6D",
         "pale-blue": "#F5F6FF",
         "white-400": "rgba(255, 255, 255, 0.80)",
-      },
-      boxShadow: {
-        "3xl": "0 10px 40px rgba(0, 0, 0, 0.1)",
       },
       screens: {
         wide: "1440px",

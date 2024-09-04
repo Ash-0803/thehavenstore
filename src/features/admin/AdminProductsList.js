@@ -64,7 +64,6 @@ export default function AdminProductsList() {
     });
   }
   function handlePage(page_no) {
-    // console.log({ ...page, _page: page_no });
     setFilter({ ...filter, _page: page_no });
   }
 
@@ -72,30 +71,7 @@ export default function AdminProductsList() {
     dispatch(fetchAllProductsByFiltersAsync(filter));
   }, [filter]);
 
-  // const [products, setProducts] = useState([
-  //   {
-  //     id: 1,
-  //     name: "Basic Tee",
-  //     href: "#",
-  //     imageSrc:
-  //       "https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg",
-  //     imageAlt: "Front of men's Basic Tee in black.",
-  //     price: "$35",
-  //     color: "Black",
-  //   },
-  //   // More products...
-  // ]);
   useEffect(() => {
-    // const getData = async () => {
-    //   try {
-    //     const response = await axios.get("https://dummyjson.com/products");
-    //     console.log(response.data.products);
-    //     setProducts(response.data.products);
-    //   } catch (error) {
-    //     console.log(error);
-    //   }
-    // };
-    // getData();
     dispatch(fetchBrandsAsync());
     dispatch(fetchCategoriesAsync());
     dispatch(fetchAllProductsAsync());
@@ -432,14 +408,6 @@ function ProductGrid({ products }) {
                             </p>
                           </div>
                         </div>
-                        {product.deleted && (
-                          <p className="text-sm text-red-400">
-                            product deleted
-                          </p>
-                        )}
-                        {product.stock <= 0 && (
-                          <p className="text-sm text-red-400">out of stock</p>
-                        )}
                       </Link>
                       <div className="mt-5">
                         <Link
@@ -448,6 +416,18 @@ function ProductGrid({ products }) {
                         >
                           Edit Product
                         </Link>
+                      </div>
+                      <div className="absolute top-0 ">
+                        {product.deleted && (
+                          <p className="text-sm text-white px-2 py-1 mb-1 bg-red-500 rounded-md">
+                            product deleted
+                          </p>
+                        )}
+                        {product.stock <= 0 && (
+                          <p className="text-sm text-white px-2 py-1 bg-red-500 rounded-md">
+                            out of stock
+                          </p>
+                        )}
                       </div>
                     </div>
                   </div>
