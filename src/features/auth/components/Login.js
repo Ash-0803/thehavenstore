@@ -17,7 +17,7 @@ export default function Login() {
   return (
     <>
       {/* DOUBT: how to navigate such that it uses recommeded useEffect Method */}
-      {user && navigate(-1)}
+      {user && navigate("/")}
       <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
         <div className="sm:mx-auto sm:w-full sm:max-w-sm">
           <img
