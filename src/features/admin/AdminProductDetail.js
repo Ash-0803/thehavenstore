@@ -2,7 +2,7 @@ import { Dialog, RadioGroup, Transition } from "@headlessui/react";
 import { StarIcon } from "@heroicons/react/20/solid";
 import { Fragment, useEffect, useRef, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { useNavigate, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import { discountedPrice } from "../../app/constants";
 import { selectLoggedInUser } from "../auth/AuthSlice";
 import {
@@ -63,8 +63,12 @@ export default function AdminProductDetail() {
   const handleCart = (e) => {
     e.preventDefault();
     if (user) {
-      !cartItems.some((obj) => obj.id == product.id && obj.size == product.size)
-        ? dispatch(addToCartAsync({ ...product, quantity: 1, user: user.id }))
+      !cartItems.some(
+        (obj) => obj.id === product.id && obj.size === product.size
+      )
+        ? dispatch(
+            addToCartAsync({ product: product.id, quantity: 1, user: user.id })
+          )
         : setIsItem(true);
     } else {
       return navigate("/login");
@@ -82,10 +86,7 @@ export default function AdminProductDetail() {
       {product && (
         <div className="pt-6">
           <nav aria-label="Breadcrumb">
-            <ol
-              role="list"
-              className="mx-auto flex max-w-2xl items-center space-x-2 px-4 sm:px-6 lg:max-w-7xl lg:px-8"
-            >
+            <ol className="mx-auto flex max-w-2xl items-center space-x-2 px-4 sm:px-6 lg:max-w-7xl lg:px-8">
               {product.breadcrumbs &&
                 product.breadcrumbs.map((breadcrumb) => (
                   <li key={breadcrumb.id}>

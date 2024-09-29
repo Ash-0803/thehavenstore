@@ -15,8 +15,8 @@ export function addToCart(item) {
 
 export function fetchItemsByUserId(userId) {
   return new Promise(async (resolve) => {
-    //TODO: we will not hard-code server URL here
-    const response = await fetch(`${BACKEND_URL}/cart?user=` + userId);
+    console.log("fetchItemsByUserId", userId);
+    const response = await fetch(`${BACKEND_URL}/cart/` + userId);
     const data = await response.json();
     resolve({ data });
   });
@@ -26,11 +26,10 @@ export function updateCart(update) {
   return new Promise(async (resolve) => {
     const response = await fetch(`${BACKEND_URL}/cart/` + update.id, {
       method: "PATCH",
-      body: JSON.stringify(update),
+      body: JSON.stringify({ quantity: update.quantity }),
       headers: { "content-type": "application/json" },
     });
     const data = await response.json();
-    // TODO: on server it will only return some info of user (not password)
     resolve({ data });
   });
 }
@@ -42,7 +41,6 @@ export function deleteItemFromCart(itemId) {
       headers: { "content-type": "application/json" },
     });
     const data = await response.json();
-    // TODO: on server it will only return some info of user (not password)
     resolve({ data: { id: itemId } });
   });
 }

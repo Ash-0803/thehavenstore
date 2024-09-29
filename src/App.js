@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { Outlet } from "react-router-dom";
-import Navbar from "./features/common/Nav";
 import Footer from "./features/common/Footer";
+import Navbar from "./features/common/Nav";
 
 import { useDispatch, useSelector } from "react-redux";
 import { fetchLoggedInUserAsync } from "./features/User/UserSlice";

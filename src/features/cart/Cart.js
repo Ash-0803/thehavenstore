@@ -24,13 +24,17 @@ export default function Cart({ page, values = null }) {
   const user = useSelector(selectLoggedInUser);
   const currentOrder = useSelector(selectOrder);
   const items = useSelector(selectItems);
+  console.log("items", items);
 
   const selectedAddress = useSelector(selectAddress);
   const paymentMethod = useSelector(selectPaymentMethod);
   const status = useSelector(selectCartStatus);
 
+  useEffect(() => {
+    dispatch(fetchItemsByUserIdAsync(user.id));
+  }, [dispatch, user.id]);
   const totalAmount = items.reduce(
-    (amount, item) => discountedPrice(item) * item.quantity + amount,
+    (amount, item) => discountedPrice(item.product) * item.quantity + amount,
     0
   );
   const totalItems = items.reduce((total, item) => item.quantity + total, 0);
@@ -49,9 +53,6 @@ export default function Cart({ page, values = null }) {
     };
     selectedAddress && paymentMethod && dispatch(createOrderAsync(order));
   };
-  useEffect(() => {
-    dispatch(fetchItemsByUserIdAsync(user.id));
-  }, []);
   return (
     <>
       <div>
@@ -145,15 +146,15 @@ function CartItem({ item }) {
     dispatch(deleteItemFromCartAsync(id));
   };
   useEffect(() => {
-    dispatch(updateCartAsync({ ...item, quantity: qty }));
-  }, [qty]);
+    dispatch(updateCartAsync({ id: item.id, quantity: qty }));
+  }, [qty, dispatch, item.id]);
 
   return (
     <li key={item.id} className="flex py-6">
       <div className="h-24 w-24 flex-shrink-0 overflow-hidden rounded-md border border-gray-200">
         <img
-          src={item.thumbnail}
-          alt={item.title}
+          src={item.product.thumbnail}
+          alt={item.product.title}
           className="h-full w-full object-cover object-center"
         />
       </div>
@@ -162,11 +163,11 @@ function CartItem({ item }) {
         <div>
           <div className="flex justify-between text-base font-medium text-gray-900">
             <h3>
-              <Link to={item.href}>{item.title}</Link>
+              <Link to={item.product.href}>{item.product.title}</Link>
             </h3>
-            <p className="ml-4">${discountedPrice(item)}</p>
+            <p className="ml-4">${discountedPrice(item.product)}</p>
           </div>
-          <p className="mt-1 text-sm text-gray-500">{item.brand}</p>
+          <p className="mt-1 text-sm text-gray-500">{item.product.brand}</p>
         </div>
         <div className="flex flex-1 items-end justify-between text-sm">
           <div className="text-gray-500 flex">

@@ -57,6 +57,7 @@ export default function ProductDetail() {
   const product = useSelector(selectProductById);
   const dialog = useSelector(selectShowDialog);
   const cartItems = useSelector(selectItems);
+  console.log("cartItems:", "  ", cartItems);
   const user = useSelector(selectLoggedInUser);
   const status = useSelector(selectProductListStatus);
 
@@ -74,11 +75,10 @@ export default function ProductDetail() {
     // }
     if (!user) navigate("/login");
     else {
-      if (cartItems.findIndex((item) => item.productId === product.id) < 0) {
+      if (cartItems.findIndex((item) => item.product.id === product.id) < 0) {
         console.log({ cartItems, product });
         const newItem = {
-          ...product,
-          productId: product.id,
+          product: product.id,
           quantity: 1,
           user: user.id,
         };
@@ -114,10 +114,7 @@ export default function ProductDetail() {
       {product && (
         <div className="pt-6">
           <nav aria-label="Breadcrumb">
-            <ol
-              role="list"
-              className="mx-auto flex max-w-2xl items-center space-x-2 px-4 sm:px-6 lg:max-w-7xl lg:px-8"
-            >
+            <ol className="mx-auto flex max-w-2xl items-center space-x-2 px-4 sm:px-6 lg:max-w-7xl lg:px-8">
               {product.breadcrumbs &&
                 product.breadcrumbs.map((breadcrumb) => (
                   <li key={breadcrumb.id}>
