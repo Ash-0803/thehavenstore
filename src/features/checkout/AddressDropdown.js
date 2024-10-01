@@ -1,12 +1,12 @@
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import { useState } from "react";
-// import { useSelector } from "react-redux";
-// import { selectUserInfo } from "../User/UserSlice";
 
 export default function AddressDropdown({ addresses, register }) {
   const [showForm, setShowForm] = useState(false);
-  // const user = useSelector(selectUserInfo);
-
+  const handleFormSubmit = (event) => {
+    event.preventDefault();
+  };
+  // FIXME: when the dropdown closes here, the form gets submitted automatically
   return (
     <div className="border-b border-gray-900/10 pb-12">
       <div>
@@ -25,7 +25,7 @@ export default function AddressDropdown({ addresses, register }) {
                 </p> */}
       </div>
       {showForm || !addresses ? (
-        <div>
+        <form onSubmit={handleFormSubmit}>
           <div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
             <div className="sm:col-span-3">
               <label
@@ -171,7 +171,7 @@ export default function AddressDropdown({ addresses, register }) {
               Add Address
             </button>
           </div>
-        </div>
+        </form>
       ) : (
         ""
       )}

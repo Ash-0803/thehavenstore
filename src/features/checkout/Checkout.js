@@ -1,7 +1,6 @@
 import { useForm } from "react-hook-form";
 import { useDispatch, useSelector } from "react-redux";
-import { selectUserInfo } from "../User/UserSlice";
-import { updateUserAsync } from "../auth/AuthSlice";
+import { selectUserInfo, updateUserAsync } from "../User/UserSlice";
 import Cart from "../cart/Cart";
 import {
   selectPaymentMethod,
@@ -13,9 +12,8 @@ import AddressDropdown from "./AddressDropdown";
 import PaymentOptions from "./PaymentOptions";
 
 export default function Checkout() {
-  // const [selectedAddress, setSelectedAddress] = useState(null);
-  // const [paymentMethod, setPaymentMethod] = useState("cash");
-  const user = useSelector(selectUserInfo);
+  const userInfo = useSelector(selectUserInfo);
+  console.log(userInfo);
   const paymentMethod = useSelector(selectPaymentMethod);
   const dispatch = useDispatch();
 
@@ -47,7 +45,7 @@ export default function Checkout() {
                 Choose from existing address
               </p>
               <Address
-                addresses={user.addresses}
+                addresses={userInfo.addresses}
                 handleAddress={handleAddress}
               />
             </div>
@@ -60,15 +58,15 @@ export default function Checkout() {
                   data.name !== "" &&
                     dispatch(
                       updateUserAsync({
-                        ...user,
-                        addresses: [...user.addresses, data],
+                        ...userInfo,
+                        addresses: [...userInfo.addresses, data],
                       })
                     );
                   reset();
                 })}
               >
                 <AddressDropdown
-                  addresses={user.addresses}
+                  addresses={userInfo.addresses}
                   register={register}
                 />
 

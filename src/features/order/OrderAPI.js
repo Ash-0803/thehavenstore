@@ -1,6 +1,7 @@
 import { BACKEND_URL } from "../../app/constants";
 
 export function createOrder(item) {
+  console.log(item);
   return new Promise(async (resolve) => {
     const response = await fetch(`${BACKEND_URL}/orders`, {
       method: "POST",

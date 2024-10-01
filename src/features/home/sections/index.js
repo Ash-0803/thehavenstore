@@ -45,7 +45,6 @@ const PopularProducts = () => {
 
   const dispatch = useDispatch();
   const popularProducts = useSelector(selectPopularProducts).products;
-  console.log(popularProducts);
   useEffect(() => {
     dispatch(fetchPopularProductsAsync(filter));
   }, [dispatch]);

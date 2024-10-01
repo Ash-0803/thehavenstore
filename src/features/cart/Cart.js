@@ -43,14 +43,16 @@ export default function Cart({ page, values = null }) {
   // };
 
   const handleOrder = () => {
+    const itemsWithoutUser = items.map(({ user, ...rest }) => rest);
     const order = {
-      items,
+      items: itemsWithoutUser,
       totalAmount,
       totalItems,
-      user,
+      user: user.id,
       paymentMethod,
       selectedAddress,
     };
+    console.log(order);
     selectedAddress && paymentMethod && dispatch(createOrderAsync(order));
   };
   return (

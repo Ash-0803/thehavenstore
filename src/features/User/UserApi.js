@@ -9,7 +9,7 @@ export function fetchLoggedInUser(userId) {
 }
 export function fetchUserOrders(userId) {
   return new Promise(async (resolve) => {
-    const response = await fetch(`${BACKEND_URL}/orders?user.id=` + userId);
+    const response = await fetch(`${BACKEND_URL}/orders/` + userId);
     const data = await response.json();
     resolve({ data });
   });

@@ -2,23 +2,23 @@ import { default as React, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { discountedPrice } from "../../../app/constants";
+import { selectLoggedInUser } from "../../auth/AuthSlice";
 import Address from "../../checkout/Address";
-import {
-  fetchUserOrdersAsync,
-  selectUserInfo,
-  // selectUser,
-  selectUserOrders,
-} from "../UserSlice";
+import { fetchUserOrdersAsync, selectUserOrders } from "../UserSlice";
 export default function UserOrders() {
-  const user = useSelector(selectUserInfo);
+  const user = useSelector(selectLoggedInUser);
   const orders = useSelector(selectUserOrders);
+  console.log(orders);
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(fetchUserOrdersAsync(user.id));
-  }, []);
+  }, [dispatch, user.id]);
 
   return (
     <div>
+      <h1 className="text-4xl my-5 font-bold tracking-tight text-gray-900 text-center">
+        Order
+      </h1>
       {orders.map((order) => {
         return <Order key={order.id} order={order} />;
       })}
@@ -32,16 +32,20 @@ function Order({ order }) {
       <div>
         <div className="mx-auto mt-12 bg-white max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="border-t border-gray-200 px-4 py-6 sm:px-6">
-            <h1 className="text-4xl my-5 font-bold tracking-tight text-gray-900">
-              Order
-            </h1>
-            <h3 className="text-2xl my-5 font-bold tracking-tight text-gray-900">
-              Order status: {order.status}
-            </h3>
+            <div className="flex justify-between items-center">
+              <h3 className="text-2xl my-5 font-bold tracking-tight text-gray-900">
+                Order status: {order.status}
+              </h3>
+              <span className="italic">id: #{order.id}</span>
+            </div>
             <div className="flow-root">
-              <ul role="list" className="-my-6 divide-y divide-gray-200">
+              <ul className="-my-6 divide-y divide-gray-200">
                 {order.items.map((item, index) => (
-                  <CartItem key={index} item={item} />
+                  <CartItem
+                    key={index}
+                    item={item.product}
+                    quantity={item.quantity}
+                  />
                 ))}
               </ul>
             </div>
@@ -77,7 +81,7 @@ function Order({ order }) {
   );
 }
 
-function CartItem({ item }) {
+function CartItem({ item, quantity }) {
   return (
     <li key={item.id} className="flex py-6">
       <div className="h-24 w-24 flex-shrink-0 overflow-hidden rounded-md border border-gray-200">
@@ -102,12 +106,12 @@ function CartItem({ item }) {
           <div className="text-gray-500 flex">
             <label
               htmlFor="quantity"
-              className="inline mr-5 text-sm font-medium leading-6 text-gray-900"
+              className="inline mr-1 text-sm font-medium leading-6 text-gray-900"
             >
-              Qty
+              Qty:
             </label>
             <div>
-              <span className="p-2">{item.quantity}</span>
+              <span>{quantity}</span>
             </div>
           </div>
         </div>

@@ -43,7 +43,6 @@ export default function Navbar({ children }) {
       { name: "Sign Out", href: "/logout" },
     ];
   }
-  console.log(userNavigation);
   return (
     <>
       <div className="min-h-full bg-pale-blue border-black border-b bordering sticky top-0 z-50">
