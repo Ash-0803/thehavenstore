@@ -19,7 +19,6 @@ import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { ITEMS_PER_PAGE, discountedPrice } from "../../app/constants";
 import {
-  fetchAllProductsAsync,
   fetchAllProductsByFiltersAsync,
   fetchBrandsAsync,
   fetchCategoriesAsync,
@@ -37,7 +36,11 @@ export default function AdminProductsList() {
   const categories = useSelector(selectCategories);
 
   const totalItems = useSelector(selectTotalItems);
-  const [filter, setFilter] = useState({ _page: 1, _limit: ITEMS_PER_PAGE });
+  const [filter, setFilter] = useState({
+    _page: 1,
+    _limit: ITEMS_PER_PAGE,
+    admin: true,
+  });
   function handleFilter(e, section, option) {
     e.target.checked
       ? setFilter({
@@ -74,7 +77,6 @@ export default function AdminProductsList() {
   useEffect(() => {
     dispatch(fetchBrandsAsync());
     dispatch(fetchCategoriesAsync());
-    dispatch(fetchAllProductsAsync());
   }, [dispatch]);
 
   const sortOptions = [
@@ -375,7 +377,7 @@ function ProductGrid({ products }) {
               ? products.map((product) => (
                   <div
                     key={product.id}
-                    className="card rounded-lg p-4 group relative bordering"
+                    className="card rounded-lg p-4 group relative border-gray-400 border-2 bg-pale-blue"
                   >
                     <div className=" ">
                       <Link to={`/product/${product.id}`}>
@@ -534,7 +536,7 @@ function MobileFilter({
                           <div className="space-y-6">
                             {section.options.map((option, optionIdx) => (
                               <div
-                                key={option.value}
+                                key={option.id}
                                 className="flex items-center"
                               >
                                 <input
@@ -607,7 +609,7 @@ function DesktopFilter({ filters, handleFilter, subCategories }) {
               <Disclosure.Panel className="pt-6">
                 <div className="space-y-4">
                   {section.options.map((option, optionIdx) => (
-                    <div key={option.value} className="flex items-center">
+                    <div key={option.id} className="flex items-center">
                       <input
                         id={`filter-${section.id}-${optionIdx}`}
                         name={`${section.id}[]`}

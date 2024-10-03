@@ -97,18 +97,6 @@ export default function ProductDetail() {
 
   return (
     <div className="bg-white">
-      {/* {status === "loading" ? (
-        <Grid
-          height="80"
-          width="80"
-          color="rgb(79, 70, 229) "
-          ariaLabel="grid-loading"
-          radius="12.5"
-          wrapperStyle={{}}
-          wrapperClass=""
-          visible={true}
-        />
-      ) : null} */}
       {dialog && <CartDialogue dialog={dialog} />}
       {isItem && <CartDialogue isItem={isItem} setIsItem={setIsItem} />}
       {product && (

@@ -1,13 +1,5 @@
 import { BACKEND_URL } from "../../app/constants";
 
-export function fetchAllProducts() {
-  return new Promise(async (resolve) => {
-    const response = await fetch(`${BACKEND_URL}/products?_limit=10`);
-    const data = await response.json();
-
-    resolve({ data });
-  });
-}
 export function fetchAllProductsByFilters(filter) {
   let queryString = "";
 
@@ -19,7 +11,8 @@ export function fetchAllProductsByFilters(filter) {
         }
       } else if (
         typeof filter[key] == "string" ||
-        typeof filter[key] == "number"
+        typeof filter[key] == "number" ||
+        typeof filter[key] == "boolean"
       ) {
         queryString += `${key}=${filter[key]}&`;
       }

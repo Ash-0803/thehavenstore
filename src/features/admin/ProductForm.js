@@ -1,8 +1,11 @@
 import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { useDispatch, useSelector } from "react-redux";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import Modal from "../common/Modal";
+
 import {
   clearSelectedProduct,
   createProductAsync,
@@ -56,14 +59,27 @@ function ProductForm() {
     const product = { ...selectedProduct };
     product.deleted = true;
     dispatch(updateProductAsync(product));
+    toast.warn("Product deleted successfully!");
   };
+  const navigate = useNavigate();
 
   return (
     <>
+      <ToastContainer
+        position="top-center"
+        autoClose={5000}
+        hideProgressBar={true}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="colored"
+      />
       <form
         noValidate
         onSubmit={handleSubmit((data) => {
-          console.log(data);
           const product = { ...data };
           product.images = [
             product.image1,
@@ -78,15 +94,17 @@ function ProductForm() {
           product.price = +product.price;
           product.stock = +product.stock;
           product.discountPercentage = +product.discountPercentage;
-          console.log(product);
 
           if (params.id) {
             product.id = params.id;
             product.rating = selectedProduct.rating || 0;
             dispatch(updateProductAsync(product));
-            reset();
+            //TODO: make it such that it runs only when the above dispatch is successful
+            toast.success("Product updated successfully!");
+            navigate("/admin");
           } else {
             dispatch(createProductAsync(product));
+            toast.success("Product created successfully!");
             reset();
             //TODO:  on product successfully added clear fields and show a message
           }
@@ -99,7 +117,7 @@ function ProductForm() {
             </h2>
 
             <div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
-              {selectedProduct.deleted && (
+              {selectedProduct && selectedProduct.deleted && (
                 <h2 className="text-red-500 sm:col-span-6">
                   This product is deleted
                 </h2>
@@ -457,15 +475,17 @@ function ProductForm() {
           </button>
         </div>
       </form>
-      <Modal
-        title={`Delete ${selectedProduct.title}`}
-        message="Are you sure you want to delete this Product ?"
-        dangerOption="Delete"
-        cancelOption="Cancel"
-        dangerAction={handleDelete}
-        cancelAction={() => setOpenModal(null)}
-        showModal={openModal}
-      ></Modal>
+      {selectedProduct && (
+        <Modal
+          title={`Delete ${selectedProduct.title}`}
+          message="Are you sure you want to delete this Product ?"
+          dangerOption="Delete"
+          cancelOption="Cancel"
+          dangerAction={handleDelete}
+          cancelAction={() => setOpenModal(null)}
+          showModal={openModal}
+        ></Modal>
+      )}
     </>
   );
 }

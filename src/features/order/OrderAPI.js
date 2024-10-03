@@ -17,7 +17,7 @@ export function updateOrder(order) {
   return new Promise(async (resolve) => {
     const response = await fetch(`${BACKEND_URL}/orders/` + order.id, {
       method: "PATCH",
-      body: JSON.stringify(order),
+      body: JSON.stringify({ status: order.status }),
       headers: { "content-type": "application/json" },
     });
     const data = await response.json();

@@ -21,9 +21,11 @@ function AdminOrders() {
   const orders = useSelector(selectOrders);
   const totalOrders = useSelector(selectTotalOrders);
   const [editableOrderId, setEditableOrderId] = useState(-1);
+  const [showEditForm, setShowEditForm] = useState(false);
   const [sort, setSort] = useState({});
 
   const handleEdit = (order) => {
+    setShowEditForm((prev) => !prev);
     setEditableOrderId(order.id);
   };
   const handleShow = () => {
@@ -31,7 +33,10 @@ function AdminOrders() {
   };
 
   const handleUpdate = (e, order) => {
-    const updatedOrder = { ...order, status: e.target.value };
+    const updatedOrder = {
+      status: e.target.value,
+      id: order.id,
+    };
     dispatch(updateOrderAsync(updatedOrder));
     setEditableOrderId(-1);
   };
@@ -41,9 +46,8 @@ function AdminOrders() {
   };
 
   const handleSort = (sortOption) => {
-    const sort = { _sort: sortOption.sort, _order: sortOption.order };
-    console.log({ sort });
-    setSort(sort);
+    const sortObject = { _sort: sortOption.sort, _order: sortOption.order };
+    setSort(sortObject);
   };
 
   const chooseColor = (status) => {
@@ -63,6 +67,7 @@ function AdminOrders() {
 
   useEffect(() => {
     const pagination = { _page: page, _limit: ITEMS_PER_PAGE };
+    console.log("sorting and pagination", { sort, pagination });
     dispatch(fetchAllOrdersAsync({ sort, pagination }));
   }, [dispatch, page, sort]);
 
@@ -132,12 +137,13 @@ function AdminOrders() {
                           <div className="mr-2">
                             <img
                               className="w-6 h-6 rounded-full"
+                              alt=""
                               src={item.thumbnail}
                             />
                           </div>
                           <span>
-                            {item.title} - #{item.quantity} - $
-                            {discountedPrice(item)}
+                            {item.title} #{order.totalItems} - $
+                            {discountedPrice(item.product)}
                           </span>
                         </div>
                       ))}
@@ -160,7 +166,7 @@ function AdminOrders() {
                       </div>
                     </td>
                     <td className="py-3 px-6 text-center">
-                      {order.id === editableOrderId ? (
+                      {order.id === editableOrderId && showEditForm ? (
                         <select onChange={(e) => handleUpdate(e, order)}>
                           <option value="pending">Pending</option>
                           <option value="dispatched">Dispatched</option>
