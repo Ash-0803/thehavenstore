@@ -1,11 +1,11 @@
 import { useSelector } from "react-redux";
 import { Navigate } from "react-router-dom";
-import { selectLoggedInUser } from "../AuthSlice";
+import { selectLoggedInUserToken } from "../AuthSlice";
 
 function Protected({ children }) {
-  const user = useSelector(selectLoggedInUser);
+  const userToken = useSelector(selectLoggedInUserToken);
 
-  if (!user) {
+  if (!userToken) {
     return <Navigate to="/login" replace={true}></Navigate>;
   }
   return children;

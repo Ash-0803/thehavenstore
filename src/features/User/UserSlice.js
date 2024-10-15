@@ -2,23 +2,23 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import { fetchLoggedInUser, fetchUserOrders, updateUser } from "./UserApi";
 
 const initialState = {
-  userInfo: null,  // this info will be used when more info is required
+  userInfo: null, // this info will be used when more info is required
   userOrders: [],
-  status: "idle", 
+  status: "idle",
 };
 
 export const fetchLoggedInUserAsync = createAsyncThunk(
   "user/fetchLoggedInUser",
-  async (userId) => {
-    const response = await fetchLoggedInUser(userId);
+  async () => {
+    const response = await fetchLoggedInUser();
     // The value we return becomes the `fulfilled` action payload
     return response.data;
   }
 );
 export const fetchUserOrdersAsync = createAsyncThunk(
   "user/fetchUserOrders",
-  async (userId) => {
-    const response = await fetchUserOrders(userId);
+  async () => {
+    const response = await fetchUserOrders();
     return response.data;
   }
 );
@@ -64,5 +64,6 @@ export const userSlice = createSlice({
 // TODO: change orders and address to be independent of user.
 export const selectUserInfo = (state) => state.user.userInfo;
 export const selectUserOrders = (state) => state.user.userOrders;
+export const selectUserStatus = (state) => state.user.status;
 
 export default userSlice.reducer;

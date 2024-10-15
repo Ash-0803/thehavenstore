@@ -3,7 +3,6 @@ import { InfinitySpin } from "react-loader-spinner";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { discountedPrice } from "../../app/constants";
-import { selectLoggedInUser } from "../auth/AuthSlice";
 import Modal from "../common/Modal";
 import {
   createOrderAsync,
@@ -18,10 +17,11 @@ import {
   selectItems,
   updateCartAsync,
 } from "./CartSlice";
+import { selectUserInfo } from "../User/UserSlice";
 
 export default function Cart({ page, values = null }) {
   const dispatch = useDispatch();
-  const user = useSelector(selectLoggedInUser);
+  const userInfo = useSelector(selectUserInfo);
   const currentOrder = useSelector(selectOrder);
   const items = useSelector(selectItems);
   console.log("items", items);
@@ -31,8 +31,8 @@ export default function Cart({ page, values = null }) {
   const status = useSelector(selectCartStatus);
 
   useEffect(() => {
-    dispatch(fetchItemsByUserIdAsync(user.id));
-  }, [dispatch, user.id]);
+    dispatch(fetchItemsByUserIdAsync());
+  }, [dispatch, userInfo]);
   const totalAmount = items.reduce(
     (amount, item) => discountedPrice(item.product) * item.quantity + amount,
     0
@@ -43,12 +43,11 @@ export default function Cart({ page, values = null }) {
   // };
 
   const handleOrder = () => {
-    const itemsWithoutUser = items.map(({ user, ...rest }) => rest);
+    const itemsWithoutUser = items.map(({ userInfo, ...rest }) => rest);
     const order = {
       items: itemsWithoutUser,
       totalAmount,
       totalItems,
-      user: user.id,
       paymentMethod,
       selectedAddress,
     };

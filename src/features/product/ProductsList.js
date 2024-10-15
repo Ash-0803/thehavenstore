@@ -9,7 +9,7 @@ import {
 } from "@heroicons/react/20/solid";
 import { XMarkIcon } from "@heroicons/react/24/outline";
 import { Fragment, useEffect, useState } from "react";
-import { InfinitySpin } from "react-loader-spinner";
+import { Triangle } from "react-loader-spinner";
 import { Link } from "react-router-dom";
 
 import { useDispatch, useSelector } from "react-redux";
@@ -22,8 +22,8 @@ import {
   selectAllProducts,
   selectBrands,
   selectCategories,
-  selectProductListStatus,
   selectTotalItems,
+  selectProductStatus,
 } from "./ProductSlice";
 
 export default function ProductsList() {
@@ -32,7 +32,6 @@ export default function ProductsList() {
   const products = useSelector(selectAllProducts);
   const brands = useSelector(selectBrands);
   const categories = useSelector(selectCategories);
-  const status = useSelector(selectProductListStatus);
   const totalItems = useSelector(selectTotalItems);
   const [filter, setFilter] = useState({ _page: 1, _limit: ITEMS_PER_PAGE });
   function handleFilter(e, section, option) {
@@ -218,11 +217,7 @@ export default function ProductsList() {
               />
 
               {/* Product grid */}
-              <ProductGrid
-                products={products}
-                status={status}
-                totalItems={totalItems}
-              />
+              <ProductGrid products={products} totalItems={totalItems} />
               {/* Products grid end */}
             </div>
           </section>
@@ -237,26 +232,34 @@ export default function ProductsList() {
   );
 }
 
-function ProductGrid({ products, status, totalItems }) {
+function ProductGrid({ products, totalItems }) {
+  const productStatus = useSelector(selectProductStatus);
   return (
     <div className="lg:col-span-3">
-      <div className="bg-white">
-        <div className="mx-auto max-w-2xl px-4 py-0 sm:px-6 sm:py-0 lg:max-w-7xl lg:px-8">
-          <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:gap-x-8">
-            {status === "loading" ? (
-              <InfinitySpin
+      <div className="bg-white h-full">
+        <div className="mx-auto max-w-2xl px-4 py-0 sm:px-6 sm:py-0 lg:max-w-7xl h-full lg:px-8">
+          {productStatus === "loading" ? (
+            <div className="flex flex-col justify-center items-center h-full">
+              <Triangle
                 visible={true}
-                width="200"
-                color="rgb(79, 70, 229)"
-                ariaLabel="infinity-spin-loading"
+                height="100"
+                width="100"
+                color="#FF6452"
+                ariaLabel="triangle-loading"
+                wrapperStyle={{}}
+                wrapperClass=""
               />
-            ) : null}
-            {products.length > 0 && products
-              ? products.map((product) => (
+              Products Loading...
+            </div>
+          ) : (
+            <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:gap-x-8">
+              {products.length > 0 &&
+                products &&
+                products.map((product) => (
                   <ProductCard key={product.id} product={product} />
-                ))
-              : "No Product found."}
-          </div>
+                ))}
+            </div>
+          )}
         </div>
       </div>
     </div>

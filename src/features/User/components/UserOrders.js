@@ -1,27 +1,48 @@
 import { default as React, useEffect } from "react";
+import { Triangle } from "react-loader-spinner";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { discountedPrice } from "../../../app/constants";
-import { selectLoggedInUser } from "../../auth/AuthSlice";
 import Address from "../../checkout/Address";
-import { fetchUserOrdersAsync, selectUserOrders } from "../UserSlice";
+import {
+  fetchUserOrdersAsync,
+  selectUserOrders,
+  selectUserStatus,
+} from "../UserSlice";
 export default function UserOrders() {
-  const user = useSelector(selectLoggedInUser);
   const orders = useSelector(selectUserOrders);
-  console.log(orders);
   const dispatch = useDispatch();
+  const orderStatus = useSelector(selectUserStatus);
+
   useEffect(() => {
-    dispatch(fetchUserOrdersAsync(user.id));
-  }, [dispatch, user.id]);
+    dispatch(fetchUserOrdersAsync());
+  }, [dispatch]);
 
   return (
     <div>
-      <h1 className="text-4xl my-5 font-bold tracking-tight text-gray-900 text-center">
-        Order
-      </h1>
-      {orders.map((order) => {
-        return <Order key={order.id} order={order} />;
-      })}
+      {orderStatus === "idle" ? (
+        <div>
+          <h1 className="text-4xl my-5 font-bold tracking-tight text-gray-900 text-center">
+            Order
+          </h1>
+          {orders.map((order) => {
+            return <Order key={order.id} order={order} />;
+          })}
+        </div>
+      ) : (
+        <div className="flex flex-col justify-center items-center h-full">
+          <Triangle
+            visible={true}
+            height="100"
+            width="100"
+            color="#FF6452"
+            ariaLabel="triangle-loading"
+            wrapperStyle={{}}
+            wrapperClass=""
+          />
+          Products Loading...
+        </div>
+      )}
     </div>
   );
 }

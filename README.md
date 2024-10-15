@@ -1,8 +1,19 @@
-# Preivew of the app :
+# HeavenStore :
 
-## HavenStore Preview :
+> This repo contains only the Frontend of this Ecom Application.
+> If you wish to check the backend work that is done, click here: ![Ecom Backend](https://github.com/Ash-0803/ecom-backend)
 
-After Running the app, this is how the landing page will look like:
+This project is not deployed yet, but if you wish to see the working demo, you may look at the preview below.
+
+## Preview :
+
+Functionality is the same, but the UI has been changed, for the changed UI, I am including screenshots!
+
+|                                                  landing Page                                                  |                                                 Quality Page                                                 |                                                Catalog Page                                                |
+| :------------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------: |
+| ![Preview of the landing page gif](https://github.com/Ash-0803/thehavenstore/blob/master/gifs/LandingPage.jpg) | ![Preview of the landing page gif](https://github.com/Ash-0803/thehavenstore/blob/master/gifs/ShoeImage.jpg) | ![Preview of the landing page gif](https://github.com/Ash-0803/thehavenstore/blob/master/gifs/Catalog.jpg) |
+
+## Landing Page:
 
 ![Preview of the landing page gif](https://github.com/Ash-0803/thehavenstore/blob/master/gifs/Preview.gif)
 
@@ -25,12 +36,36 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Available Scripts
 
-In the project directory, you can run:
+In the project directory, executing:
 
-### `npm start`
+```javascript
+npm i
+npm start
+```
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+> Previously, this app used to run with the help of json server, but now, I have made it's backend functionally, so you'll have to run the backend alongside too, which you can find here : ![Ecom Backend](https://github.com/Ash-0803/ecom-backend)
+
+If you still wish to just see the demo of this app without using the backend,follow these steps:
+
+### Using the json-server
+
+1. you can use json-server with the help of command:
+
+   ```javascript
+   npm json
+   ```
+
+2. You'll have to go to the file,
+   ##### _`thehavenstore/src/app/constants.js`_
+   <br>
+3. and change the BACKEND_URL:
+
+   ```javascript
+   export const BACKEND_URL = "http://localhost:8080";
+   ```
+
+   The page will reload when you make changes.\
+   You may also see any lint errors in the console.

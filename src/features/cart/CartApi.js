@@ -13,10 +13,13 @@ export function addToCart(item) {
   });
 }
 
-export function fetchItemsByUserId(userId) {
+export function fetchItemsByUserId() {
   return new Promise(async (resolve) => {
-    console.log("fetchItemsByUserId", userId);
-    const response = await fetch(`${BACKEND_URL}/cart/` + userId);
+    console.log("fetchItemsByUserId");
+    const response = await fetch(`${BACKEND_URL}/cart`, {
+      method: "GET",
+      credentials: "include",
+    });
     const data = await response.json();
     resolve({ data });
   });
@@ -45,9 +48,9 @@ export function deleteItemFromCart(itemId) {
   });
 }
 
-export function resetCart(userId) {
+export function resetCart() {
   return new Promise(async (resolve) => {
-    const response = await fetchItemsByUserId(userId);
+    const response = await fetchItemsByUserId();
     const userItems = response.data;
     for (let item of userItems) {
       await deleteItemFromCart(item.id);

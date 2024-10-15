@@ -4,7 +4,7 @@ import { Fragment, useEffect, useRef, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { discountedPrice } from "../../app/constants";
-import { selectLoggedInUser } from "../auth/AuthSlice";
+import { selectLoggedInUserToken } from "../auth/AuthSlice";
 import {
   addToCartAsync,
   hideDialog,
@@ -57,18 +57,16 @@ export default function AdminProductDetail() {
   const dispatch = useDispatch();
   const params = useParams();
 
-  const user = useSelector(selectLoggedInUser);
+  const userToken = useSelector(selectLoggedInUserToken);
   const navigate = useNavigate();
 
   const handleCart = (e) => {
     e.preventDefault();
-    if (user) {
+    if (userToken) {
       !cartItems.some(
         (obj) => obj.id === product.id && obj.size === product.size
       )
-        ? dispatch(
-            addToCartAsync({ product: product.id, quantity: 1, user: user.id })
-          )
+        ? dispatch(addToCartAsync({ product: product.id, quantity: 1 }))
         : setIsItem(true);
     } else {
       return navigate("/login");

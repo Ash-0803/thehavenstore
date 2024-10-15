@@ -1,4 +1,5 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+// import { globalStatusChange } from "../home/extra slices/commonSlice";
 import {
   createProduct,
   fetchAllProductsByFilters,
@@ -89,13 +90,16 @@ export const productSlice = createSlice({
         state.status = "idle";
         state.brands = action.payload[0].brands;
       })
-      .addCase(fetchAllProductsByFiltersAsync.pending, (state) => {
+      .addCase(fetchAllProductsByFiltersAsync.pending, (state, action) => {
         state.status = "loading";
+        //TODO: This is not working for some reason right now(the product list is not showing), we'll look into this later
+        // action.meta.arg.dispatch(globalStatusChange("loading"));
       })
       .addCase(fetchAllProductsByFiltersAsync.fulfilled, (state, action) => {
         state.status = "idle";
         state.products = action.payload.products;
         state.totalItems = action.payload.totalItems;
+        // action.meta.arg.dispatch(globalStatusChange("idle"));
       })
       .addCase(fetchProductByIdAsync.pending, (state) => {
         state.status = "loading";
@@ -130,6 +134,6 @@ export const selectCategories = (state) => state.product.categories;
 export const selectBrands = (state) => state.product.brands;
 export const selectTotalItems = (state) => state.product.totalItems;
 export const selectProductById = (state) => state.product.selectedProduct;
-export const selectProductListStatus = (state) => state.product.status;
+export const selectProductStatus = (state) => state.product.status;
 
 export default productSlice.reducer;

@@ -24,6 +24,7 @@ export function checkUser(loginInfo) {
     try {
       const response = await fetch(`${BACKEND_URL}/auth/login`, {
         method: "POST",
+        credentials: "include",
         body: JSON.stringify(loginInfo),
         headers: { "Content-Type": "application/json" },
       });

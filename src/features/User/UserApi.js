@@ -1,15 +1,21 @@
 import { BACKEND_URL } from "../../app/constants";
 
-export function fetchLoggedInUser(userId) {
+export function fetchLoggedInUser() {
   return new Promise(async (resolve) => {
-    const response = await fetch(`${BACKEND_URL}/users/` + userId);
+    const response = await fetch(`${BACKEND_URL}/users/own`, {
+      method: "GET",
+      credentials: "include",
+    });
     const data = await response.json();
     resolve({ data });
   });
 }
-export function fetchUserOrders(userId) {
+export function fetchUserOrders() {
   return new Promise(async (resolve) => {
-    const response = await fetch(`${BACKEND_URL}/orders/` + userId);
+    const response = await fetch(`${BACKEND_URL}/orders/own`, {
+      method: "GET",
+      credentials: "include",
+    });
     const data = await response.json();
     resolve({ data });
   });
