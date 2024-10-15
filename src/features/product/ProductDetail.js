@@ -6,7 +6,7 @@ import { Fragment, useEffect, useRef, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { discountedPrice } from "../../app/constants";
-import { selectLoggedInUser } from "../auth/AuthSlice";
+import { selectLoggedInUserToken } from "../auth/AuthSlice";
 import {
   addToCartAsync,
   hideDialog,
@@ -57,9 +57,9 @@ export default function ProductDetail() {
   const product = useSelector(selectProductById);
   const dialog = useSelector(selectShowDialog);
   const cartItems = useSelector(selectItems);
-  console.log("cartItems:", "  ", cartItems);
-  const user = useSelector(selectLoggedInUser);
-  const status = useSelector(selectProductListStatus);
+  console.log("cartItems:  ", cartItems);
+  const userToken = useSelector(selectLoggedInUserToken);
+  // const status = useSelector(selectProductListStatus);
 
   const dispatch = useDispatch();
   const params = useParams();
@@ -73,14 +73,13 @@ export default function ProductDetail() {
     //     : setIsItem(true);
     // } else {
     // }
-    if (!user) navigate("/login");
+    if (!userToken) navigate("/login");
     else {
       if (cartItems.findIndex((item) => item.product.id === product.id) < 0) {
         console.log({ cartItems, product });
         const newItem = {
           product: product.id,
           quantity: 1,
-          user: user.id,
         };
         delete newItem["id"];
         dispatch(addToCartAsync(newItem));

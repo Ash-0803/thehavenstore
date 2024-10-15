@@ -5,26 +5,34 @@ import Navbar from "./features/common/Nav";
 
 import { useDispatch, useSelector } from "react-redux";
 import { fetchLoggedInUserAsync } from "./features/User/UserSlice";
-import { selectLoggedInUser } from "./features/auth/AuthSlice";
+import { selectLoggedInUserToken } from "./features/auth/AuthSlice";
 import { fetchItemsByUserIdAsync } from "./features/cart/CartSlice";
+import { selectGlobalStatus } from "./features/home/extra slices/commonSlice";
+import LoadingScreen from "./pages/LoadingScreenPage";
 
 function App() {
   const dispatch = useDispatch();
-  const user = useSelector(selectLoggedInUser);
+  const globalStatus = useSelector(selectGlobalStatus);
+  console.log(globalStatus);
+  const userToken = useSelector(selectLoggedInUserToken);
   useEffect(() => {
-    if (user) {
-      dispatch(fetchItemsByUserIdAsync(user.id));
-      dispatch(fetchLoggedInUserAsync(user.id));
+    if (userToken) {
+      dispatch(fetchItemsByUserIdAsync());
+      dispatch(fetchLoggedInUserAsync());
     }
-  }, [dispatch, user]);
+  }, [dispatch, userToken]);
 
   return (
     <div className="App bg-white">
-      <Navbar />
-      <Outlet />
-      <section className=" bg-black padding-x padding-t pb-8">
-        <Footer />
-      </section>
+      {globalStatus === "idle" ? (
+        <>
+          <Navbar />
+          <Outlet />
+          <Footer />
+        </>
+      ) : (
+        <LoadingScreen />
+      )}
     </div>
   );
 }

@@ -1,11 +1,15 @@
 import { useForm } from "react-hook-form";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
-import { checkUserAsync, selectError, selectLoggedInUser } from "../AuthSlice";
+import {
+  checkUserAsync,
+  selectError,
+  selectLoggedInUserToken,
+} from "../AuthSlice";
 
 export default function Login() {
   const error = useSelector(selectError);
-  const user = useSelector(selectLoggedInUser);
+  const userToken = useSelector(selectLoggedInUserToken);
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const {
@@ -17,7 +21,7 @@ export default function Login() {
   return (
     <>
       {/* DOUBT: how to navigate such that it uses recommeded useEffect Method */}
-      {user && navigate("/")}
+      {userToken && navigate("/")}
       <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
         <div className="sm:mx-auto sm:w-full sm:max-w-sm">
           <img

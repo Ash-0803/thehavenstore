@@ -8,8 +8,8 @@ import {
 import { Fragment } from "react";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import { selectLoggedInUser } from "../auth/AuthSlice";
 import { selectItems } from "../cart/CartSlice";
+import { selectUserInfo } from "../User/UserSlice";
 
 const navigation = [
   { name: "HOME", href: "/", user: true },
@@ -25,11 +25,11 @@ function classNames(...classes) {
 
 export default function Navbar({ children }) {
   const cartItems = useSelector(selectItems);
-  var user = useSelector(selectLoggedInUser); // FIXME: this user should be const rather than a variable
-  console.log(user);
-  if (user == null) {
-    user = {};
-    user.role = "user";
+  var userInfo = useSelector(selectUserInfo); // FIXME: this user should be const rather than a variable
+  console.log(userInfo);
+  if (userInfo == null) {
+    userInfo = {};
+    userInfo.role = "user";
     userNavigation = [
       { name: "Your Profile", href: "/profile" },
       { name: "My Orders", href: "/orders" },
@@ -71,7 +71,7 @@ export default function Navbar({ children }) {
                   <div className="hidden md:block">
                     <div className="ml-10 flex items-baseline space-x-4">
                       {navigation.map((item) =>
-                        user.role == "admin" ? (
+                        userInfo.role === "admin" ? (
                           <Link
                             key={item.name}
                             to={item.href}
@@ -128,10 +128,10 @@ export default function Navbar({ children }) {
                           <Menu.Button className="relative flex max-w-xs items-center rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
                             <span className="absolute -inset-1.5" />
                             <span className="sr-only">Open user menu</span>
-                            {user && user.imageUrl ? (
+                            {userInfo && userInfo.imageUrl ? (
                               <img
                                 className="h-8 w-8 rounded-full"
-                                src={user.imageUrl}
+                                src={userInfo.imageUrl}
                                 alt=""
                               />
                             ) : (
@@ -195,7 +195,7 @@ export default function Navbar({ children }) {
               <Disclosure.Panel className="md:hidden">
                 <div className="space-y-1 px-2 pb-3 pt-2 sm:px-3">
                   {navigation.map((item) =>
-                    item[user.role] ? (
+                    item[userInfo.role] ? (
                       <Link
                         key={item.name}
                         to={item.href}
@@ -219,10 +219,10 @@ export default function Navbar({ children }) {
                     </div>
                     <div className="ml-3">
                       <div className="text-base font-medium leading-none text-white">
-                        {user && user.name}
+                        {userInfo && userInfo.name}
                       </div>
                       <div className="text-sm font-medium leading-none text-gray-400">
-                        {user && user.email}
+                        {userInfo && userInfo.email}
                       </div>
                     </div>
                     <Link

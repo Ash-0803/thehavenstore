@@ -1,10 +1,12 @@
 import { configureStore } from "@reduxjs/toolkit";
-import productReducer from "../features/product/ProductSlice";
+import userReducer from "../features/User/UserSlice";
 import authReducer from "../features/auth/AuthSlice";
 import cartReducer from "../features/cart/CartSlice";
-import orderReducer from "../features/order/OrderSlice";
-import userReducer from "../features/User/UserSlice";
 import popularProductsReducer from "../features/home/extra slices/PopularProductsSlice";
+import globalReducer from "../features/home/extra slices/commonSlice";
+import orderReducer from "../features/order/OrderSlice";
+import productReducer from "../features/product/ProductSlice";
+
 export const store = configureStore({
   reducer: {
     product: productReducer,
@@ -13,5 +15,6 @@ export const store = configureStore({
     order: orderReducer,
     user: userReducer,
     popularProducts: popularProductsReducer,
+    global: globalReducer,
   },
 });
