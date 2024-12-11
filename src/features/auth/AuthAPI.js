@@ -19,13 +19,35 @@ export function logoutUser(userId) {
   });
 }
 
-export function checkUser(loginInfo) {
+export function loginUser(loginInfo) {
   return new Promise(async (resolve, reject) => {
     try {
       const response = await fetch(`${BACKEND_URL}/auth/login`, {
         method: "POST",
         credentials: "include",
         body: JSON.stringify(loginInfo),
+        headers: { "Content-Type": "application/json" },
+      });
+
+      if (response.ok) {
+        const data = await response.json();
+        console.log(data);
+        resolve({ data });
+      } else {
+        const err = await response.json();
+        reject({ err });
+      }
+    } catch (err) {
+      reject({ err: err.message });
+    }
+  });
+}
+export function checkAuth(loginInfo) {
+  return new Promise(async (resolve, reject) => {
+    try {
+      const response = await fetch(`${BACKEND_URL}/auth/check`, {
+        method: "GET",
+        credentials: "include",
         headers: { "Content-Type": "application/json" },
       });
 

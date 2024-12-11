@@ -46,8 +46,10 @@ const PopularProducts = () => {
   const dispatch = useDispatch();
   const popularProducts = useSelector(selectPopularProducts).products;
   useEffect(() => {
-    dispatch(fetchPopularProductsAsync(filter));
-  }, [dispatch]);
+    if (!popularProducts) {
+      dispatch(fetchPopularProductsAsync(filter));
+    }
+  }, [dispatch, filter, popularProducts]);
   return (
     <section id="products" className="max-container max-sm:mt-12">
       <div className="flex flex-col justify-start gap-5">

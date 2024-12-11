@@ -11,7 +11,7 @@ export const fetchLoggedInUserAsync = createAsyncThunk(
   "user/fetchLoggedInUser",
   async () => {
     const response = await fetchLoggedInUser();
-    // The value we return becomes the `fulfilled` action payload
+
     return response.data;
   }
 );
@@ -26,7 +26,7 @@ export const updateUserAsync = createAsyncThunk(
   "user/updateUser",
   async (update) => {
     const response = await updateUser(update);
-    // The value we return becomes the `fulfilled` action payload
+
     return response.data;
   }
 );

@@ -1,9 +1,11 @@
 import { BACKEND_URL } from "../../app/constants";
 
 export function addToCart(item) {
+  console.log("addToCart", item);
   return new Promise(async (resolve) => {
     const response = await fetch(`${BACKEND_URL}/cart`, {
       method: "POST",
+      credentials: "include",
       body: JSON.stringify(item),
       headers: { "content-type": "application/json" },
     });
@@ -29,6 +31,7 @@ export function updateCart(update) {
   return new Promise(async (resolve) => {
     const response = await fetch(`${BACKEND_URL}/cart/` + update.id, {
       method: "PATCH",
+      credentials: "include",
       body: JSON.stringify({ quantity: update.quantity }),
       headers: { "content-type": "application/json" },
     });
@@ -41,6 +44,7 @@ export function deleteItemFromCart(itemId) {
   return new Promise(async (resolve) => {
     const response = await fetch(`${BACKEND_URL}/cart/` + itemId, {
       method: "DELETE",
+      credentials: "include",
       headers: { "content-type": "application/json" },
     });
     const data = await response.json();

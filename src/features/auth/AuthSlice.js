@@ -1,5 +1,5 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import { checkUser, createUser, logoutUser } from "./AuthAPI";
+import { createUser, loginUser, logoutUser, checkAuth } from "./AuthAPI";
 
 const initialState = {
   value: 0,
@@ -12,7 +12,7 @@ export const createUserAsync = createAsyncThunk(
   "user/createUser",
   async (userData) => {
     const response = await createUser(userData);
-    // The value we return becomes the `fulfilled` action payload
+
     return response.data;
   }
 );
@@ -20,19 +20,25 @@ export const logoutUserAsync = createAsyncThunk(
   "user/logoutUser",
   async (userId) => {
     const response = await logoutUser(userId);
-    // The value we return becomes the `fulfilled` action payload
     return response.data;
   }
 );
 
-export const checkUserAsync = createAsyncThunk(
-  "user/checkUser",
+export const loginUserAsync = createAsyncThunk(
+  "user/loginUser",
   async (loginInfo) => {
-    const response = await checkUser(loginInfo);
-    // The value we return becomes the `fulfilled` action payload
+    const response = await loginUser(loginInfo);
     return response.data;
   }
 );
+export const checkAuthAsync = createAsyncThunk("user/checkAuth", async () => {
+  try {
+    const response = await checkAuth();
+    return response.data;
+  } catch (error) {
+    console.log("error checking user", error);
+  }
+});
 
 export const authSlice = createSlice({
   name: "user",
@@ -50,18 +56,28 @@ export const authSlice = createSlice({
         state.status = "idle";
         state.loggedInUserToken = action.payload;
       })
-      .addCase(checkUserAsync.pending, (state) => {
+      .addCase(loginUserAsync.pending, (state) => {
         state.status = "loading";
       })
-      .addCase(checkUserAsync.fulfilled, (state, action) => {
+      .addCase(loginUserAsync.fulfilled, (state, action) => {
         state.status = "idle";
         state.loggedInUserToken = action.payload;
       })
-      .addCase(checkUserAsync.rejected, (state, action) => {
+      .addCase(loginUserAsync.rejected, (state, action) => {
         state.status = "idle";
         state.error = action.error;
       })
-
+      .addCase(checkAuthAsync.pending, (state) => {
+        state.status = "loading";
+      })
+      .addCase(checkAuthAsync.fulfilled, (state, action) => {
+        state.status = "idle";
+        state.loggedInUserToken = action.payload;
+      })
+      .addCase(checkAuthAsync.rejected, (state, action) => {
+        state.status = "idle";
+        state.error = action.error;
+      })
       .addCase(logoutUserAsync.pending, (state) => {
         state.status = "loading";
       })

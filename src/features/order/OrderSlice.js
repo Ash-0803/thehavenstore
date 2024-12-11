@@ -12,7 +12,7 @@ export const createOrderAsync = createAsyncThunk(
   "order/createOrder",
   async (order) => {
     const response = await createOrder(order);
-    // The value we return becomes the `fulfilled` action payload
+
     return response.data;
   }
 );
@@ -20,17 +20,20 @@ export const updateOrderAsync = createAsyncThunk(
   "order/updateOrder",
   async (order) => {
     const response = await updateOrder(order);
-    // The value we return becomes the `fulfilled` action payload
+
     return response.data;
   }
 );
 
 export const fetchAllOrdersAsync = createAsyncThunk(
   "order/fetchAllOrders",
-  async ({ sort, pagination }) => {
-    const response = await fetchAllOrders(sort, pagination);
-    // The value we return becomes the `fulfilled` action payload
-    return response.data;
+  async ({ sort, pagination }, { rejectWithValue }) => {
+    try {
+      const response = await fetchAllOrders(sort, pagination);
+      return response.data;
+    } catch (error) {
+      return rejectWithValue(error.message);
+    }
   }
 );
 
@@ -66,6 +69,10 @@ export const orderSlice = createSlice({
         state.status = "idle";
         state.orders = action.payload.orders;
         state.totalOrders = action.payload.totalOrders;
+      })
+      .addCase(fetchAllOrdersAsync.rejected, (state, action) => {
+        state.status = "rejected";
+        state.orders = { rejected: true };
       })
       .addCase(updateOrderAsync.pending, (state) => {
         state.status = "loading";

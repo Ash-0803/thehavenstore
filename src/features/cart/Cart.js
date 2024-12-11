@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { InfinitySpin } from "react-loader-spinner";
+import { Triangle } from "react-loader-spinner";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { discountedPrice } from "../../app/constants";
@@ -10,6 +10,7 @@ import {
   selectOrder,
   selectPaymentMethod,
 } from "../order/OrderSlice";
+import { selectUserInfo } from "../User/UserSlice";
 import {
   deleteItemFromCartAsync,
   fetchItemsByUserIdAsync,
@@ -17,7 +18,6 @@ import {
   selectItems,
   updateCartAsync,
 } from "./CartSlice";
-import { selectUserInfo } from "../User/UserSlice";
 
 export default function Cart({ page, values = null }) {
   const dispatch = useDispatch();
@@ -57,75 +57,105 @@ export default function Cart({ page, values = null }) {
   return (
     <>
       <div>
-        <div className="mx-auto mt-12 bg-white max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="border-t border-gray-200 px-4 py-6 sm:px-6">
-            <h1 className="text-4xl my-5 font-bold tracking-tight text-gray-900">
-              Cart
-            </h1>
-            <div className="flow-root">
-              {status === "loading" ? (
-                <InfinitySpin
-                  visible={true}
-                  width="200"
-                  color="rgb(79, 70, 229)"
-                  ariaLabel="infinity-spin-loading"
-                />
-              ) : null}
-              <ul className="-my-6 divide-y divide-gray-200">
-                {items.map((item, index) => (
-                  <CartItem key={index} item={item} />
-                ))}
-              </ul>
-            </div>
+        {status === "loading" ? (
+          <div className="flex flex-col justify-center items-center h-full">
+            <Triangle
+              visible={true}
+              height="100"
+              width="100"
+              color="#FF6452"
+              ariaLabel="triangle-loading"
+              wrapperStyle={{}}
+              wrapperClass=""
+            />
+            Cart Loading...
           </div>
+        ) : items && items.length ? (
+          <div className="mx-auto mt-12 bg-white max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="border-t border-gray-200 px-4 py-6 sm:px-6">
+              <h1 className="text-4xl my-5 font-bold tracking-tight text-gray-900">
+                Cart
+              </h1>
+              <div className="flow-root">
+                <ul className="-my-6 divide-y divide-gray-200">
+                  {items.map((item, index) => (
+                    <CartItem key={index} item={item} />
+                  ))}
+                </ul>
+              </div>
+            </div>
 
-          <div className="border-t border-gray-200 px-4 py-6 sm:px-6">
-            <div className="flex justify-between my-2 text-base font-medium text-gray-900">
-              <p>Subtotal</p>
-              <p>$ {totalAmount}</p>
-            </div>
-            <div className="flex justify-between my-2 text-base font-medium text-gray-900">
-              <p>Total Items in Cart</p>
-              <p>{totalItems} items</p>
-            </div>
-            <p className="mt-0.5 text-sm text-gray-500">
-              Shipping and taxes calculated at checkout.
-            </p>
-            <div className="mt-6">
-              {page == "checkout" ? (
-                <Link
-                  to={`/order-success/${currentOrder?.id}`}
-                  // FIXME: Proper ID needs tobe set
-                  onClick={() => handleOrder()}
-                  className="flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-indigo-700"
-                >
-                  Order Now
-                </Link>
-              ) : (
-                <Link
-                  to="/checkout"
-                  className="flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-indigo-700"
-                >
-                  Checkout
-                </Link>
-              )}
-            </div>
-            <div className="mt-6 flex justify-center text-center text-sm text-gray-500">
-              <p>
-                or
-                <Link to="/">
-                  <button
-                    type="button"
-                    className="font-medium text-indigo-600 hover:text-indigo-500"
-                  >
-                    Continue Shopping
-                    <span aria-hidden="true"> &rarr;</span>
-                  </button>
-                </Link>
+            <div className="border-t border-gray-200 px-4 py-6 sm:px-6">
+              <div className="flex justify-between my-2 text-base font-medium text-gray-900">
+                <p>Subtotal</p>
+                <p>$ {totalAmount}</p>
+              </div>
+              <div className="flex justify-between my-2 text-base font-medium text-gray-900">
+                <p>Total Items in Cart</p>
+                <p>{totalItems} items</p>
+              </div>
+              <p className="mt-0.5 text-sm text-gray-500">
+                Shipping and taxes calculated at checkout.
               </p>
+              <div className="mt-6">
+                {page === "checkout" ? (
+                  paymentMethod === "cash" ? (
+                    <Link
+                      to={`/order-success/${currentOrder?.id}`}
+                      // FIXME: Proper ID needs tobe set
+                      onClick={() => handleOrder()}
+                      className="flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-indigo-700"
+                    >
+                      Order Now
+                    </Link>
+                  ) : (
+                    <Link
+                      to={`/stripe-checkout/`}
+                      // FIXME: Proper ID needs to be set
+                      onClick={() => handleOrder()}
+                      className="flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-indigo-700"
+                    >
+                      Order Now
+                    </Link>
+                  )
+                ) : (
+                  <Link
+                    to="/checkout"
+                    className="flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-indigo-700"
+                  >
+                    Checkout
+                  </Link>
+                )}
+              </div>
+              <div className="mt-6 flex justify-center text-center text-sm text-gray-500">
+                <p>
+                  or
+                  <Link to="/">
+                    <button
+                      type="button"
+                      className="font-medium text-indigo-600 hover:text-indigo-500"
+                    >
+                      Continue Shopping
+                      <span aria-hidden="true"> &rarr;</span>
+                    </button>
+                  </Link>
+                </p>
+              </div>
             </div>
           </div>
-        </div>
+        ) : (
+          <div className="text-center h-screen w-screen flex flex-col justify-center items-center">
+            <h1 className="text-xl my-5 font-bold tracking-tight text-gray-900 text-center">
+              Your cart is empty right now
+            </h1>
+            <Link
+              to="/"
+              className="font-semibold leading-6 text-indigo-600 hover:text-indigo-500"
+            >
+              Continue Shopping
+            </Link>
+          </div>
+        )}
       </div>
     </>
   );

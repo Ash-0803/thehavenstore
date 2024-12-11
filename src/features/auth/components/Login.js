@@ -2,7 +2,7 @@ import { useForm } from "react-hook-form";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 import {
-  checkUserAsync,
+  loginUserAsync,
   selectError,
   selectLoggedInUserToken,
 } from "../AuthSlice";
@@ -39,7 +39,7 @@ export default function Login() {
             noValidate
             onSubmit={handleSubmit((data) => {
               dispatch(
-                checkUserAsync({ email: data.email, password: data.password })
+                loginUserAsync({ email: data.email, password: data.password })
               );
             })}
             className="space-y-6"
@@ -59,7 +59,7 @@ export default function Login() {
                   {...register("email", {
                     required: "email is required",
                     pattern: {
-                      value: /\b[\w\.-]+@[\w\.-]+\.\w{2,4}\b/gi,
+                      value: /\b[\w.-]+@[\w.-]+\.\w{2,4}\b/gi,
                       message: "email not valid",
                     },
                   })}

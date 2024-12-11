@@ -1,7 +1,9 @@
-import { default as React, useEffect } from "react";
+import { default as React, useEffect, useState } from "react";
 import { Triangle } from "react-loader-spinner";
 import { useDispatch, useSelector } from "react-redux";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import { discountedPrice } from "../../../app/constants";
 import Address from "../../checkout/Address";
 import {
@@ -9,28 +11,64 @@ import {
   selectUserOrders,
   selectUserStatus,
 } from "../UserSlice";
+
 export default function UserOrders() {
   const orders = useSelector(selectUserOrders);
   const dispatch = useDispatch();
   const orderStatus = useSelector(selectUserStatus);
+  const navigate = useNavigate();
+  const [toastShown, setToastShown] = useState(false);
 
   useEffect(() => {
     dispatch(fetchUserOrdersAsync());
   }, [dispatch]);
 
+  useEffect(() => {
+    if (orderStatus === "rejected" && !orders.length && !toastShown) {
+      toast.error("Order could not be fetched. Please try again later.");
+      setToastShown(true);
+    }
+  }, [orderStatus, orders, navigate, toastShown]);
+
   return (
     <div>
-      {orderStatus === "idle" ? (
-        <div>
-          <h1 className="text-4xl my-5 font-bold tracking-tight text-gray-900 text-center">
-            Order
-          </h1>
-          {orders.map((order) => {
-            return <Order key={order.id} order={order} />;
-          })}
-        </div>
+      <ToastContainer
+        position="top-center"
+        autoClose={2000}
+        hideProgressBar={true}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="colored"
+      />
+      {orderStatus === "idle" && orders.length ? (
+        typeof orders === Object && orderStatus === "rejected" ? (
+          <div className="text-center h-screen w-screen flex flex-col justify-center items-center">
+            <h1 className="text-xl my-5 font-bold tracking-tight text-gray-900 text-center">
+              We could not find any orders from this account!
+            </h1>
+            <Link
+              to="/"
+              className="font-semibold leading-6 text-indigo-600 hover:text-indigo-500"
+            >
+              Continue Shopping
+            </Link>
+          </div>
+        ) : (
+          <div>
+            <h1 className="text-4xl my-5 font-bold tracking-tight text-gray-900 text-center">
+              Order
+            </h1>
+            {orders.map((order) => {
+              return <Order key={order.id} order={order} />;
+            })}
+          </div>
+        )
       ) : (
-        <div className="flex flex-col justify-center items-center h-full">
+        <div className="flex justify-center items-center h-screen w-screen">
           <Triangle
             visible={true}
             height="100"
@@ -40,7 +78,7 @@ export default function UserOrders() {
             wrapperStyle={{}}
             wrapperClass=""
           />
-          Products Loading...
+          Orders Loading...
         </div>
       )}
     </div>
