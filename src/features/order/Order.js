@@ -1,12 +1,14 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Link, Navigate, useParams } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 import { resetCartAsync } from "../cart/CartSlice";
 import { resetCurrentOrder, selectOrder } from "./OrderSlice";
 
 export function Order() {
   const currentOrder = useSelector(selectOrder);
-  const params = useParams();
+  console.log("current order:", currentOrder);
+
+  // const params = useParams();
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(resetCartAsync());
@@ -19,10 +21,10 @@ export function Order() {
       <main className="grid min-h-full place-items-center bg-white px-6 py-24 sm:py-32 lg:px-8">
         <div className="text-center">
           <p className="text-base font-semibold text-indigo-600">
-            Your order has been placed succesfully
+            Your order has been placed succesfully{currentOrder}
           </p>
           <h1 className="mt-4 text-3xl font-bold tracking-tight text-gray-900 sm:text-5xl">
-            Order id : #{params.id}
+            Order id : #{currentOrder.id}
           </h1>
           <p className="mt-6 text-base leading-7 text-gray-600">
             Checkout more of our products:

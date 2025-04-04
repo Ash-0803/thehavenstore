@@ -22,8 +22,8 @@ import {
   selectAllProducts,
   selectBrands,
   selectCategories,
-  selectTotalItems,
   selectProductStatus,
+  selectTotalItems,
 } from "./ProductSlice";
 
 export default function ProductsList() {
@@ -402,30 +402,31 @@ function MobileFilter({
                         </h3>
                         <Disclosure.Panel className="pt-6">
                           <div className="space-y-6">
-                            {section.options.map((option, optionIdx) => (
-                              <div
-                                key={option.id}
-                                className="flex items-center"
-                              >
-                                <input
-                                  id={`filter-mobile-${section.id}-${optionIdx}`}
-                                  name={`${section.id}[]`}
-                                  defaultValue={option.value}
-                                  type="checkbox"
-                                  defaultChecked={option.checked}
-                                  onChange={(e) =>
-                                    handleFilter(e, section, option)
-                                  }
-                                  className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
-                                />
-                                <label
-                                  htmlFor={`filter-mobile-${section.id}-${optionIdx}`}
-                                  className="ml-3 min-w-0 flex-1 text-gray-500"
+                            {section.options &&
+                              section.options.map((option, optionIdx) => (
+                                <div
+                                  key={option.id}
+                                  className="flex items-center"
                                 >
-                                  {option.label}
-                                </label>
-                              </div>
-                            ))}
+                                  <input
+                                    id={`filter-mobile-${section.id}-${optionIdx}`}
+                                    name={`${section.id}[]`}
+                                    defaultValue={option.value}
+                                    type="checkbox"
+                                    defaultChecked={option.checked}
+                                    onChange={(e) =>
+                                      handleFilter(e, section, option)
+                                    }
+                                    className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
+                                  />
+                                  <label
+                                    htmlFor={`filter-mobile-${section.id}-${optionIdx}`}
+                                    className="ml-3 min-w-0 flex-1 text-gray-500"
+                                  >
+                                    {option.label}
+                                  </label>
+                                </div>
+                              ))}
                           </div>
                         </Disclosure.Panel>
                       </>
@@ -476,25 +477,26 @@ function DesktopFilter({ filters, handleFilter, subCategories }) {
               </h3>
               <Disclosure.Panel className="pt-6">
                 <div className="space-y-4">
-                  {section.options.map((option, optionIdx) => (
-                    <div key={option.id} className="flex items-center">
-                      <input
-                        id={`filter-${section.id}-${optionIdx}`}
-                        name={`${section.id}[]`}
-                        defaultValue={option.value}
-                        type="checkbox"
-                        defaultChecked={option.checked}
-                        onChange={(e) => handleFilter(e, section, option)}
-                        className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
-                      />
-                      <label
-                        htmlFor={`filter-${section.id}-${optionIdx}`}
-                        className="ml-3 text-sm text-gray-600"
-                      >
-                        {option.label}
-                      </label>
-                    </div>
-                  ))}
+                  {section.options &&
+                    section.options.map((option, optionIdx) => (
+                      <div key={option.id} className="flex items-center">
+                        <input
+                          id={`filter-${section.id}-${optionIdx}`}
+                          name={`${section.id}[]`}
+                          defaultValue={option.value}
+                          type="checkbox"
+                          defaultChecked={option.checked}
+                          onChange={(e) => handleFilter(e, section, option)}
+                          className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
+                        />
+                        <label
+                          htmlFor={`filter-${section.id}-${optionIdx}`}
+                          className="ml-3 text-sm text-gray-600"
+                        >
+                          {option.label}
+                        </label>
+                      </div>
+                    ))}
                 </div>
               </Disclosure.Panel>
             </>

@@ -1,1154 +1,2079 @@
 {
   "products": [
     {
-      "id": "1",
-      "title": "iPhone 9",
-      "description": "An apple mobile which is nothing like apple",
-      "price": 549,
-      "discountPercentage": 12.96,
-      "rating": 4.69,
-      "stock": 0,
-      "brand": "Apple",
-      "category": "smartphones",
-      "thumbnail": "https://cdn.dummyjson.com/product-images/1/thumbnail.jpg",
-      "images": [
-        "https://cdn.dummyjson.com/product-images/1/1.jpg",
-        "https://cdn.dummyjson.com/product-images/1/2.jpg",
-        "https://cdn.dummyjson.com/product-images/1/3.jpg",
-        "https://cdn.dummyjson.com/product-images/1/thumbnail.jpg"
-      ],
-      "deleted": true
-    },
-    {
-      "id": "2",
-      "title": "iPhone X",
-      "description": "SIM-Free, Model A19211 6.5-inch Super Retina HD display with OLED technology A12 Bionic chip with ...",
-      "price": 899,
-      "discountPercentage": 17.94,
-      "rating": 4.44,
-      "stock": 34,
-      "brand": "Apple",
-      "category": "smartphones",
-      "thumbnail": "https://cdn.dummyjson.com/product-images/2/thumbnail.jpg",
-      "images": [
-        "https://cdn.dummyjson.com/product-images/2/1.jpg",
-        "https://cdn.dummyjson.com/product-images/2/2.jpg",
-        "https://cdn.dummyjson.com/product-images/2/3.jpg",
-        "https://cdn.dummyjson.com/product-images/2/thumbnail.jpg"
-      ]
-    },
-    {
-      "id": "3",
-      "title": "Samsung Universe 9",
-      "description": "Samsung's new variant which goes beyond Galaxy to the Universe",
-      "price": 1249,
-      "discountPercentage": 15.46,
-      "rating": 4.09,
-      "stock": 36,
-      "brand": "Samsung",
-      "category": "smartphones",
-      "thumbnail": "https://cdn.dummyjson.com/product-images/3/thumbnail.jpg",
-      "images": [
-        "https://cdn.dummyjson.com/product-images/3/1.jpg"
-      ]
-    },
-    {
-      "id": "4",
-      "title": "OPPOF19",
-      "description": "OPPO F19 is officially announced on April 2021.",
-      "price": 280,
-      "discountPercentage": 17.91,
-      "rating": 4.3,
-      "stock": 123,
-      "brand": "OPPO",
-      "category": "smartphones",
-      "thumbnail": "https://cdn.dummyjson.com/product-images/4/thumbnail.jpg",
-      "images": [
-        "https://cdn.dummyjson.com/product-images/4/1.jpg",
-        "https://cdn.dummyjson.com/product-images/4/2.jpg",
-        "https://cdn.dummyjson.com/product-images/4/3.jpg",
-        "https://cdn.dummyjson.com/product-images/4/4.jpg",
-        "https://cdn.dummyjson.com/product-images/4/thumbnail.jpg"
-      ]
-    },
-    {
-      "id": "5",
-      "title": "Huawei P30",
-      "description": "Huawei’s re-badged P30 Pro New Edition was officially unveiled yesterday in Germany and now the device has made its way to the UK.",
-      "price": 499,
-      "discountPercentage": 10.58,
-      "rating": 4.09,
-      "stock": 32,
-      "brand": "Huawei",
-      "category": "smartphones",
-      "thumbnail": "https://cdn.dummyjson.com/product-images/5/thumbnail.jpg",
-      "images": [
-        "https://cdn.dummyjson.com/product-images/5/1.jpg",
-        "https://cdn.dummyjson.com/product-images/5/2.jpg",
-        "https://cdn.dummyjson.com/product-images/5/3.jpg"
-      ]
-    },
-    {
-      "id": "6",
-      "title": "MacBook Pro",
-      "description": "MacBook Pro 2021 with mini-LED display may launch between September, November",
-      "price": 1749,
-      "discountPercentage": 11.02,
-      "rating": 4.57,
-      "stock": 83,
-      "brand": "Apple",
-      "category": "laptops",
-      "thumbnail": "https://cdn.dummyjson.com/product-images/6/thumbnail.png",
-      "images": [
-        "https://cdn.dummyjson.com/product-images/6/1.png",
-        "https://cdn.dummyjson.com/product-images/6/2.jpg",
-        "https://cdn.dummyjson.com/product-images/6/3.png",
-        "https://cdn.dummyjson.com/product-images/6/4.jpg"
-      ]
-    },
-    {
-      "id": "7",
-      "title": "Samsung Galaxy Book",
-      "description": "Samsung Galaxy Book S (2020) Laptop With Intel Lakefield Chip, 8GB of RAM Launched",
-      "price": 1499,
-      "discountPercentage": 4.15,
-      "rating": 4.25,
-      "stock": 50,
-      "brand": "Samsung",
-      "category": "laptops",
-      "thumbnail": "https://cdn.dummyjson.com/product-images/7/thumbnail.jpg",
-      "images": [
-        "https://cdn.dummyjson.com/product-images/7/1.jpg",
-        "https://cdn.dummyjson.com/product-images/7/2.jpg",
-        "https://cdn.dummyjson.com/product-images/7/3.jpg",
-        "https://cdn.dummyjson.com/product-images/7/thumbnail.jpg"
-      ]
-    },
-    {
-      "id": "8",
-      "title": "Microsoft Surface Laptop 4",
-      "description": "Style and speed. Stand out on HD video calls backed by Studio Mics. Capture ideas on the vibrant touchscreen.",
-      "price": 1499,
-      "discountPercentage": 10.23,
-      "rating": 4.43,
-      "stock": 68,
-      "brand": "Microsoft Surface",
-      "category": "laptops",
-      "thumbnail": "https://cdn.dummyjson.com/product-images/8/thumbnail.jpg",
-      "images": [
-        "https://cdn.dummyjson.com/product-images/8/1.jpg",
-        "https://cdn.dummyjson.com/product-images/8/2.jpg",
-        "https://cdn.dummyjson.com/product-images/8/3.jpg",
-        "https://cdn.dummyjson.com/product-images/8/4.jpg",
-        "https://cdn.dummyjson.com/product-images/8/thumbnail.jpg"
-      ]
-    },
-    {
-      "id": "9",
-      "title": "Infinix INBOOK",
-      "description": "Infinix Inbook X1 Ci3 10th 8GB 256GB 14 Win10 Grey – 1 Year Warranty",
-      "price": 1099,
-      "discountPercentage": 11.83,
-      "rating": 4.54,
-      "stock": 96,
-      "brand": "Infinix",
-      "category": "laptops",
-      "thumbnail": "https://cdn.dummyjson.com/product-images/9/thumbnail.jpg",
-      "images": [
-        "https://cdn.dummyjson.com/product-images/9/1.jpg",
-        "https://cdn.dummyjson.com/product-images/9/2.png",
-        "https://cdn.dummyjson.com/product-images/9/3.png",
-        "https://cdn.dummyjson.com/product-images/9/4.jpg",
-        "https://cdn.dummyjson.com/product-images/9/thumbnail.jpg"
-      ]
-    },
-    {
-      "id": "10",
-      "title": "HP Pavilion 15-DK1056WM",
-      "description": "HP Pavilion 15-DK1056WM Gaming Laptop 10th Gen Core i5, 8GB, 256GB SSD, GTX 1650 4GB, Windows 10",
-      "price": 1099,
-      "discountPercentage": 6.18,
-      "rating": 4.43,
-      "stock": 89,
-      "brand": "HP Pavilion",
-      "category": "laptops",
-      "thumbnail": "https://cdn.dummyjson.com/product-images/10/thumbnail.jpeg",
-      "images": [
-        "https://cdn.dummyjson.com/product-images/10/1.jpg",
-        "https://cdn.dummyjson.com/product-images/10/2.jpg",
-        "https://cdn.dummyjson.com/product-images/10/3.jpg",
-        "https://cdn.dummyjson.com/product-images/10/thumbnail.jpeg"
-      ]
-    },
-    {
-      "id": "11",
-      "title": "perfume Oil",
-      "description": "Mega Discount, Impression of Acqua Di Gio by GiorgioArmani concentrated attar perfume Oil",
-      "price": 13,
-      "discountPercentage": 8.4,
-      "rating": 4.26,
-      "stock": 65,
-      "brand": "Impression of Acqua Di Gio",
-      "category": "fragrances",
-      "thumbnail": "https://cdn.dummyjson.com/product-images/11/thumbnail.jpg",
-      "images": [
-        "https://cdn.dummyjson.com/product-images/11/1.jpg",
-        "https://cdn.dummyjson.com/product-images/11/2.jpg",
-        "https://cdn.dummyjson.com/product-images/11/3.jpg",
-        "https://cdn.dummyjson.com/product-images/11/thumbnail.jpg"
-      ]
-    },
-    {
-      "id": "12",
-      "title": "Brown Perfume",
-      "description": "Royal_Mirage Sport Brown Perfume for Men & Women - 120ml",
-      "price": 40,
-      "discountPercentage": 15.66,
-      "rating": 4,
-      "stock": 52,
-      "brand": "Royal_Mirage",
-      "category": "fragrances",
-      "thumbnail": "https://cdn.dummyjson.com/product-images/12/thumbnail.jpg",
-      "images": [
-        "https://cdn.dummyjson.com/product-images/12/1.jpg",
-        "https://cdn.dummyjson.com/product-images/12/2.jpg",
-        "https://cdn.dummyjson.com/product-images/12/3.png",
-        "https://cdn.dummyjson.com/product-images/12/4.jpg",
-        "https://cdn.dummyjson.com/product-images/12/thumbnail.jpg"
-      ]
-    },
-    {
-      "id": "13",
-      "title": "Fog Scent Xpressio Perfume",
-      "description": "Product details of Best Fog Scent Xpressio Perfume 100ml For Men cool long lasting perfumes for Men",
-      "price": 13,
-      "discountPercentage": 8.14,
-      "rating": 4.59,
-      "stock": 61,
-      "brand": "Fog Scent Xpressio",
-      "category": "fragrances",
-      "thumbnail": "https://cdn.dummyjson.com/product-images/13/thumbnail.webp",
-      "images": [
-        "https://cdn.dummyjson.com/product-images/13/1.jpg",
-        "https://cdn.dummyjson.com/product-images/13/2.png",
-        "https://cdn.dummyjson.com/product-images/13/3.jpg",
-        "https://cdn.dummyjson.com/product-images/13/4.jpg",
-        "https://cdn.dummyjson.com/product-images/13/thumbnail.webp"
-      ]
-    },
-    {
-      "id": "14",
-      "title": "Non-Alcoholic Concentrated Perfume Oil",
-      "description": "Original Al Munakh® by Mahal Al Musk | Our Impression of Climate | 6ml Non-Alcoholic Concentrated Perfume Oil",
-      "price": 120,
-      "discountPercentage": 15.6,
-      "rating": 4.21,
-      "stock": 114,
-      "brand": "Al Munakh",
-      "category": "fragrances",
-      "thumbnail": "https://cdn.dummyjson.com/product-images/14/thumbnail.jpg",
-      "images": [
-        "https://cdn.dummyjson.com/product-images/14/1.jpg",
-        "https://cdn.dummyjson.com/product-images/14/2.jpg",
-        "https://cdn.dummyjson.com/product-images/14/3.jpg",
-        "https://cdn.dummyjson.com/product-images/14/thumbnail.jpg"
-      ]
-    },
-    {
-      "id": "15",
-      "title": "Eau De Perfume Spray",
-      "description": "Genuine Al-Rehab spray perfume from UAE/Saudi Arabia/Yemen High Quality",
-      "price": 30,
-      "discountPercentage": 10.99,
-      "rating": 4.7,
-      "stock": 105,
-      "brand": "Lord - Al-Rehab",
-      "category": "fragrances",
-      "thumbnail": "https://cdn.dummyjson.com/product-images/15/thumbnail.jpg",
-      "images": [
-        "https://cdn.dummyjson.com/product-images/15/1.jpg",
-        "https://cdn.dummyjson.com/product-images/15/2.jpg",
-        "https://cdn.dummyjson.com/product-images/15/3.jpg",
-        "https://cdn.dummyjson.com/product-images/15/4.jpg",
-        "https://cdn.dummyjson.com/product-images/15/thumbnail.jpg"
-      ]
-    },
-    {
-      "id": "16",
-      "title": "Hyaluronic Acid Serum",
-      "description": "L'OrÃ©al Paris introduces Hyaluron Expert Replumping Serum formulated with 1.5% Hyaluronic Acid",
-      "price": 19,
-      "discountPercentage": 13.31,
-      "rating": 4.83,
-      "stock": 110,
-      "brand": "L'Oreal Paris",
-      "category": "skincare",
-      "thumbnail": "https://cdn.dummyjson.com/product-images/16/thumbnail.jpg",
-      "images": [
-        "https://cdn.dummyjson.com/product-images/16/1.png",
-        "https://cdn.dummyjson.com/product-images/16/2.webp",
-        "https://cdn.dummyjson.com/product-images/16/3.jpg",
-        "https://cdn.dummyjson.com/product-images/16/4.jpg",
-        "https://cdn.dummyjson.com/product-images/16/thumbnail.jpg"
-      ]
-    },
-    {
-      "id": "17",
-      "title": "Tree Oil 30ml",
-      "description": "Tea tree oil contains a number of compounds, including terpinen-4-ol, that have been shown to kill certain bacteria,",
-      "price": 12,
-      "discountPercentage": 4.09,
-      "rating": 4.52,
-      "stock": 78,
-      "brand": "Hemani Tea",
-      "category": "skincare",
-      "thumbnail": "https://cdn.dummyjson.com/product-images/17/thumbnail.jpg",
-      "images": [
-        "https://cdn.dummyjson.com/product-images/17/1.jpg",
-        "https://cdn.dummyjson.com/product-images/17/2.jpg",
-        "https://cdn.dummyjson.com/product-images/17/3.jpg",
-        "https://cdn.dummyjson.com/product-images/17/thumbnail.jpg"
-      ]
-    },
-    {
-      "id": "18",
-      "title": "Oil Free Moisturizer 100ml",
-      "description": "Dermive Oil Free Moisturizer with SPF 20 is specifically formulated with ceramides, hyaluronic acid & sunscreen.",
-      "price": 40,
-      "discountPercentage": 13.1,
-      "rating": 4.56,
-      "stock": 88,
-      "brand": "Dermive",
-      "category": "skincare",
-      "thumbnail": "https://cdn.dummyjson.com/product-images/18/thumbnail.jpg",
-      "images": [
-        "https://cdn.dummyjson.com/product-images/18/1.jpg",
-        "https://cdn.dummyjson.com/product-images/18/2.jpg",
-        "https://cdn.dummyjson.com/product-images/18/3.jpg",
-        "https://cdn.dummyjson.com/product-images/18/4.jpg",
-        "https://cdn.dummyjson.com/product-images/18/thumbnail.jpg"
-      ]
-    },
-    {
-      "id": "19",
-      "title": "Skin Beauty Serum.",
-      "description": "Product name: rorec collagen hyaluronic acid white face serum riceNet weight: 15 m",
-      "price": 46,
-      "discountPercentage": 10.68,
-      "rating": 4.42,
-      "stock": 54,
-      "brand": "ROREC White Rice",
-      "category": "skincare",
-      "thumbnail": "https://cdn.dummyjson.com/product-images/19/thumbnail.jpg",
-      "images": [
-        "https://cdn.dummyjson.com/product-images/19/1.jpg",
-        "https://cdn.dummyjson.com/product-images/19/2.jpg",
-        "https://cdn.dummyjson.com/product-images/19/3.png",
-        "https://cdn.dummyjson.com/product-images/19/thumbnail.jpg"
-      ]
-    },
-    {
-      "id": "20",
-      "title": "Freckle Treatment Cream- 15gm",
-      "description": "Fair & Clear is Pakistan's only pure Freckle cream which helpsfade Freckles, Darkspots and pigments. Mercury level is 0%, so there are no side effects.",
-      "price": 70,
-      "discountPercentage": 16.99,
-      "rating": 4.06,
-      "stock": 140,
-      "brand": "Fair & Clear",
-      "category": "skincare",
-      "thumbnail": "https://cdn.dummyjson.com/product-images/20/thumbnail.jpg",
-      "images": [
-        "https://cdn.dummyjson.com/product-images/20/1.jpg",
-        "https://cdn.dummyjson.com/product-images/20/2.jpg",
-        "https://cdn.dummyjson.com/product-images/20/3.jpg",
-        "https://cdn.dummyjson.com/product-images/20/4.jpg",
-        "https://cdn.dummyjson.com/product-images/20/thumbnail.jpg"
-      ]
-    },
-    {
-      "id": "21",
-      "title": "- Daal Masoor 500 grams",
-      "description": "Fine quality Branded Product Keep in a cool and dry place",
-      "price": 20,
-      "discountPercentage": 4.81,
-      "rating": 4.44,
-      "stock": 133,
-      "brand": "Saaf & Khaas",
-      "category": "groceries",
-      "thumbnail": "https://cdn.dummyjson.com/product-images/21/thumbnail.png",
-      "images": [
-        "https://cdn.dummyjson.com/product-images/21/1.png",
-        "https://cdn.dummyjson.com/product-images/21/2.jpg",
-        "https://cdn.dummyjson.com/product-images/21/3.jpg"
-      ]
-    },
-    {
-      "id": "22",
-      "title": "Elbow Macaroni - 400 gm",
-      "description": "Product details of Bake Parlor Big Elbow Macaroni - 400 gm",
-      "price": 14,
-      "discountPercentage": 15.58,
-      "rating": 4.57,
-      "stock": 146,
-      "brand": "Bake Parlor Big",
-      "category": "groceries",
-      "thumbnail": "https://cdn.dummyjson.com/product-images/22/thumbnail.jpg",
-      "images": [
-        "https://cdn.dummyjson.com/product-images/22/1.jpg",
-        "https://cdn.dummyjson.com/product-images/22/2.jpg",
-        "https://cdn.dummyjson.com/product-images/22/3.jpg"
-      ]
-    },
-    {
-      "id": "23",
-      "title": "Orange Essence Food Flavou",
-      "description": "Specifications of Orange Essence Food Flavour For Cakes and Baking Food Item",
-      "price": 14,
-      "discountPercentage": 8.04,
-      "rating": 4.85,
-      "stock": 26,
-      "brand": "Baking Food Items",
-      "category": "groceries",
-      "thumbnail": "https://cdn.dummyjson.com/product-images/23/thumbnail.jpg",
-      "images": [
-        "https://cdn.dummyjson.com/product-images/23/1.jpg",
-        "https://cdn.dummyjson.com/product-images/23/2.jpg",
-        "https://cdn.dummyjson.com/product-images/23/3.jpg",
-        "https://cdn.dummyjson.com/product-images/23/4.jpg",
-        "https://cdn.dummyjson.com/product-images/23/thumbnail.jpg"
-      ]
-    },
-    {
-      "id": "24",
-      "title": "cereals muesli fruit nuts",
-      "description": "original fauji cereal muesli 250gm box pack original fauji cereals muesli fruit nuts flakes breakfast cereal break fast faujicereals cerels cerel foji fouji",
-      "price": 46,
-      "discountPercentage": 16.8,
+      "title": "Essence Mascara Lash Princess",
+      "description": "The Essence Mascara Lash Princess is a popular mascara known for its volumizing and lengthening effects. Achieve dramatic lashes with this long-lasting and cruelty-free formula.",
+      "price": 9.99,
+      "discountPercentage": 7.17,
       "rating": 4.94,
-      "stock": 113,
-      "brand": "fauji",
-      "category": "groceries",
-      "thumbnail": "https://cdn.dummyjson.com/product-images/24/thumbnail.jpg",
+      "stock": 5,
+      "brand": "Essence",
+      "category": "beauty",
+      "thumbnail": "https://cdn.dummyjson.com/products/images/beauty/Essence%20Mascara%20Lash%20Princess/thumbnail.png",
       "images": [
-        "https://cdn.dummyjson.com/product-images/24/1.jpg",
-        "https://cdn.dummyjson.com/product-images/24/2.jpg",
-        "https://cdn.dummyjson.com/product-images/24/3.jpg",
-        "https://cdn.dummyjson.com/product-images/24/4.jpg",
-        "https://cdn.dummyjson.com/product-images/24/thumbnail.jpg"
-      ]
+        "https://cdn.dummyjson.com/products/images/beauty/Essence%20Mascara%20Lash%20Princess/1.png"
+      ],
+      "colors": [],
+      "sizes": [],
+      "highlights": [],
+      "discountPrice": 9.273717,
+      "deleted": false
     },
     {
-      "id": "25",
-      "title": "Gulab Powder 50 Gram",
-      "description": "Dry Rose Flower Powder Gulab Powder 50 Gram • Treats Wounds",
-      "price": 70,
-      "discountPercentage": 13.58,
-      "rating": 4.87,
+      "title": "Eyeshadow Palette with Mirror",
+      "description": "The Eyeshadow Palette with Mirror offers a versatile range of eyeshadow shades for creating stunning eye looks. With a built-in mirror, it's convenient for on-the-go makeup application.",
+      "price": 19.99,
+      "discountPercentage": 5.5,
+      "rating": 3.28,
+      "stock": 44,
+      "brand": "Glamour Beauty",
+      "category": "beauty",
+      "thumbnail": "https://cdn.dummyjson.com/products/images/beauty/Eyeshadow%20Palette%20with%20Mirror/thumbnail.png",
+      "images": [
+        "https://cdn.dummyjson.com/products/images/beauty/Eyeshadow%20Palette%20with%20Mirror/1.png"
+      ],
+      "colors": [],
+      "sizes": [],
+      "highlights": [],
+      "discountPrice": 18.890549999999998,
+      "deleted": false
+    },
+    {
+      "title": "Powder Canister",
+      "description": "The Powder Canister is a finely milled setting powder designed to set makeup and control shine. With a lightweight and translucent formula, it provides a smooth and matte finish.",
+      "price": 14.99,
+      "discountPercentage": 18.14,
+      "rating": 3.82,
+      "stock": 59,
+      "brand": "Velvet Touch",
+      "category": "beauty",
+      "thumbnail": "https://cdn.dummyjson.com/products/images/beauty/Powder%20Canister/thumbnail.png",
+      "images": [
+        "https://cdn.dummyjson.com/products/images/beauty/Powder%20Canister/1.png"
+      ],
+      "colors": [],
+      "sizes": [],
+      "highlights": [],
+      "discountPrice": 12.270814,
+      "deleted": false
+    },
+    {
+      "title": "Red Lipstick",
+      "description": "The Red Lipstick is a classic and bold choice for adding a pop of color to your lips. With a creamy and pigmented formula, it provides a vibrant and long-lasting finish.",
+      "price": 12.99,
+      "discountPercentage": 19.03,
+      "rating": 2.51,
+      "stock": 68,
+      "brand": "Chic Cosmetics",
+      "category": "beauty",
+      "thumbnail": "https://cdn.dummyjson.com/products/images/beauty/Red%20Lipstick/thumbnail.png",
+      "images": [
+        "https://cdn.dummyjson.com/products/images/beauty/Red%20Lipstick/1.png"
+      ],
+      "colors": [],
+      "sizes": [],
+      "highlights": [],
+      "discountPrice": 10.518003,
+      "deleted": false
+    },
+    {
+      "title": "Red Nail Polish",
+      "description": "The Red Nail Polish offers a rich and glossy red hue for vibrant and polished nails. With a quick-drying formula, it provides a salon-quality finish at home.",
+      "price": 8.99,
+      "discountPercentage": 2.46,
+      "rating": 3.91,
+      "stock": 71,
+      "brand": "Nail Couture",
+      "category": "beauty",
+      "thumbnail": "https://cdn.dummyjson.com/products/images/beauty/Red%20Nail%20Polish/thumbnail.png",
+      "images": [
+        "https://cdn.dummyjson.com/products/images/beauty/Red%20Nail%20Polish/1.png"
+      ],
+      "colors": [],
+      "sizes": [],
+      "highlights": [],
+      "discountPrice": 8.768846,
+      "deleted": false
+    },
+    {
+      "title": "Chanel Coco Noir Eau De",
+      "description": "Coco Noir by Chanel is an elegant and mysterious fragrance, featuring notes of grapefruit, rose, and sandalwood. Perfect for evening occasions.",
+      "price": 129.99,
+      "discountPercentage": 18.64,
+      "rating": 2.76,
+      "stock": 41,
+      "brand": "Chanel",
+      "category": "fragrances",
+      "thumbnail": "https://cdn.dummyjson.com/products/images/fragrances/Chanel%20Coco%20Noir%20Eau%20De/thumbnail.png",
+      "images": [
+        "https://cdn.dummyjson.com/products/images/fragrances/Chanel%20Coco%20Noir%20Eau%20De/1.png",
+        "https://cdn.dummyjson.com/products/images/fragrances/Chanel%20Coco%20Noir%20Eau%20De/2.png",
+        "https://cdn.dummyjson.com/products/images/fragrances/Chanel%20Coco%20Noir%20Eau%20De/3.png"
+      ],
+      "colors": [],
+      "sizes": [],
+      "highlights": [],
+      "discountPrice": 105.75986400000001,
+      "deleted": false
+    },
+    {
+      "title": "Dior J'adore",
+      "description": "J'adore by Dior is a luxurious and floral fragrance, known for its blend of ylang-ylang, rose, and jasmine. It embodies femininity and sophistication.",
+      "price": 89.99,
+      "discountPercentage": 17.44,
+      "rating": 3.31,
+      "stock": 91,
+      "brand": "Dior",
+      "category": "fragrances",
+      "thumbnail": "https://cdn.dummyjson.com/products/images/fragrances/Dior%20J'adore/thumbnail.png",
+      "images": [
+        "https://cdn.dummyjson.com/products/images/fragrances/Dior%20J'adore/1.png",
+        "https://cdn.dummyjson.com/products/images/fragrances/Dior%20J'adore/2.png",
+        "https://cdn.dummyjson.com/products/images/fragrances/Dior%20J'adore/3.png"
+      ],
+      "colors": [],
+      "sizes": [],
+      "highlights": [],
+      "discountPrice": 74.295744,
+      "deleted": false
+    },
+    {
+      "title": "Dolce Shine Eau de",
+      "description": "Dolce Shine by Dolce & Gabbana is a vibrant and fruity fragrance, featuring notes of mango, jasmine, and blonde woods. It's a joyful and youthful scent.",
+      "price": 69.99,
+      "discountPercentage": 11.47,
+      "rating": 2.68,
+      "stock": 3,
+      "brand": "Dolce & Gabbana",
+      "category": "fragrances",
+      "thumbnail": "https://cdn.dummyjson.com/products/images/fragrances/Dolce%20Shine%20Eau%20de/thumbnail.png",
+      "images": [
+        "https://cdn.dummyjson.com/products/images/fragrances/Dolce%20Shine%20Eau%20de/1.png",
+        "https://cdn.dummyjson.com/products/images/fragrances/Dolce%20Shine%20Eau%20de/2.png",
+        "https://cdn.dummyjson.com/products/images/fragrances/Dolce%20Shine%20Eau%20de/3.png"
+      ],
+      "colors": [],
+      "sizes": [],
+      "highlights": [],
+      "discountPrice": 61.962146999999995,
+      "deleted": false
+    },
+    {
+      "title": "Gucci Bloom Eau de",
+      "description": "Gucci Bloom by Gucci is a floral and captivating fragrance, with notes of tuberose, jasmine, and Rangoon creeper. It's a modern and romantic scent.",
+      "price": 79.99,
+      "discountPercentage": 8.9,
+      "rating": 2.69,
+      "stock": 93,
+      "brand": "Gucci",
+      "category": "fragrances",
+      "thumbnail": "https://cdn.dummyjson.com/products/images/fragrances/Gucci%20Bloom%20Eau%20de/thumbnail.png",
+      "images": [
+        "https://cdn.dummyjson.com/products/images/fragrances/Gucci%20Bloom%20Eau%20de/1.png",
+        "https://cdn.dummyjson.com/products/images/fragrances/Gucci%20Bloom%20Eau%20de/2.png",
+        "https://cdn.dummyjson.com/products/images/fragrances/Gucci%20Bloom%20Eau%20de/3.png"
+      ],
+      "colors": [],
+      "sizes": [],
+      "highlights": [],
+      "discountPrice": 72.87089,
+      "deleted": false
+    },
+    {
+      "title": "Annibale Colombo Sofa",
+      "description": "The Annibale Colombo Sofa is a sophisticated and comfortable seating option, featuring exquisite design and premium upholstery for your living room.",
+      "price": 2499.99,
+      "discountPercentage": 18.54,
+      "rating": 3.08,
+      "stock": 16,
+      "brand": "Annibale Colombo",
+      "category": "furniture",
+      "thumbnail": "https://cdn.dummyjson.com/products/images/furniture/Annibale%20Colombo%20Sofa/thumbnail.png",
+      "images": [
+        "https://cdn.dummyjson.com/products/images/furniture/Annibale%20Colombo%20Sofa/1.png",
+        "https://cdn.dummyjson.com/products/images/furniture/Annibale%20Colombo%20Sofa/2.png",
+        "https://cdn.dummyjson.com/products/images/furniture/Annibale%20Colombo%20Sofa/3.png"
+      ],
+      "colors": [],
+      "sizes": [],
+      "highlights": [],
+      "discountPrice": 2036.4918539999999,
+      "deleted": false
+    },
+    {
+      "title": "Bedside Table African Cherry",
+      "description": "The Bedside Table in African Cherry is a stylish and functional addition to your bedroom, providing convenient storage space and a touch of elegance.",
+      "price": 299.99,
+      "discountPercentage": 9.58,
+      "rating": 4.48,
+      "stock": 16,
+      "brand": "Furniture Co.",
+      "category": "furniture",
+      "thumbnail": "https://cdn.dummyjson.com/products/images/furniture/Bedside%20Table%20African%20Cherry/thumbnail.png",
+      "images": [
+        "https://cdn.dummyjson.com/products/images/furniture/Bedside%20Table%20African%20Cherry/1.png",
+        "https://cdn.dummyjson.com/products/images/furniture/Bedside%20Table%20African%20Cherry/2.png",
+        "https://cdn.dummyjson.com/products/images/furniture/Bedside%20Table%20African%20Cherry/3.png"
+      ],
+      "colors": [],
+      "sizes": [],
+      "highlights": [],
+      "discountPrice": 271.250958,
+      "deleted": false
+    },
+    {
+      "title": "Knoll Saarinen Executive Conference Chair",
+      "description": "The Knoll Saarinen Executive Conference Chair is a modern and ergonomic chair, perfect for your office or conference room with its timeless design.",
+      "price": 499.99,
+      "discountPercentage": 15.23,
+      "rating": 4.11,
       "stock": 47,
-      "brand": "Dry Rose",
-      "category": "groceries",
-      "thumbnail": "https://cdn.dummyjson.com/product-images/25/thumbnail.jpg",
+      "brand": "Knoll",
+      "category": "furniture",
+      "thumbnail": "https://cdn.dummyjson.com/products/images/furniture/Knoll%20Saarinen%20Executive%20Conference%20Chair/thumbnail.png",
       "images": [
-        "https://cdn.dummyjson.com/product-images/25/1.png",
-        "https://cdn.dummyjson.com/product-images/25/2.jpg",
-        "https://cdn.dummyjson.com/product-images/25/3.png",
-        "https://cdn.dummyjson.com/product-images/25/4.jpg",
-        "https://cdn.dummyjson.com/product-images/25/thumbnail.jpg"
-      ]
+        "https://cdn.dummyjson.com/products/images/furniture/Knoll%20Saarinen%20Executive%20Conference%20Chair/1.png",
+        "https://cdn.dummyjson.com/products/images/furniture/Knoll%20Saarinen%20Executive%20Conference%20Chair/2.png",
+        "https://cdn.dummyjson.com/products/images/furniture/Knoll%20Saarinen%20Executive%20Conference%20Chair/3.png"
+      ],
+      "colors": [],
+      "sizes": [],
+      "highlights": [],
+      "discountPrice": 423.841523,
+      "deleted": false
     },
     {
-      "id": "26",
-      "title": "Plant Hanger For Home",
-      "description": "Boho Decor Plant Hanger For Home Wall Decoration Macrame Wall Hanging Shelf",
-      "price": 41,
-      "discountPercentage": 17.86,
-      "rating": 4.08,
-      "stock": 131,
-      "brand": "Boho Decor",
-      "category": "home-decoration",
-      "thumbnail": "https://cdn.dummyjson.com/product-images/26/thumbnail.jpg",
+      "title": "Wooden Bathroom Sink With Mirror",
+      "description": "The Wooden Bathroom Sink with Mirror is a unique and stylish addition to your bathroom, featuring a wooden sink countertop and a matching mirror.",
+      "price": 799.99,
+      "discountPercentage": 11.22,
+      "rating": 3.26,
+      "stock": 95,
+      "brand": "Bath Trends",
+      "category": "furniture",
+      "thumbnail": "https://cdn.dummyjson.com/products/images/furniture/Wooden%20Bathroom%20Sink%20With%20Mirror/thumbnail.png",
       "images": [
-        "https://cdn.dummyjson.com/product-images/26/1.jpg",
-        "https://cdn.dummyjson.com/product-images/26/2.jpg",
-        "https://cdn.dummyjson.com/product-images/26/3.jpg",
-        "https://cdn.dummyjson.com/product-images/26/4.jpg",
-        "https://cdn.dummyjson.com/product-images/26/5.jpg",
-        "https://cdn.dummyjson.com/product-images/26/thumbnail.jpg"
-      ]
+        "https://cdn.dummyjson.com/products/images/furniture/Wooden%20Bathroom%20Sink%20With%20Mirror/1.png",
+        "https://cdn.dummyjson.com/products/images/furniture/Wooden%20Bathroom%20Sink%20With%20Mirror/2.png",
+        "https://cdn.dummyjson.com/products/images/furniture/Wooden%20Bathroom%20Sink%20With%20Mirror/3.png"
+      ],
+      "colors": [],
+      "sizes": [],
+      "highlights": [],
+      "discountPrice": 710.231122,
+      "deleted": false
     },
     {
-      "id": "27",
-      "title": "Flying Wooden Bird",
-      "description": "Package Include 6 Birds with Adhesive Tape Shape: 3D Shaped Wooden Birds Material: Wooden MDF, Laminated 3.5mm",
-      "price": 51,
-      "discountPercentage": 15.58,
-      "rating": 4.41,
-      "stock": 17,
-      "brand": "Flying Wooden",
-      "category": "home-decoration",
-      "thumbnail": "https://cdn.dummyjson.com/product-images/27/thumbnail.webp",
+      "title": "Apple MacBook Pro 14 Inch Space Grey",
+      "description": "The MacBook Pro 14 Inch in Space Grey is a powerful and sleek laptop, featuring Apple's M1 Pro chip for exceptional performance and a stunning Retina display.",
+      "price": 1999.99,
+      "discountPercentage": 9.25,
+      "rating": 3.13,
+      "stock": 39,
+      "brand": "Apple",
+      "category": "laptops",
+      "thumbnail": "https://cdn.dummyjson.com/products/images/laptops/Apple%20MacBook%20Pro%2014%20Inch%20Space%20Grey/thumbnail.png",
       "images": [
-        "https://cdn.dummyjson.com/product-images/27/1.jpg",
-        "https://cdn.dummyjson.com/product-images/27/2.jpg",
-        "https://cdn.dummyjson.com/product-images/27/3.jpg",
-        "https://cdn.dummyjson.com/product-images/27/4.jpg",
-        "https://cdn.dummyjson.com/product-images/27/thumbnail.webp"
-      ]
+        "https://cdn.dummyjson.com/products/images/laptops/Apple%20MacBook%20Pro%2014%20Inch%20Space%20Grey/1.png",
+        "https://cdn.dummyjson.com/products/images/laptops/Apple%20MacBook%20Pro%2014%20Inch%20Space%20Grey/2.png",
+        "https://cdn.dummyjson.com/products/images/laptops/Apple%20MacBook%20Pro%2014%20Inch%20Space%20Grey/3.png"
+      ],
+      "colors": [],
+      "sizes": [],
+      "highlights": [],
+      "discountPrice": 1814.990925,
+      "deleted": false
     },
     {
-      "id": "28",
-      "title": "3D Embellishment Art Lamp",
-      "description": "3D led lamp sticker Wall sticker 3d wall art light on/off button cell operated (included)",
-      "price": 20,
-      "discountPercentage": 16.49,
-      "rating": 4.82,
-      "stock": 54,
-      "brand": "LED Lights",
-      "category": "home-decoration",
-      "thumbnail": "https://cdn.dummyjson.com/product-images/28/thumbnail.jpg",
+      "title": "Asus Zenbook Pro Dual Screen Laptop",
+      "description": "The Asus Zenbook Pro Dual Screen Laptop is a high-performance device with dual screens, providing productivity and versatility for creative professionals.",
+      "price": 1799.99,
+      "discountPercentage": 9.21,
+      "rating": 3.14,
+      "stock": 38,
+      "brand": "Asus",
+      "category": "laptops",
+      "thumbnail": "https://cdn.dummyjson.com/products/images/laptops/Asus%20Zenbook%20Pro%20Dual%20Screen%20Laptop/thumbnail.png",
       "images": [
-        "https://cdn.dummyjson.com/product-images/28/1.jpg",
-        "https://cdn.dummyjson.com/product-images/28/2.jpg",
-        "https://cdn.dummyjson.com/product-images/28/3.png",
-        "https://cdn.dummyjson.com/product-images/28/4.jpg",
-        "https://cdn.dummyjson.com/product-images/28/thumbnail.jpg"
-      ]
+        "https://cdn.dummyjson.com/products/images/laptops/Asus%20Zenbook%20Pro%20Dual%20Screen%20Laptop/1.png",
+        "https://cdn.dummyjson.com/products/images/laptops/Asus%20Zenbook%20Pro%20Dual%20Screen%20Laptop/2.png",
+        "https://cdn.dummyjson.com/products/images/laptops/Asus%20Zenbook%20Pro%20Dual%20Screen%20Laptop/3.png"
+      ],
+      "colors": [],
+      "sizes": [],
+      "highlights": [],
+      "discountPrice": 1634.2109209999999,
+      "deleted": false
     },
     {
-      "id": "29",
-      "title": "Handcraft Chinese style",
-      "description": "Handcraft Chinese style art luxury palace hotel villa mansion home decor ceramic vase with brass fruit plate",
-      "price": 60,
-      "discountPercentage": 15.34,
-      "rating": 4.44,
-      "stock": 7,
-      "brand": "luxury palace",
-      "category": "home-decoration",
-      "thumbnail": "https://cdn.dummyjson.com/product-images/29/thumbnail.webp",
+      "title": "Huawei Matebook X Pro",
+      "description": "The Huawei Matebook X Pro is a slim and stylish laptop with a high-resolution touchscreen display, offering a premium experience for users on the go.",
+      "price": 1399.99,
+      "discountPercentage": 15.25,
+      "rating": 4.62,
+      "stock": 34,
+      "brand": "Huawei",
+      "category": "laptops",
+      "thumbnail": "https://cdn.dummyjson.com/products/images/laptops/Huawei%20Matebook%20X%20Pro/thumbnail.png",
       "images": [
-        "https://cdn.dummyjson.com/product-images/29/1.jpg",
-        "https://cdn.dummyjson.com/product-images/29/2.jpg",
-        "https://cdn.dummyjson.com/product-images/29/3.webp",
-        "https://cdn.dummyjson.com/product-images/29/4.webp",
-        "https://cdn.dummyjson.com/product-images/29/thumbnail.webp"
-      ]
+        "https://cdn.dummyjson.com/products/images/laptops/Huawei%20Matebook%20X%20Pro/1.png",
+        "https://cdn.dummyjson.com/products/images/laptops/Huawei%20Matebook%20X%20Pro/2.png",
+        "https://cdn.dummyjson.com/products/images/laptops/Huawei%20Matebook%20X%20Pro/3.png"
+      ],
+      "colors": [],
+      "sizes": [],
+      "highlights": [],
+      "discountPrice": 1186.4915250000001,
+      "deleted": false
     },
     {
-      "id": "30",
-      "title": "Key Holder",
-      "description": "Attractive DesignMetallic materialFour key hooksReliable & DurablePremium Quality",
-      "price": 30,
-      "discountPercentage": 2.92,
+      "title": "Lenovo Yoga 920",
+      "description": "The Lenovo Yoga 920 is a 2-in-1 convertible laptop with a flexible hinge, allowing you to use it as a laptop or tablet, offering versatility and portability.",
+      "price": 1099.99,
+      "discountPercentage": 7.77,
+      "rating": 2.98,
+      "stock": 71,
+      "brand": "Lenovo",
+      "category": "laptops",
+      "thumbnail": "https://cdn.dummyjson.com/products/images/laptops/Lenovo%20Yoga%20920/thumbnail.png",
+      "images": [
+        "https://cdn.dummyjson.com/products/images/laptops/Lenovo%20Yoga%20920/1.png",
+        "https://cdn.dummyjson.com/products/images/laptops/Lenovo%20Yoga%20920/2.png",
+        "https://cdn.dummyjson.com/products/images/laptops/Lenovo%20Yoga%20920/3.png"
+      ],
+      "colors": [],
+      "sizes": [],
+      "highlights": [],
+      "discountPrice": 1014.5207770000001,
+      "deleted": false
+    },
+    {
+      "title": "New DELL XPS 13 9300 Laptop",
+      "description": "The New DELL XPS 13 9300 Laptop is a compact and powerful device, featuring a virtually borderless InfinityEdge display and high-end performance for various tasks.",
+      "price": 1499.99,
+      "discountPercentage": 11.7,
+      "rating": 2.98,
+      "stock": 18,
+      "brand": "Dell",
+      "category": "laptops",
+      "thumbnail": "https://cdn.dummyjson.com/products/images/laptops/New%20DELL%20XPS%2013%209300%20Laptop/thumbnail.png",
+      "images": [
+        "https://cdn.dummyjson.com/products/images/laptops/New%20DELL%20XPS%2013%209300%20Laptop/1.png",
+        "https://cdn.dummyjson.com/products/images/laptops/New%20DELL%20XPS%2013%209300%20Laptop/2.png",
+        "https://cdn.dummyjson.com/products/images/laptops/New%20DELL%20XPS%2013%209300%20Laptop/3.png"
+      ],
+      "colors": [],
+      "sizes": [],
+      "highlights": [],
+      "discountPrice": 1324.49117,
+      "deleted": false
+    },
+    {
+      "title": "Blue & Black Check Shirt",
+      "description": "The Blue & Black Check Shirt is a stylish and comfortable men's shirt featuring a classic check pattern. Made from high-quality fabric, it's suitable for both casual and semi-formal occasions.",
+      "price": 29.99,
+      "discountPercentage": 1.41,
+      "rating": 4.19,
+      "stock": 44,
+      "brand": "Fashion Trends",
+      "category": "mens-shirts",
+      "thumbnail": "https://cdn.dummyjson.com/products/images/mens-shirts/Blue%20&%20Black%20Check%20Shirt/thumbnail.png",
+      "images": [
+        "https://cdn.dummyjson.com/products/images/mens-shirts/Blue%20&%20Black%20Check%20Shirt/1.png",
+        "https://cdn.dummyjson.com/products/images/mens-shirts/Blue%20&%20Black%20Check%20Shirt/2.png",
+        "https://cdn.dummyjson.com/products/images/mens-shirts/Blue%20&%20Black%20Check%20Shirt/3.png",
+        "https://cdn.dummyjson.com/products/images/mens-shirts/Blue%20&%20Black%20Check%20Shirt/4.png"
+      ],
+      "colors": [],
+      "sizes": [],
+      "highlights": [],
+      "discountPrice": 29.567141,
+      "deleted": false
+    },
+    {
+      "title": "Gigabyte Aorus Men Tshirt",
+      "description": "The Gigabyte Aorus Men Tshirt is a cool and casual shirt for gaming enthusiasts. With the Aorus logo and sleek design, it's perfect for expressing your gaming style.",
+      "price": 24.99,
+      "discountPercentage": 12.6,
+      "rating": 4.95,
+      "stock": 64,
+      "brand": "Gigabyte",
+      "category": "mens-shirts",
+      "thumbnail": "https://cdn.dummyjson.com/products/images/mens-shirts/Gigabyte%20Aorus%20Men%20Tshirt/thumbnail.png",
+      "images": [
+        "https://cdn.dummyjson.com/products/images/mens-shirts/Gigabyte%20Aorus%20Men%20Tshirt/1.png",
+        "https://cdn.dummyjson.com/products/images/mens-shirts/Gigabyte%20Aorus%20Men%20Tshirt/2.png",
+        "https://cdn.dummyjson.com/products/images/mens-shirts/Gigabyte%20Aorus%20Men%20Tshirt/3.png",
+        "https://cdn.dummyjson.com/products/images/mens-shirts/Gigabyte%20Aorus%20Men%20Tshirt/4.png"
+      ],
+      "colors": [],
+      "sizes": [],
+      "highlights": [],
+      "discountPrice": 21.84126,
+      "deleted": false
+    },
+    {
+      "title": "Man Plaid Shirt",
+      "description": "The Man Plaid Shirt is a timeless and versatile men's shirt with a classic plaid pattern. Its comfortable fit and casual style make it a wardrobe essential for various occasions.",
+      "price": 34.99,
+      "discountPercentage": 17.53,
+      "rating": 3.66,
+      "stock": 65,
+      "brand": "Classic Wear",
+      "category": "mens-shirts",
+      "thumbnail": "https://cdn.dummyjson.com/products/images/mens-shirts/Man%20Plaid%20Shirt/thumbnail.png",
+      "images": [
+        "https://cdn.dummyjson.com/products/images/mens-shirts/Man%20Plaid%20Shirt/1.png",
+        "https://cdn.dummyjson.com/products/images/mens-shirts/Man%20Plaid%20Shirt/2.png",
+        "https://cdn.dummyjson.com/products/images/mens-shirts/Man%20Plaid%20Shirt/3.png",
+        "https://cdn.dummyjson.com/products/images/mens-shirts/Man%20Plaid%20Shirt/4.png"
+      ],
+      "colors": [],
+      "sizes": [],
+      "highlights": [],
+      "discountPrice": 28.856253000000002,
+      "deleted": false
+    },
+    {
+      "title": "Man Short Sleeve Shirt",
+      "description": "The Man Short Sleeve Shirt is a breezy and stylish option for warm days. With a comfortable fit and short sleeves, it's perfect for a laid-back yet polished look.",
+      "price": 19.99,
+      "discountPercentage": 8.65,
+      "rating": 4.62,
+      "stock": 20,
+      "brand": "Casual Comfort",
+      "category": "mens-shirts",
+      "thumbnail": "https://cdn.dummyjson.com/products/images/mens-shirts/Man%20Short%20Sleeve%20Shirt/thumbnail.png",
+      "images": [
+        "https://cdn.dummyjson.com/products/images/mens-shirts/Man%20Short%20Sleeve%20Shirt/1.png",
+        "https://cdn.dummyjson.com/products/images/mens-shirts/Man%20Short%20Sleeve%20Shirt/2.png",
+        "https://cdn.dummyjson.com/products/images/mens-shirts/Man%20Short%20Sleeve%20Shirt/3.png",
+        "https://cdn.dummyjson.com/products/images/mens-shirts/Man%20Short%20Sleeve%20Shirt/4.png"
+      ],
+      "colors": [],
+      "sizes": [],
+      "highlights": [],
+      "discountPrice": 18.260865,
+      "deleted": false
+    },
+    {
+      "title": "Men Check Shirt",
+      "description": "The Men Check Shirt is a classic and versatile shirt featuring a stylish check pattern. Suitable for various occasions, it adds a smart and polished touch to your wardrobe.",
+      "price": 27.99,
+      "discountPercentage": 14.21,
+      "rating": 2.9,
+      "stock": 69,
+      "brand": "Urban Chic",
+      "category": "mens-shirts",
+      "thumbnail": "https://cdn.dummyjson.com/products/images/mens-shirts/Men%20Check%20Shirt/thumbnail.png",
+      "images": [
+        "https://cdn.dummyjson.com/products/images/mens-shirts/Men%20Check%20Shirt/1.png",
+        "https://cdn.dummyjson.com/products/images/mens-shirts/Men%20Check%20Shirt/2.png",
+        "https://cdn.dummyjson.com/products/images/mens-shirts/Men%20Check%20Shirt/3.png",
+        "https://cdn.dummyjson.com/products/images/mens-shirts/Men%20Check%20Shirt/4.png"
+      ],
+      "colors": [],
+      "sizes": [],
+      "highlights": [],
+      "discountPrice": 24.012621,
+      "deleted": false
+    },
+    {
+      "title": "Nike Air Jordan 1 Red And Black",
+      "description": "The Nike Air Jordan 1 in Red and Black is an iconic basketball sneaker known for its stylish design and high-performance features, making it a favorite among sneaker enthusiasts and athletes.",
+      "price": 149.99,
+      "discountPercentage": 15.82,
+      "rating": 2.77,
+      "stock": 15,
+      "brand": "Nike",
+      "category": "mens-shoes",
+      "thumbnail": "https://cdn.dummyjson.com/products/images/mens-shoes/Nike%20Air%20Jordan%201%20Red%20And%20Black/thumbnail.png",
+      "images": [
+        "https://cdn.dummyjson.com/products/images/mens-shoes/Nike%20Air%20Jordan%201%20Red%20And%20Black/1.png",
+        "https://cdn.dummyjson.com/products/images/mens-shoes/Nike%20Air%20Jordan%201%20Red%20And%20Black/2.png",
+        "https://cdn.dummyjson.com/products/images/mens-shoes/Nike%20Air%20Jordan%201%20Red%20And%20Black/3.png",
+        "https://cdn.dummyjson.com/products/images/mens-shoes/Nike%20Air%20Jordan%201%20Red%20And%20Black/4.png"
+      ],
+      "colors": [],
+      "sizes": [],
+      "highlights": [],
+      "discountPrice": 126.261582,
+      "deleted": false
+    },
+    {
+      "title": "Nike Baseball Cleats",
+      "description": "Nike Baseball Cleats are designed for maximum traction and performance on the baseball field. They provide stability and support for players during games and practices.",
+      "price": 79.99,
+      "discountPercentage": 11.4,
+      "rating": 4.01,
+      "stock": 14,
+      "brand": "Nike",
+      "category": "mens-shoes",
+      "thumbnail": "https://cdn.dummyjson.com/products/images/mens-shoes/Nike%20Baseball%20Cleats/thumbnail.png",
+      "images": [
+        "https://cdn.dummyjson.com/products/images/mens-shoes/Nike%20Baseball%20Cleats/1.png",
+        "https://cdn.dummyjson.com/products/images/mens-shoes/Nike%20Baseball%20Cleats/2.png",
+        "https://cdn.dummyjson.com/products/images/mens-shoes/Nike%20Baseball%20Cleats/3.png",
+        "https://cdn.dummyjson.com/products/images/mens-shoes/Nike%20Baseball%20Cleats/4.png"
+      ],
+      "colors": [],
+      "sizes": [],
+      "highlights": [],
+      "discountPrice": 70.87114,
+      "deleted": false
+    },
+    {
+      "title": "Puma Future Rider Trainers",
+      "description": "The Puma Future Rider Trainers offer a blend of retro style and modern comfort. Perfect for casual wear, these trainers provide a fashionable and comfortable option for everyday use.",
+      "price": 89.99,
+      "discountPercentage": 3.64,
+      "rating": 4.85,
+      "stock": 10,
+      "brand": "Puma",
+      "category": "mens-shoes",
+      "thumbnail": "https://cdn.dummyjson.com/products/images/mens-shoes/Puma%20Future%20Rider%20Trainers/thumbnail.png",
+      "images": [
+        "https://cdn.dummyjson.com/products/images/mens-shoes/Puma%20Future%20Rider%20Trainers/1.png",
+        "https://cdn.dummyjson.com/products/images/mens-shoes/Puma%20Future%20Rider%20Trainers/2.png",
+        "https://cdn.dummyjson.com/products/images/mens-shoes/Puma%20Future%20Rider%20Trainers/3.png",
+        "https://cdn.dummyjson.com/products/images/mens-shoes/Puma%20Future%20Rider%20Trainers/4.png"
+      ],
+      "colors": [],
+      "sizes": [],
+      "highlights": [],
+      "discountPrice": 86.71436399999999,
+      "deleted": false
+    },
+    {
+      "title": "Sports Sneakers Off White & Red",
+      "description": "The Sports Sneakers in Off White and Red combine style and functionality, making them a fashionable choice for sports enthusiasts. The red and off-white color combination adds a bold and energetic touch.",
+      "price": 119.99,
+      "discountPercentage": 11.69,
       "rating": 4.92,
-      "stock": 54,
-      "brand": "Golden",
-      "category": "home-decoration",
-      "thumbnail": "https://cdn.dummyjson.com/product-images/30/thumbnail.jpg",
+      "stock": 73,
+      "brand": "Off White",
+      "category": "mens-shoes",
+      "thumbnail": "https://cdn.dummyjson.com/products/images/mens-shoes/Sports%20Sneakers%20Off%20White%20&%20Red/thumbnail.png",
       "images": [
-        "https://cdn.dummyjson.com/product-images/30/1.jpg",
-        "https://cdn.dummyjson.com/product-images/30/2.jpg",
-        "https://cdn.dummyjson.com/product-images/30/3.jpg",
-        "https://cdn.dummyjson.com/product-images/30/thumbnail.jpg"
-      ]
+        "https://cdn.dummyjson.com/products/images/mens-shoes/Sports%20Sneakers%20Off%20White%20&%20Red/1.png",
+        "https://cdn.dummyjson.com/products/images/mens-shoes/Sports%20Sneakers%20Off%20White%20&%20Red/2.png",
+        "https://cdn.dummyjson.com/products/images/mens-shoes/Sports%20Sneakers%20Off%20White%20&%20Red/3.png",
+        "https://cdn.dummyjson.com/products/images/mens-shoes/Sports%20Sneakers%20Off%20White%20&%20Red/4.png"
+      ],
+      "colors": [],
+      "sizes": [],
+      "highlights": [],
+      "discountPrice": 105.963169,
+      "deleted": false
+    },
+    {
+      "title": "Sports Sneakers Off White Red",
+      "description": "Another variant of the Sports Sneakers in Off White Red, featuring a unique design. These sneakers offer style and comfort for casual occasions.",
+      "price": 109.99,
+      "discountPercentage": 17.22,
+      "rating": 2.95,
+      "stock": 75,
+      "brand": "Off White",
+      "category": "mens-shoes",
+      "thumbnail": "https://cdn.dummyjson.com/products/images/mens-shoes/Sports%20Sneakers%20Off%20White%20Red/thumbnail.png",
+      "images": [
+        "https://cdn.dummyjson.com/products/images/mens-shoes/Sports%20Sneakers%20Off%20White%20Red/1.png",
+        "https://cdn.dummyjson.com/products/images/mens-shoes/Sports%20Sneakers%20Off%20White%20Red/2.png",
+        "https://cdn.dummyjson.com/products/images/mens-shoes/Sports%20Sneakers%20Off%20White%20Red/3.png",
+        "https://cdn.dummyjson.com/products/images/mens-shoes/Sports%20Sneakers%20Off%20White%20Red/4.png"
+      ],
+      "colors": [],
+      "sizes": [],
+      "highlights": [],
+      "discountPrice": 91.04972199999999,
+      "deleted": false
+    },
+    {
+      "title": "Brown Leather Belt Watch",
+      "description": "The Brown Leather Belt Watch is a stylish timepiece with a classic design. Featuring a genuine leather strap and a sleek dial, it adds a touch of sophistication to your look.",
+      "price": 89.99,
+      "discountPercentage": 15.01,
+      "rating": 4.47,
+      "stock": 69,
+      "brand": "Fashion Timepieces",
+      "category": "mens-watches",
+      "thumbnail": "https://cdn.dummyjson.com/products/images/mens-watches/Brown%20Leather%20Belt%20Watch/thumbnail.png",
+      "images": [
+        "https://cdn.dummyjson.com/products/images/mens-watches/Brown%20Leather%20Belt%20Watch/1.png",
+        "https://cdn.dummyjson.com/products/images/mens-watches/Brown%20Leather%20Belt%20Watch/2.png",
+        "https://cdn.dummyjson.com/products/images/mens-watches/Brown%20Leather%20Belt%20Watch/3.png"
+      ],
+      "colors": [],
+      "sizes": [],
+      "highlights": [],
+      "discountPrice": 76.482501,
+      "deleted": false
+    },
+    {
+      "title": "Rolex Cellini Date Black Dial",
+      "description": "The Rolex Cellini Date with Black Dial is a classic and prestigious watch. With a black dial and date complication, it exudes sophistication and is a symbol of Rolex's heritage.",
+      "price": 8999.99,
+      "discountPercentage": 14.28,
+      "rating": 3.61,
+      "stock": 84,
+      "brand": "Rolex",
+      "category": "mens-watches",
+      "thumbnail": "https://cdn.dummyjson.com/products/images/mens-watches/Rolex%20Cellini%20Date%20Black%20Dial/thumbnail.png",
+      "images": [
+        "https://cdn.dummyjson.com/products/images/mens-watches/Rolex%20Cellini%20Date%20Black%20Dial/1.png",
+        "https://cdn.dummyjson.com/products/images/mens-watches/Rolex%20Cellini%20Date%20Black%20Dial/2.png",
+        "https://cdn.dummyjson.com/products/images/mens-watches/Rolex%20Cellini%20Date%20Black%20Dial/3.png"
+      ],
+      "colors": [],
+      "sizes": [],
+      "highlights": [],
+      "discountPrice": 7714.7914279999995,
+      "deleted": false
+    },
+    {
+      "title": "Amazon Echo Plus",
+      "description": "The Amazon Echo Plus is a smart speaker with built-in Alexa voice control. It features premium sound quality and serves as a hub for controlling smart home devices.",
+      "price": 99.99,
+      "discountPercentage": 16.3,
+      "rating": 3.52,
+      "stock": 50,
+      "brand": "Amazon",
+      "category": "mobile-accessories",
+      "thumbnail": "https://cdn.dummyjson.com/products/images/mobile-accessories/Amazon%20Echo%20Plus/thumbnail.png",
+      "images": [
+        "https://cdn.dummyjson.com/products/images/mobile-accessories/Amazon%20Echo%20Plus/1.png",
+        "https://cdn.dummyjson.com/products/images/mobile-accessories/Amazon%20Echo%20Plus/2.png"
+      ],
+      "colors": [],
+      "sizes": [],
+      "highlights": [],
+      "discountPrice": 83.69162999999999,
+      "deleted": false
+    },
+    {
+      "title": "Apple Airpods",
+      "description": "The Apple Airpods offer a seamless wireless audio experience. With easy pairing, high-quality sound, and Siri integration, they are perfect for on-the-go listening.",
+      "price": 129.99,
+      "discountPercentage": 4.82,
+      "rating": 4.38,
+      "stock": 93,
+      "brand": "Apple",
+      "category": "mobile-accessories",
+      "thumbnail": "https://cdn.dummyjson.com/products/images/mobile-accessories/Apple%20Airpods/thumbnail.png",
+      "images": [
+        "https://cdn.dummyjson.com/products/images/mobile-accessories/Apple%20Airpods/1.png",
+        "https://cdn.dummyjson.com/products/images/mobile-accessories/Apple%20Airpods/2.png",
+        "https://cdn.dummyjson.com/products/images/mobile-accessories/Apple%20Airpods/3.png"
+      ],
+      "colors": [],
+      "sizes": [],
+      "highlights": [],
+      "discountPrice": 123.72448200000001,
+      "deleted": false
+    },
+    {
+      "title": "Apple AirPods Max Silver",
+      "description": "The Apple AirPods Max in Silver are premium over-ear headphones with high-fidelity audio, adaptive EQ, and active noise cancellation. Experience immersive sound in style.",
+      "price": 549.99,
+      "discountPercentage": 11.7,
+      "rating": 3.11,
+      "stock": 7,
+      "brand": "Apple",
+      "category": "mobile-accessories",
+      "thumbnail": "https://cdn.dummyjson.com/products/images/mobile-accessories/Apple%20AirPods%20Max%20Silver/thumbnail.png",
+      "images": [
+        "https://cdn.dummyjson.com/products/images/mobile-accessories/Apple%20AirPods%20Max%20Silver/1.png"
+      ],
+      "colors": [],
+      "sizes": [],
+      "highlights": [],
+      "discountPrice": 485.64117,
+      "deleted": false
+    },
+    {
+      "title": "Apple Airpower Wireless Charger",
+      "description": "The Apple AirPower Wireless Charger provides a convenient way to charge your compatible Apple devices wirelessly. Simply place your devices on the charging mat for effortless charging.",
+      "price": 79.99,
+      "discountPercentage": 6.54,
+      "rating": 4.51,
+      "stock": 78,
+      "brand": "Apple",
+      "category": "mobile-accessories",
+      "thumbnail": "https://cdn.dummyjson.com/products/images/mobile-accessories/Apple%20Airpower%20Wireless%20Charger/thumbnail.png",
+      "images": [
+        "https://cdn.dummyjson.com/products/images/mobile-accessories/Apple%20Airpower%20Wireless%20Charger/1.png"
+      ],
+      "colors": [],
+      "sizes": [],
+      "highlights": [],
+      "discountPrice": 74.75865399999999,
+      "deleted": false
+    },
+    {
+      "title": "Apple HomePod Mini Cosmic Grey",
+      "description": "The Apple HomePod Mini in Cosmic Grey is a compact smart speaker that delivers impressive audio and integrates seamlessly with the Apple ecosystem for a smart home experience.",
+      "price": 99.99,
+      "discountPercentage": 3.7,
+      "rating": 4.51,
+      "stock": 65,
+      "brand": "Apple",
+      "category": "mobile-accessories",
+      "thumbnail": "https://cdn.dummyjson.com/products/images/mobile-accessories/Apple%20HomePod%20Mini%20Cosmic%20Grey/thumbnail.png",
+      "images": [
+        "https://cdn.dummyjson.com/products/images/mobile-accessories/Apple%20HomePod%20Mini%20Cosmic%20Grey/1.png"
+      ],
+      "colors": [],
+      "sizes": [],
+      "highlights": [],
+      "discountPrice": 96.29037,
+      "deleted": false
+    },
+    {
+      "title": "Apple iPhone Charger",
+      "description": "The Apple iPhone Charger is a high-quality charger designed for fast and efficient charging of your iPhone. Ensure your device stays powered up and ready to go.",
+      "price": 19.99,
+      "discountPercentage": 1.01,
+      "rating": 3.03,
+      "stock": 4,
+      "brand": "Apple",
+      "category": "mobile-accessories",
+      "thumbnail": "https://cdn.dummyjson.com/products/images/mobile-accessories/Apple%20iPhone%20Charger/thumbnail.png",
+      "images": [
+        "https://cdn.dummyjson.com/products/images/mobile-accessories/Apple%20iPhone%20Charger/1.png",
+        "https://cdn.dummyjson.com/products/images/mobile-accessories/Apple%20iPhone%20Charger/2.png"
+      ],
+      "colors": [],
+      "sizes": [],
+      "highlights": [],
+      "discountPrice": 19.788100999999997,
+      "deleted": false
+    },
+    {
+      "title": "Apple MagSafe Battery Pack",
+      "description": "The Apple MagSafe Battery Pack is a portable and convenient way to add extra battery life to your MagSafe-compatible iPhone. Attach it magnetically for a secure connection.",
+      "price": 99.99,
+      "discountPercentage": 10.27,
+      "rating": 2.61,
+      "stock": 80,
+      "brand": "Apple",
+      "category": "mobile-accessories",
+      "thumbnail": "https://cdn.dummyjson.com/products/images/mobile-accessories/Apple%20MagSafe%20Battery%20Pack/thumbnail.png",
+      "images": [
+        "https://cdn.dummyjson.com/products/images/mobile-accessories/Apple%20MagSafe%20Battery%20Pack/1.png",
+        "https://cdn.dummyjson.com/products/images/mobile-accessories/Apple%20MagSafe%20Battery%20Pack/2.png"
+      ],
+      "colors": [],
+      "sizes": [],
+      "highlights": [],
+      "discountPrice": 89.72102699999999,
+      "deleted": false
+    },
+    {
+      "title": "Apple Watch Series 4 Gold",
+      "description": "The Apple Watch Series 4 in Gold is a stylish and advanced smartwatch with features like heart rate monitoring, fitness tracking, and a beautiful Retina display.",
+      "price": 349.99,
+      "discountPercentage": 5.14,
+      "rating": 4.42,
+      "stock": 68,
+      "brand": "Apple",
+      "category": "mobile-accessories",
+      "thumbnail": "https://cdn.dummyjson.com/products/images/mobile-accessories/Apple%20Watch%20Series%204%20Gold/thumbnail.png",
+      "images": [
+        "https://cdn.dummyjson.com/products/images/mobile-accessories/Apple%20Watch%20Series%204%20Gold/1.png",
+        "https://cdn.dummyjson.com/products/images/mobile-accessories/Apple%20Watch%20Series%204%20Gold/2.png",
+        "https://cdn.dummyjson.com/products/images/mobile-accessories/Apple%20Watch%20Series%204%20Gold/3.png"
+      ],
+      "colors": [],
+      "sizes": [],
+      "highlights": [],
+      "discountPrice": 332.000514,
+      "deleted": false
+    },
+    {
+      "title": "Beats Flex Wireless Earphones",
+      "description": "The Beats Flex Wireless Earphones offer a comfortable and versatile audio experience. With magnetic earbuds and up to 12 hours of battery life, they are ideal for everyday use.",
+      "price": 49.99,
+      "discountPercentage": 8.27,
+      "rating": 4.17,
+      "stock": 49,
+      "brand": "Beats",
+      "category": "mobile-accessories",
+      "thumbnail": "https://cdn.dummyjson.com/products/images/mobile-accessories/Beats%20Flex%20Wireless%20Earphones/thumbnail.png",
+      "images": [
+        "https://cdn.dummyjson.com/products/images/mobile-accessories/Beats%20Flex%20Wireless%20Earphones/1.png"
+      ],
+      "colors": [],
+      "sizes": [],
+      "highlights": [],
+      "discountPrice": 45.855827000000005,
+      "deleted": false
+    },
+    {
+      "title": "iPhone 12 Silicone Case with MagSafe Plum",
+      "description": "The iPhone 12 Silicone Case with MagSafe in Plum is a stylish and protective case designed for the iPhone 12. It features MagSafe technology for easy attachment of accessories.",
+      "price": 29.99,
+      "discountPercentage": 14.35,
+      "rating": 4.41,
+      "stock": 51,
+      "brand": "Apple",
+      "category": "mobile-accessories",
+      "thumbnail": "https://cdn.dummyjson.com/products/images/mobile-accessories/iPhone%2012%20Silicone%20Case%20with%20MagSafe%20Plum/thumbnail.png",
+      "images": [
+        "https://cdn.dummyjson.com/products/images/mobile-accessories/iPhone%2012%20Silicone%20Case%20with%20MagSafe%20Plum/1.png",
+        "https://cdn.dummyjson.com/products/images/mobile-accessories/iPhone%2012%20Silicone%20Case%20with%20MagSafe%20Plum/2.png",
+        "https://cdn.dummyjson.com/products/images/mobile-accessories/iPhone%2012%20Silicone%20Case%20with%20MagSafe%20Plum/3.png",
+        "https://cdn.dummyjson.com/products/images/mobile-accessories/iPhone%2012%20Silicone%20Case%20with%20MagSafe%20Plum/4.png"
+      ],
+      "colors": [],
+      "sizes": [],
+      "highlights": [],
+      "discountPrice": 25.686435,
+      "deleted": false
+    },
+    {
+      "title": "Monopod",
+      "description": "The Monopod is a versatile camera accessory for stable and adjustable shooting. Perfect for capturing selfies, group photos, and videos with ease.",
+      "price": 19.99,
+      "discountPercentage": 11.62,
+      "rating": 2.99,
+      "stock": 96,
+      "brand": "TechGear",
+      "category": "mobile-accessories",
+      "thumbnail": "https://cdn.dummyjson.com/products/images/mobile-accessories/Monopod/thumbnail.png",
+      "images": [
+        "https://cdn.dummyjson.com/products/images/mobile-accessories/Monopod/1.png",
+        "https://cdn.dummyjson.com/products/images/mobile-accessories/Monopod/2.png"
+      ],
+      "colors": [],
+      "sizes": [],
+      "highlights": [],
+      "discountPrice": 17.667161999999998,
+      "deleted": false
+    },
+    {
+      "title": "Selfie Lamp with iPhone",
+      "description": "The Selfie Lamp with iPhone is a portable and adjustable LED light designed to enhance your selfies and video calls. Attach it to your iPhone for well-lit photos.",
+      "price": 14.99,
+      "discountPercentage": 13.86,
+      "rating": 2.84,
+      "stock": 89,
+      "brand": "GadgetMaster",
+      "category": "mobile-accessories",
+      "thumbnail": "https://cdn.dummyjson.com/products/images/mobile-accessories/Selfie%20Lamp%20with%20iPhone/thumbnail.png",
+      "images": [
+        "https://cdn.dummyjson.com/products/images/mobile-accessories/Selfie%20Lamp%20with%20iPhone/1.png"
+      ],
+      "colors": [],
+      "sizes": [],
+      "highlights": [],
+      "discountPrice": 12.912386,
+      "deleted": false
+    },
+    {
+      "title": "Selfie Stick Monopod",
+      "description": "The Selfie Stick Monopod is a extendable and foldable device for capturing the perfect selfie or group photo. Compatible with smartphones and cameras.",
+      "price": 12.99,
+      "discountPercentage": 15.29,
+      "rating": 2.93,
+      "stock": 33,
+      "brand": "SnapTech",
+      "category": "mobile-accessories",
+      "thumbnail": "https://cdn.dummyjson.com/products/images/mobile-accessories/Selfie%20Stick%20Monopod/thumbnail.png",
+      "images": [
+        "https://cdn.dummyjson.com/products/images/mobile-accessories/Selfie%20Stick%20Monopod/1.png"
+      ],
+      "colors": [],
+      "sizes": [],
+      "highlights": [],
+      "discountPrice": 11.003829,
+      "deleted": false
+    },
+    {
+      "title": "TV Studio Camera Pedestal",
+      "description": "The TV Studio Camera Pedestal is a professional-grade camera support system for smooth and precise camera movements in a studio setting. Ideal for broadcast and production.",
+      "price": 499.99,
+      "discountPercentage": 10.28,
+      "rating": 4.05,
+      "stock": 45,
+      "brand": "ProVision",
+      "category": "mobile-accessories",
+      "thumbnail": "https://cdn.dummyjson.com/products/images/mobile-accessories/TV%20Studio%20Camera%20Pedestal/thumbnail.png",
+      "images": [
+        "https://cdn.dummyjson.com/products/images/mobile-accessories/TV%20Studio%20Camera%20Pedestal/1.png"
+      ],
+      "colors": [],
+      "sizes": [],
+      "highlights": [],
+      "discountPrice": 448.591028,
+      "deleted": false
+    },
+    {
+      "title": "Generic Motorcycle",
+      "description": "The Generic Motorcycle is a versatile and reliable bike suitable for various riding preferences. With a balanced design, it provides a comfortable and efficient riding experience.",
+      "price": 3999.99,
+      "discountPercentage": 2.89,
+      "rating": 4.85,
+      "stock": 63,
+      "brand": "Generic Motors",
+      "category": "motorcycle",
+      "thumbnail": "https://cdn.dummyjson.com/products/images/motorcycle/Generic%20Motorcycle/thumbnail.png",
+      "images": [
+        "https://cdn.dummyjson.com/products/images/motorcycle/Generic%20Motorcycle/1.png",
+        "https://cdn.dummyjson.com/products/images/motorcycle/Generic%20Motorcycle/2.png",
+        "https://cdn.dummyjson.com/products/images/motorcycle/Generic%20Motorcycle/3.png",
+        "https://cdn.dummyjson.com/products/images/motorcycle/Generic%20Motorcycle/4.png"
+      ],
+      "colors": [],
+      "sizes": [],
+      "highlights": [],
+      "discountPrice": 3884.3902889999995,
+      "deleted": false
+    },
+    {
+      "title": "Kawasaki Z800",
+      "description": "The Kawasaki Z800 is a powerful and agile sportbike known for its striking design and performance. It's equipped with advanced features, making it a favorite among motorcycle enthusiasts.",
+      "price": 8999.99,
+      "discountPercentage": 15.07,
+      "rating": 4.06,
+      "stock": 88,
+      "brand": "Kawasaki",
+      "category": "motorcycle",
+      "thumbnail": "https://cdn.dummyjson.com/products/images/motorcycle/Kawasaki%20Z800/thumbnail.png",
+      "images": [
+        "https://cdn.dummyjson.com/products/images/motorcycle/Kawasaki%20Z800/1.png",
+        "https://cdn.dummyjson.com/products/images/motorcycle/Kawasaki%20Z800/2.png",
+        "https://cdn.dummyjson.com/products/images/motorcycle/Kawasaki%20Z800/3.png",
+        "https://cdn.dummyjson.com/products/images/motorcycle/Kawasaki%20Z800/4.png"
+      ],
+      "colors": [],
+      "sizes": [],
+      "highlights": [],
+      "discountPrice": 7643.691507,
+      "deleted": false
+    },
+    {
+      "title": "Scooter Motorcycle",
+      "description": "The Scooter Motorcycle is a practical and fuel-efficient bike ideal for urban commuting. It features a step-through design and user-friendly controls for easy maneuverability.",
+      "price": 2999.99,
+      "discountPercentage": 19.19,
+      "rating": 3.33,
+      "stock": 11,
+      "brand": "ScootMaster",
+      "category": "motorcycle",
+      "thumbnail": "https://cdn.dummyjson.com/products/images/motorcycle/Scooter%20Motorcycle/thumbnail.png",
+      "images": [
+        "https://cdn.dummyjson.com/products/images/motorcycle/Scooter%20Motorcycle/1.png",
+        "https://cdn.dummyjson.com/products/images/motorcycle/Scooter%20Motorcycle/2.png",
+        "https://cdn.dummyjson.com/products/images/motorcycle/Scooter%20Motorcycle/3.png",
+        "https://cdn.dummyjson.com/products/images/motorcycle/Scooter%20Motorcycle/4.png"
+      ],
+      "colors": [],
+      "sizes": [],
+      "highlights": [],
+      "discountPrice": 2424.291919,
+      "deleted": false
+    },
+    {
+      "title": "Sportbike Motorcycle",
+      "description": "The Sportbike Motorcycle is designed for speed and agility, with a sleek and aerodynamic profile. It's suitable for riders looking for a dynamic and thrilling riding experience.",
+      "price": 7499.99,
+      "discountPercentage": 18.07,
+      "rating": 2.97,
+      "stock": 12,
+      "brand": "SpeedMaster",
+      "category": "motorcycle",
+      "thumbnail": "https://cdn.dummyjson.com/products/images/motorcycle/Sportbike%20Motorcycle/thumbnail.png",
+      "images": [
+        "https://cdn.dummyjson.com/products/images/motorcycle/Sportbike%20Motorcycle/1.png",
+        "https://cdn.dummyjson.com/products/images/motorcycle/Sportbike%20Motorcycle/2.png",
+        "https://cdn.dummyjson.com/products/images/motorcycle/Sportbike%20Motorcycle/3.png",
+        "https://cdn.dummyjson.com/products/images/motorcycle/Sportbike%20Motorcycle/4.png"
+      ],
+      "colors": [],
+      "sizes": [],
+      "highlights": [],
+      "discountPrice": 6144.741807,
+      "deleted": false
+    },
+    {
+      "title": "Attitude Super Leaves Hand Soap",
+      "description": "Attitude Super Leaves Hand Soap is a natural and nourishing hand soap enriched with the goodness of super leaves. It cleanses and moisturizes your hands, leaving them feeling fresh and soft.",
+      "price": 8.99,
+      "discountPercentage": 17.42,
+      "rating": 4.68,
+      "stock": 98,
+      "brand": "Attitude",
+      "category": "skin-care",
+      "thumbnail": "https://cdn.dummyjson.com/products/images/skin-care/Attitude%20Super%20Leaves%20Hand%20Soap/thumbnail.png",
+      "images": [
+        "https://cdn.dummyjson.com/products/images/skin-care/Attitude%20Super%20Leaves%20Hand%20Soap/1.png",
+        "https://cdn.dummyjson.com/products/images/skin-care/Attitude%20Super%20Leaves%20Hand%20Soap/2.png",
+        "https://cdn.dummyjson.com/products/images/skin-care/Attitude%20Super%20Leaves%20Hand%20Soap/3.png"
+      ],
+      "colors": [],
+      "sizes": [],
+      "highlights": [],
+      "discountPrice": 7.423942,
+      "deleted": false
+    },
+    {
+      "title": "Olay Ultra Moisture Shea Butter Body Wash",
+      "description": "Olay Ultra Moisture Shea Butter Body Wash is a luxurious body wash that hydrates and nourishes your skin with the moisturizing power of shea butter. Enjoy a rich lather and silky-smooth skin.",
+      "price": 12.99,
+      "discountPercentage": 16.95,
+      "rating": 4.81,
+      "stock": 43,
+      "brand": "Olay",
+      "category": "skin-care",
+      "thumbnail": "https://cdn.dummyjson.com/products/images/skin-care/Olay%20Ultra%20Moisture%20Shea%20Butter%20Body%20Wash/thumbnail.png",
+      "images": [
+        "https://cdn.dummyjson.com/products/images/skin-care/Olay%20Ultra%20Moisture%20Shea%20Butter%20Body%20Wash/1.png",
+        "https://cdn.dummyjson.com/products/images/skin-care/Olay%20Ultra%20Moisture%20Shea%20Butter%20Body%20Wash/2.png",
+        "https://cdn.dummyjson.com/products/images/skin-care/Olay%20Ultra%20Moisture%20Shea%20Butter%20Body%20Wash/3.png"
+      ],
+      "colors": [],
+      "sizes": [],
+      "highlights": [],
+      "discountPrice": 10.788195,
+      "deleted": false
+    },
+    {
+      "title": "Vaseline Men Body and Face Lotion",
+      "description": "Vaseline Men Body and Face Lotion is a specially formulated lotion designed to provide long-lasting moisture to men's skin. It absorbs quickly and helps keep the skin hydrated and healthy.",
+      "price": 9.99,
+      "discountPercentage": 11.63,
+      "rating": 3.97,
+      "stock": 54,
+      "brand": "Vaseline",
+      "category": "skin-care",
+      "thumbnail": "https://cdn.dummyjson.com/products/images/skin-care/Vaseline%20Men%20Body%20and%20Face%20Lotion/thumbnail.png",
+      "images": [
+        "https://cdn.dummyjson.com/products/images/skin-care/Vaseline%20Men%20Body%20and%20Face%20Lotion/1.png",
+        "https://cdn.dummyjson.com/products/images/skin-care/Vaseline%20Men%20Body%20and%20Face%20Lotion/2.png",
+        "https://cdn.dummyjson.com/products/images/skin-care/Vaseline%20Men%20Body%20and%20Face%20Lotion/3.png"
+      ],
+      "colors": [],
+      "sizes": [],
+      "highlights": [],
+      "discountPrice": 8.828163,
+      "deleted": false
+    },
+    {
+      "title": "iPhone 5s",
+      "description": "The iPhone 5s is a classic smartphone known for its compact design and advanced features during its release. While it's an older model, it still provides a reliable user experience.",
+      "price": 199.99,
+      "discountPercentage": 11.85,
+      "rating": 3.92,
+      "stock": 65,
+      "brand": "Apple",
+      "category": "smartphones",
+      "thumbnail": "https://cdn.dummyjson.com/products/images/smartphones/iPhone%205s/thumbnail.png",
+      "images": [
+        "https://cdn.dummyjson.com/products/images/smartphones/iPhone%205s/1.png",
+        "https://cdn.dummyjson.com/products/images/smartphones/iPhone%205s/2.png",
+        "https://cdn.dummyjson.com/products/images/smartphones/iPhone%205s/3.png"
+      ],
+      "colors": [],
+      "sizes": [],
+      "highlights": [],
+      "discountPrice": 176.29118499999998,
+      "deleted": false
+    },
+    {
+      "title": "iPhone 6",
+      "description": "The iPhone 6 is a stylish and capable smartphone with a larger display and improved performance. It introduced new features and design elements, making it a popular choice in its time.",
+      "price": 299.99,
+      "discountPercentage": 4.54,
+      "rating": 3.76,
+      "stock": 99,
+      "brand": "Apple",
+      "category": "smartphones",
+      "thumbnail": "https://cdn.dummyjson.com/products/images/smartphones/iPhone%206/thumbnail.png",
+      "images": [
+        "https://cdn.dummyjson.com/products/images/smartphones/iPhone%206/1.png",
+        "https://cdn.dummyjson.com/products/images/smartphones/iPhone%206/2.png",
+        "https://cdn.dummyjson.com/products/images/smartphones/iPhone%206/3.png"
+      ],
+      "colors": [],
+      "sizes": [],
+      "highlights": [],
+      "discountPrice": 286.370454,
+      "deleted": false
+    },
+    {
+      "title": "iPhone 13 Pro",
+      "description": "The iPhone 13 Pro is a cutting-edge smartphone with a powerful camera system, high-performance chip, and stunning display. It offers advanced features for users who demand top-notch technology.",
+      "price": 1099.99,
+      "discountPercentage": 18.3,
+      "rating": 3.42,
+      "stock": 26,
+      "brand": "Apple",
+      "category": "smartphones",
+      "thumbnail": "https://cdn.dummyjson.com/products/images/smartphones/iPhone%2013%20Pro/thumbnail.png",
+      "images": [
+        "https://cdn.dummyjson.com/products/images/smartphones/iPhone%2013%20Pro/1.png",
+        "https://cdn.dummyjson.com/products/images/smartphones/iPhone%2013%20Pro/2.png",
+        "https://cdn.dummyjson.com/products/images/smartphones/iPhone%2013%20Pro/3.png"
+      ],
+      "colors": [],
+      "sizes": [],
+      "highlights": [],
+      "discountPrice": 898.69183,
+      "deleted": false
+    },
+    {
+      "title": "iPhone X",
+      "description": "The iPhone X is a flagship smartphone featuring a bezel-less OLED display, facial recognition technology (Face ID), and impressive performance. It represents a milestone in iPhone design and innovation.",
+      "price": 899.99,
+      "discountPercentage": 14.19,
+      "rating": 4.96,
+      "stock": 99,
+      "brand": "Apple",
+      "category": "smartphones",
+      "thumbnail": "https://cdn.dummyjson.com/products/images/smartphones/iPhone%20X/thumbnail.png",
+      "images": [
+        "https://cdn.dummyjson.com/products/images/smartphones/iPhone%20X/1.png",
+        "https://cdn.dummyjson.com/products/images/smartphones/iPhone%20X/2.png",
+        "https://cdn.dummyjson.com/products/images/smartphones/iPhone%20X/3.png"
+      ],
+      "colors": [],
+      "sizes": [],
+      "highlights": [],
+      "discountPrice": 772.281419,
+      "deleted": false
+    },
+    {
+      "title": "Oppo A57",
+      "description": "The Oppo A57 is a mid-range smartphone known for its sleek design and capable features. It offers a balance of performance and affordability, making it a popular choice.",
+      "price": 249.99,
+      "discountPercentage": 12.17,
+      "rating": 3.1,
+      "stock": 76,
+      "brand": "Oppo",
+      "category": "smartphones",
+      "thumbnail": "https://cdn.dummyjson.com/products/images/smartphones/Oppo%20A57/thumbnail.png",
+      "images": [
+        "https://cdn.dummyjson.com/products/images/smartphones/Oppo%20A57/1.png",
+        "https://cdn.dummyjson.com/products/images/smartphones/Oppo%20A57/2.png",
+        "https://cdn.dummyjson.com/products/images/smartphones/Oppo%20A57/3.png"
+      ],
+      "colors": [],
+      "sizes": [],
+      "highlights": [],
+      "discountPrice": 219.566217,
+      "deleted": false
+    },
+    {
+      "title": "Oppo F19 Pro Plus",
+      "description": "The Oppo F19 Pro Plus is a feature-rich smartphone with a focus on camera capabilities. It boasts advanced photography features and a powerful performance for a premium user experience.",
+      "price": 399.99,
+      "discountPercentage": 15.62,
+      "rating": 2.57,
+      "stock": 92,
+      "brand": "Oppo",
+      "category": "smartphones",
+      "thumbnail": "https://cdn.dummyjson.com/products/images/smartphones/Oppo%20F19%20Pro%20Plus/thumbnail.png",
+      "images": [
+        "https://cdn.dummyjson.com/products/images/smartphones/Oppo%20F19%20Pro%20Plus/1.png",
+        "https://cdn.dummyjson.com/products/images/smartphones/Oppo%20F19%20Pro%20Plus/2.png",
+        "https://cdn.dummyjson.com/products/images/smartphones/Oppo%20F19%20Pro%20Plus/3.png"
+      ],
+      "colors": [],
+      "sizes": [],
+      "highlights": [],
+      "discountPrice": 337.511562,
+      "deleted": false
+    },
+    {
+      "title": "Oppo K1",
+      "description": "The Oppo K1 series offers a range of smartphones with various features and specifications. Known for their stylish design and reliable performance, the Oppo K1 series caters to diverse user preferences.",
+      "price": 299.99,
+      "discountPercentage": 14.58,
+      "rating": 3.39,
+      "stock": 61,
+      "brand": "Oppo",
+      "category": "smartphones",
+      "thumbnail": "https://cdn.dummyjson.com/products/images/smartphones/Oppo%20K1/thumbnail.png",
+      "images": [
+        "https://cdn.dummyjson.com/products/images/smartphones/Oppo%20K1/1.png",
+        "https://cdn.dummyjson.com/products/images/smartphones/Oppo%20K1/2.png",
+        "https://cdn.dummyjson.com/products/images/smartphones/Oppo%20K1/3.png",
+        "https://cdn.dummyjson.com/products/images/smartphones/Oppo%20K1/4.png"
+      ],
+      "colors": [],
+      "sizes": [],
+      "highlights": [],
+      "discountPrice": 256.251458,
+      "deleted": false
+    },
+    {
+      "title": "Realme C35",
+      "description": "The Realme C35 is a budget-friendly smartphone with a focus on providing essential features for everyday use. It offers a reliable performance and user-friendly experience.",
+      "price": 149.99,
+      "discountPercentage": 16.47,
+      "rating": 2.56,
+      "stock": 81,
+      "brand": "Realme",
+      "category": "smartphones",
+      "thumbnail": "https://cdn.dummyjson.com/products/images/smartphones/Realme%20C35/thumbnail.png",
+      "images": [
+        "https://cdn.dummyjson.com/products/images/smartphones/Realme%20C35/1.png",
+        "https://cdn.dummyjson.com/products/images/smartphones/Realme%20C35/2.png",
+        "https://cdn.dummyjson.com/products/images/smartphones/Realme%20C35/3.png"
+      ],
+      "colors": [],
+      "sizes": [],
+      "highlights": [],
+      "discountPrice": 125.28664700000002,
+      "deleted": false
+    },
+    {
+      "title": "Realme X",
+      "description": "The Realme X is a mid-range smartphone known for its sleek design and impressive display. It offers a good balance of performance and camera capabilities for users seeking a quality device.",
+      "price": 299.99,
+      "discountPercentage": 2.39,
+      "rating": 4.42,
+      "stock": 87,
+      "brand": "Realme",
+      "category": "smartphones",
+      "thumbnail": "https://cdn.dummyjson.com/products/images/smartphones/Realme%20X/thumbnail.png",
+      "images": [
+        "https://cdn.dummyjson.com/products/images/smartphones/Realme%20X/1.png",
+        "https://cdn.dummyjson.com/products/images/smartphones/Realme%20X/2.png",
+        "https://cdn.dummyjson.com/products/images/smartphones/Realme%20X/3.png"
+      ],
+      "colors": [],
+      "sizes": [],
+      "highlights": [],
+      "discountPrice": 292.820239,
+      "deleted": false
+    },
+    {
+      "title": "Realme XT",
+      "description": "The Realme XT is a feature-rich smartphone with a focus on camera technology. It comes equipped with advanced camera sensors, delivering high-quality photos and videos for photography enthusiasts.",
+      "price": 349.99,
+      "discountPercentage": 3.03,
+      "rating": 4.14,
+      "stock": 53,
+      "brand": "Realme",
+      "category": "smartphones",
+      "thumbnail": "https://cdn.dummyjson.com/products/images/smartphones/Realme%20XT/thumbnail.png",
+      "images": [
+        "https://cdn.dummyjson.com/products/images/smartphones/Realme%20XT/1.png",
+        "https://cdn.dummyjson.com/products/images/smartphones/Realme%20XT/2.png",
+        "https://cdn.dummyjson.com/products/images/smartphones/Realme%20XT/3.png"
+      ],
+      "colors": [],
+      "sizes": [],
+      "highlights": [],
+      "discountPrice": 339.385303,
+      "deleted": false
+    },
+    {
+      "title": "Samsung Galaxy S7",
+      "description": "The Samsung Galaxy S7 is a flagship smartphone known for its sleek design and advanced features. It features a high-resolution display, powerful camera, and robust performance.",
+      "price": 299.99,
+      "discountPercentage": 8.83,
+      "rating": 4.9,
+      "stock": 55,
+      "brand": "Samsung",
+      "category": "smartphones",
+      "thumbnail": "https://cdn.dummyjson.com/products/images/smartphones/Samsung%20Galaxy%20S7/thumbnail.png",
+      "images": [
+        "https://cdn.dummyjson.com/products/images/smartphones/Samsung%20Galaxy%20S7/1.png",
+        "https://cdn.dummyjson.com/products/images/smartphones/Samsung%20Galaxy%20S7/2.png",
+        "https://cdn.dummyjson.com/products/images/smartphones/Samsung%20Galaxy%20S7/3.png"
+      ],
+      "colors": [],
+      "sizes": [],
+      "highlights": [],
+      "discountPrice": 273.500883,
+      "deleted": false
+    },
+    {
+      "title": "Samsung Galaxy S8",
+      "description": "The Samsung Galaxy S8 is a premium smartphone with an Infinity Display, offering a stunning visual experience. It boasts advanced camera capabilities and cutting-edge technology.",
+      "price": 499.99,
+      "discountPercentage": 2.69,
+      "rating": 3.69,
+      "stock": 75,
+      "brand": "Samsung",
+      "category": "smartphones",
+      "thumbnail": "https://cdn.dummyjson.com/products/images/smartphones/Samsung%20Galaxy%20S8/thumbnail.png",
+      "images": [
+        "https://cdn.dummyjson.com/products/images/smartphones/Samsung%20Galaxy%20S8/1.png",
+        "https://cdn.dummyjson.com/products/images/smartphones/Samsung%20Galaxy%20S8/2.png",
+        "https://cdn.dummyjson.com/products/images/smartphones/Samsung%20Galaxy%20S8/3.png"
+      ],
+      "colors": [],
+      "sizes": [],
+      "highlights": [],
+      "discountPrice": 486.54026899999997,
+      "deleted": false
+    },
+    {
+      "title": "Vivo S1",
+      "description": "The Vivo S1 is a stylish and mid-range smartphone offering a blend of design and performance. It features a vibrant display, capable camera system, and reliable functionality.",
+      "price": 249.99,
+      "discountPercentage": 4.25,
+      "rating": 2.83,
+      "stock": 13,
+      "brand": "Vivo",
+      "category": "smartphones",
+      "thumbnail": "https://cdn.dummyjson.com/products/images/smartphones/Vivo%20S1/thumbnail.png",
+      "images": [
+        "https://cdn.dummyjson.com/products/images/smartphones/Vivo%20S1/1.png",
+        "https://cdn.dummyjson.com/products/images/smartphones/Vivo%20S1/2.png",
+        "https://cdn.dummyjson.com/products/images/smartphones/Vivo%20S1/3.png"
+      ],
+      "colors": [],
+      "sizes": [],
+      "highlights": [],
+      "discountPrice": 239.36542500000002,
+      "deleted": false
+    },
+    {
+      "title": "Vivo V9",
+      "description": "The Vivo V9 is a smartphone known for its sleek design and emphasis on capturing high-quality selfies. It features a notch display, dual-camera setup, and a modern design.",
+      "price": 299.99,
+      "discountPercentage": 14.57,
+      "rating": 3.1,
+      "stock": 19,
+      "brand": "Vivo",
+      "category": "smartphones",
+      "thumbnail": "https://cdn.dummyjson.com/products/images/smartphones/Vivo%20V9/thumbnail.png",
+      "images": [
+        "https://cdn.dummyjson.com/products/images/smartphones/Vivo%20V9/1.png",
+        "https://cdn.dummyjson.com/products/images/smartphones/Vivo%20V9/2.png",
+        "https://cdn.dummyjson.com/products/images/smartphones/Vivo%20V9/3.png"
+      ],
+      "colors": [],
+      "sizes": [],
+      "highlights": [],
+      "discountPrice": 256.28145700000005,
+      "deleted": false
+    },
+    {
+      "title": "Vivo X21",
+      "description": "The Vivo X21 is a premium smartphone with a focus on cutting-edge technology. It features an in-display fingerprint sensor, a high-resolution display, and advanced camera capabilities.",
+      "price": 499.99,
+      "discountPercentage": 7.32,
+      "rating": 2.75,
+      "stock": 0,
+      "brand": "Vivo",
+      "category": "smartphones",
+      "thumbnail": "https://cdn.dummyjson.com/products/images/smartphones/Vivo%20X21/thumbnail.png",
+      "images": [
+        "https://cdn.dummyjson.com/products/images/smartphones/Vivo%20X21/1.png",
+        "https://cdn.dummyjson.com/products/images/smartphones/Vivo%20X21/2.png",
+        "https://cdn.dummyjson.com/products/images/smartphones/Vivo%20X21/3.png"
+      ],
+      "colors": [],
+      "sizes": [],
+      "highlights": [],
+      "discountPrice": 463.390732,
+      "deleted": false
+    },
+    {
+      "title": "Black Sun Glasses",
+      "description": "The Black Sun Glasses are a classic and stylish choice, featuring a sleek black frame and tinted lenses. They provide both UV protection and a fashionable look.",
+      "price": 29.99,
+      "discountPercentage": 14.22,
+      "rating": 3.23,
+      "stock": 100,
+      "brand": "Fashion Shades",
+      "category": "sunglasses",
+      "thumbnail": "https://cdn.dummyjson.com/products/images/sunglasses/Black%20Sun%20Glasses/thumbnail.png",
+      "images": [
+        "https://cdn.dummyjson.com/products/images/sunglasses/Black%20Sun%20Glasses/1.png",
+        "https://cdn.dummyjson.com/products/images/sunglasses/Black%20Sun%20Glasses/2.png",
+        "https://cdn.dummyjson.com/products/images/sunglasses/Black%20Sun%20Glasses/3.png"
+      ],
+      "colors": [],
+      "sizes": [],
+      "highlights": [],
+      "discountPrice": 25.725422,
+      "deleted": false
+    },
+    {
+      "title": "Classic Sun Glasses",
+      "description": "The Classic Sun Glasses offer a timeless design with a neutral frame and UV-protected lenses. These sunglasses are versatile and suitable for various occasions.",
+      "price": 24.99,
+      "discountPercentage": 15.67,
+      "rating": 2.99,
+      "stock": 100,
+      "brand": "Fashion Shades",
+      "category": "sunglasses",
+      "thumbnail": "https://cdn.dummyjson.com/products/images/sunglasses/Classic%20Sun%20Glasses/thumbnail.png",
+      "images": [
+        "https://cdn.dummyjson.com/products/images/sunglasses/Classic%20Sun%20Glasses/1.png",
+        "https://cdn.dummyjson.com/products/images/sunglasses/Classic%20Sun%20Glasses/2.png",
+        "https://cdn.dummyjson.com/products/images/sunglasses/Classic%20Sun%20Glasses/3.png"
+      ],
+      "colors": [],
+      "sizes": [],
+      "highlights": [],
+      "discountPrice": 21.074066999999996,
+      "deleted": false
+    },
+    {
+      "title": "Green and Black Glasses",
+      "description": "The Green and Black Glasses feature a bold combination of green and black colors, adding a touch of vibrancy to your eyewear collection. They are both stylish and eye-catching.",
+      "price": 34.99,
+      "discountPercentage": 10.75,
+      "rating": 2.84,
+      "stock": 74,
+      "brand": "Fashion Shades",
+      "category": "sunglasses",
+      "thumbnail": "https://cdn.dummyjson.com/products/images/sunglasses/Green%20and%20Black%20Glasses/thumbnail.png",
+      "images": [
+        "https://cdn.dummyjson.com/products/images/sunglasses/Green%20and%20Black%20Glasses/1.png",
+        "https://cdn.dummyjson.com/products/images/sunglasses/Green%20and%20Black%20Glasses/2.png",
+        "https://cdn.dummyjson.com/products/images/sunglasses/Green%20and%20Black%20Glasses/3.png"
+      ],
+      "colors": [],
+      "sizes": [],
+      "highlights": [],
+      "discountPrice": 31.228575,
+      "deleted": false
+    },
+    {
+      "title": "Party Glasses",
+      "description": "The Party Glasses are designed to add flair to your party outfit. With unique shapes or colorful frames, they're perfect for adding a playful touch to your look during celebrations.",
+      "price": 19.99,
+      "discountPercentage": 19.52,
+      "rating": 3.21,
+      "stock": 35,
+      "brand": "Fashion Fun",
+      "category": "sunglasses",
+      "thumbnail": "https://cdn.dummyjson.com/products/images/sunglasses/Party%20Glasses/thumbnail.png",
+      "images": [
+        "https://cdn.dummyjson.com/products/images/sunglasses/Party%20Glasses/1.png",
+        "https://cdn.dummyjson.com/products/images/sunglasses/Party%20Glasses/2.png",
+        "https://cdn.dummyjson.com/products/images/sunglasses/Party%20Glasses/3.png"
+      ],
+      "colors": [],
+      "sizes": [],
+      "highlights": [],
+      "discountPrice": 16.087951999999998,
+      "deleted": false
+    },
+    {
+      "title": "Sunglasses",
+      "description": "The Sunglasses offer a classic and simple design with a focus on functionality. These sunglasses provide essential UV protection while maintaining a timeless look.",
+      "price": 22.99,
+      "discountPercentage": 4.87,
+      "rating": 2.58,
+      "stock": 59,
+      "brand": "Fashion Shades",
+      "category": "sunglasses",
+      "thumbnail": "https://cdn.dummyjson.com/products/images/sunglasses/Sunglasses/thumbnail.png",
+      "images": [
+        "https://cdn.dummyjson.com/products/images/sunglasses/Sunglasses/1.png",
+        "https://cdn.dummyjson.com/products/images/sunglasses/Sunglasses/2.png",
+        "https://cdn.dummyjson.com/products/images/sunglasses/Sunglasses/3.png"
+      ],
+      "colors": [],
+      "sizes": [],
+      "highlights": [],
+      "discountPrice": 21.870387,
+      "deleted": false
+    },
+    {
+      "title": "iPad Mini 2021 Starlight",
+      "description": "The iPad Mini 2021 in Starlight is a compact and powerful tablet from Apple. Featuring a stunning Retina display, powerful A-series chip, and a sleek design, it offers a premium tablet experience.",
+      "price": 499.99,
+      "discountPercentage": 19.48,
+      "rating": 3.87,
+      "stock": 32,
+      "brand": "Apple",
+      "category": "tablets",
+      "thumbnail": "https://cdn.dummyjson.com/products/images/tablets/iPad%20Mini%202021%20Starlight/thumbnail.png",
+      "images": [
+        "https://cdn.dummyjson.com/products/images/tablets/iPad%20Mini%202021%20Starlight/1.png",
+        "https://cdn.dummyjson.com/products/images/tablets/iPad%20Mini%202021%20Starlight/2.png",
+        "https://cdn.dummyjson.com/products/images/tablets/iPad%20Mini%202021%20Starlight/3.png",
+        "https://cdn.dummyjson.com/products/images/tablets/iPad%20Mini%202021%20Starlight/4.png"
+      ],
+      "colors": [],
+      "sizes": [],
+      "highlights": [],
+      "discountPrice": 402.591948,
+      "deleted": false
+    },
+    {
+      "title": "Samsung Galaxy Tab S8 Plus Grey",
+      "description": "The Samsung Galaxy Tab S8 Plus in Grey is a high-performance Android tablet by Samsung. With a large AMOLED display, powerful processor, and S Pen support, it's ideal for productivity and entertainment.",
+      "price": 599.99,
+      "discountPercentage": 8.11,
+      "rating": 3.43,
+      "stock": 76,
+      "brand": "Samsung",
+      "category": "tablets",
+      "thumbnail": "https://cdn.dummyjson.com/products/images/tablets/Samsung%20Galaxy%20Tab%20S8%20Plus%20Grey/thumbnail.png",
+      "images": [
+        "https://cdn.dummyjson.com/products/images/tablets/Samsung%20Galaxy%20Tab%20S8%20Plus%20Grey/1.png",
+        "https://cdn.dummyjson.com/products/images/tablets/Samsung%20Galaxy%20Tab%20S8%20Plus%20Grey/2.png",
+        "https://cdn.dummyjson.com/products/images/tablets/Samsung%20Galaxy%20Tab%20S8%20Plus%20Grey/3.png",
+        "https://cdn.dummyjson.com/products/images/tablets/Samsung%20Galaxy%20Tab%20S8%20Plus%20Grey/4.png"
+      ],
+      "colors": [],
+      "sizes": [],
+      "highlights": [],
+      "discountPrice": 551.330811,
+      "deleted": false
+    },
+    {
+      "title": "Samsung Galaxy Tab White",
+      "description": "The Samsung Galaxy Tab in White is a sleek and versatile Android tablet. With a vibrant display, long-lasting battery, and a range of features, it offers a great user experience for various tasks.",
+      "price": 349.99,
+      "discountPercentage": 4.82,
+      "rating": 3.7,
+      "stock": 0,
+      "brand": "Samsung",
+      "category": "tablets",
+      "thumbnail": "https://cdn.dummyjson.com/products/images/tablets/Samsung%20Galaxy%20Tab%20White/thumbnail.png",
+      "images": [
+        "https://cdn.dummyjson.com/products/images/tablets/Samsung%20Galaxy%20Tab%20White/1.png",
+        "https://cdn.dummyjson.com/products/images/tablets/Samsung%20Galaxy%20Tab%20White/2.png",
+        "https://cdn.dummyjson.com/products/images/tablets/Samsung%20Galaxy%20Tab%20White/3.png",
+        "https://cdn.dummyjson.com/products/images/tablets/Samsung%20Galaxy%20Tab%20White/4.png"
+      ],
+      "colors": [],
+      "sizes": [],
+      "highlights": [],
+      "discountPrice": 333.120482,
+      "deleted": false
+    },
+    {
+      "title": "Blue Women's Handbag",
+      "description": "The Blue Women's Handbag is a stylish and spacious accessory for everyday use. With a vibrant blue color and multiple compartments, it combines fashion and functionality.",
+      "price": 49.99,
+      "discountPercentage": 5.24,
+      "rating": 3.37,
+      "stock": 76,
+      "brand": "Fashionista",
+      "category": "womens-bags",
+      "thumbnail": "https://cdn.dummyjson.com/products/images/womens-bags/Blue%20Women's%20Handbag/thumbnail.png",
+      "images": [
+        "https://cdn.dummyjson.com/products/images/womens-bags/Blue%20Women's%20Handbag/1.png",
+        "https://cdn.dummyjson.com/products/images/womens-bags/Blue%20Women's%20Handbag/2.png",
+        "https://cdn.dummyjson.com/products/images/womens-bags/Blue%20Women's%20Handbag/3.png"
+      ],
+      "colors": [],
+      "sizes": [],
+      "highlights": [],
+      "discountPrice": 47.370524,
+      "deleted": false
+    },
+    {
+      "title": "Heshe Women's Leather Bag",
+      "description": "The Heshe Women's Leather Bag is a luxurious and high-quality leather bag for the sophisticated woman. With a timeless design and durable craftsmanship, it's a versatile accessory.",
+      "price": 129.99,
+      "discountPercentage": 7.74,
+      "rating": 2.62,
+      "stock": 9,
+      "brand": "Heshe",
+      "category": "womens-bags",
+      "thumbnail": "https://cdn.dummyjson.com/products/images/womens-bags/Heshe%20Women's%20Leather%20Bag/thumbnail.png",
+      "images": [
+        "https://cdn.dummyjson.com/products/images/womens-bags/Heshe%20Women's%20Leather%20Bag/1.png",
+        "https://cdn.dummyjson.com/products/images/womens-bags/Heshe%20Women's%20Leather%20Bag/2.png",
+        "https://cdn.dummyjson.com/products/images/womens-bags/Heshe%20Women's%20Leather%20Bag/3.png"
+      ],
+      "colors": [],
+      "sizes": [],
+      "highlights": [],
+      "discountPrice": 119.928774,
+      "deleted": false
+    },
+    {
+      "title": "Prada Women Bag",
+      "description": "The Prada Women Bag is an iconic designer bag that exudes elegance and luxury. Crafted with precision and featuring the Prada logo, it's a statement piece for fashion enthusiasts.",
+      "price": 599.99,
+      "discountPercentage": 18.3,
+      "rating": 3.52,
+      "stock": 43,
+      "brand": "Prada",
+      "category": "womens-bags",
+      "thumbnail": "https://cdn.dummyjson.com/products/images/womens-bags/Prada%20Women%20Bag/thumbnail.png",
+      "images": [
+        "https://cdn.dummyjson.com/products/images/womens-bags/Prada%20Women%20Bag/1.png",
+        "https://cdn.dummyjson.com/products/images/womens-bags/Prada%20Women%20Bag/2.png",
+        "https://cdn.dummyjson.com/products/images/womens-bags/Prada%20Women%20Bag/3.png"
+      ],
+      "colors": [],
+      "sizes": [],
+      "highlights": [],
+      "discountPrice": 490.19183,
+      "deleted": false
+    },
+    {
+      "title": "White Faux Leather Backpack",
+      "description": "The White Faux Leather Backpack is a trendy and practical backpack for the modern woman. With a sleek white design and ample storage space, it's perfect for both casual and on-the-go styles.",
+      "price": 39.99,
+      "discountPercentage": 7.76,
+      "rating": 4.91,
+      "stock": 89,
+      "brand": "Urban Chic",
+      "category": "womens-bags",
+      "thumbnail": "https://cdn.dummyjson.com/products/images/womens-bags/White%20Faux%20Leather%20Backpack/thumbnail.png",
+      "images": [
+        "https://cdn.dummyjson.com/products/images/womens-bags/White%20Faux%20Leather%20Backpack/1.png",
+        "https://cdn.dummyjson.com/products/images/womens-bags/White%20Faux%20Leather%20Backpack/2.png",
+        "https://cdn.dummyjson.com/products/images/womens-bags/White%20Faux%20Leather%20Backpack/3.png"
+      ],
+      "colors": [],
+      "sizes": [],
+      "highlights": [],
+      "discountPrice": 36.886776000000005,
+      "deleted": false
+    },
+    {
+      "title": "Women Handbag Black",
+      "description": "The Women Handbag in Black is a classic and versatile accessory that complements various outfits. With a timeless black color and functional design, it's a must-have in every woman's wardrobe.",
+      "price": 59.99,
+      "discountPercentage": 3.08,
+      "rating": 4.94,
+      "stock": 24,
+      "brand": "Elegance Collection",
+      "category": "womens-bags",
+      "thumbnail": "https://cdn.dummyjson.com/products/images/womens-bags/Women%20Handbag%20Black/thumbnail.png",
+      "images": [
+        "https://cdn.dummyjson.com/products/images/womens-bags/Women%20Handbag%20Black/1.png",
+        "https://cdn.dummyjson.com/products/images/womens-bags/Women%20Handbag%20Black/2.png",
+        "https://cdn.dummyjson.com/products/images/womens-bags/Women%20Handbag%20Black/3.png"
+      ],
+      "colors": [],
+      "sizes": [],
+      "highlights": [],
+      "discountPrice": 58.142308,
+      "deleted": false
+    },
+    {
+      "title": "Black & Brown Slipper",
+      "description": "The Black & Brown Slipper is a comfortable and stylish choice for casual wear. Featuring a blend of black and brown colors, it adds a touch of sophistication to your relaxation.",
+      "price": 19.99,
+      "discountPercentage": 13.62,
+      "rating": 4.13,
+      "stock": 80,
+      "brand": "Comfort Trends",
+      "category": "womens-shoes",
+      "thumbnail": "https://cdn.dummyjson.com/products/images/womens-shoes/Black%20&%20Brown%20Slipper/thumbnail.png",
+      "images": [
+        "https://cdn.dummyjson.com/products/images/womens-shoes/Black%20&%20Brown%20Slipper/1.png",
+        "https://cdn.dummyjson.com/products/images/womens-shoes/Black%20&%20Brown%20Slipper/2.png",
+        "https://cdn.dummyjson.com/products/images/womens-shoes/Black%20&%20Brown%20Slipper/3.png",
+        "https://cdn.dummyjson.com/products/images/womens-shoes/Black%20&%20Brown%20Slipper/4.png"
+      ],
+      "colors": [],
+      "sizes": [],
+      "highlights": [],
+      "discountPrice": 17.267362,
+      "deleted": false
+    },
+    {
+      "title": "Calvin Klein Heel Shoes",
+      "description": "Calvin Klein Heel Shoes are elegant and sophisticated, designed for formal occasions. With a classic design and high-quality materials, they complement your stylish ensemble.",
+      "price": 79.99,
+      "discountPercentage": 11.39,
+      "rating": 4.06,
+      "stock": 99,
+      "brand": "Calvin Klein",
+      "category": "womens-shoes",
+      "thumbnail": "https://cdn.dummyjson.com/products/images/womens-shoes/Calvin%20Klein%20Heel%20Shoes/thumbnail.png",
+      "images": [
+        "https://cdn.dummyjson.com/products/images/womens-shoes/Calvin%20Klein%20Heel%20Shoes/1.png",
+        "https://cdn.dummyjson.com/products/images/womens-shoes/Calvin%20Klein%20Heel%20Shoes/2.png",
+        "https://cdn.dummyjson.com/products/images/womens-shoes/Calvin%20Klein%20Heel%20Shoes/3.png",
+        "https://cdn.dummyjson.com/products/images/womens-shoes/Calvin%20Klein%20Heel%20Shoes/4.png"
+      ],
+      "colors": [],
+      "sizes": [],
+      "highlights": [],
+      "discountPrice": 70.879139,
+      "deleted": false
+    },
+    {
+      "title": "Golden Shoes Woman",
+      "description": "The Golden Shoes for Women are a glamorous choice for special occasions. Featuring a golden hue and stylish design, they add a touch of luxury to your outfit.",
+      "price": 49.99,
+      "discountPercentage": 14.93,
+      "rating": 4.82,
+      "stock": 99,
+      "brand": "Fashion Diva",
+      "category": "womens-shoes",
+      "thumbnail": "https://cdn.dummyjson.com/products/images/womens-shoes/Golden%20Shoes%20Woman/thumbnail.png",
+      "images": [
+        "https://cdn.dummyjson.com/products/images/womens-shoes/Golden%20Shoes%20Woman/1.png",
+        "https://cdn.dummyjson.com/products/images/womens-shoes/Golden%20Shoes%20Woman/2.png",
+        "https://cdn.dummyjson.com/products/images/womens-shoes/Golden%20Shoes%20Woman/3.png",
+        "https://cdn.dummyjson.com/products/images/womens-shoes/Golden%20Shoes%20Woman/4.png"
+      ],
+      "colors": [],
+      "sizes": [],
+      "highlights": [],
+      "discountPrice": 42.526493,
+      "deleted": false
+    },
+    {
+      "title": "IWC Ingenieur Automatic Steel",
+      "description": "The IWC Ingenieur Automatic Steel watch is a durable and sophisticated timepiece. With a stainless steel case and automatic movement, it combines precision and style for watch enthusiasts.",
+      "price": 4999.99,
+      "discountPercentage": 5.76,
+      "rating": 2.58,
+      "stock": 85,
+      "brand": "IWC",
+      "category": "womens-watches",
+      "thumbnail": "https://cdn.dummyjson.com/products/images/womens-watches/IWC%20Ingenieur%20Automatic%20Steel/thumbnail.png",
+      "images": [
+        "https://cdn.dummyjson.com/products/images/womens-watches/IWC%20Ingenieur%20Automatic%20Steel/1.png",
+        "https://cdn.dummyjson.com/products/images/womens-watches/IWC%20Ingenieur%20Automatic%20Steel/2.png",
+        "https://cdn.dummyjson.com/products/images/womens-watches/IWC%20Ingenieur%20Automatic%20Steel/3.png"
+      ],
+      "colors": [],
+      "sizes": [],
+      "highlights": [],
+      "discountPrice": 4711.990576,
+      "deleted": false
+    },
+    {
+      "title": "Watch Gold for Women",
+      "description": "The Gold Women's Watch is a stunning accessory that combines luxury and style. Featuring a gold-plated case and a chic design, it adds a touch of glamour to any outfit.",
+      "price": 799.99,
+      "discountPercentage": 6.37,
+      "rating": 3.03,
+      "stock": 94,
+      "brand": "Fashion Gold",
+      "category": "womens-watches",
+      "thumbnail": "https://cdn.dummyjson.com/products/images/womens-watches/Watch%20Gold%20for%20Women/thumbnail.png",
+      "images": [
+        "https://cdn.dummyjson.com/products/images/womens-watches/Watch%20Gold%20for%20Women/1.png",
+        "https://cdn.dummyjson.com/products/images/womens-watches/Watch%20Gold%20for%20Women/2.png",
+        "https://cdn.dummyjson.com/products/images/womens-watches/Watch%20Gold%20for%20Women/3.png"
+      ],
+      "colors": [],
+      "sizes": [],
+      "highlights": [],
+      "discountPrice": 749.0306370000001,
+      "deleted": false
+    },
+    {
+      "title": "Women's Wrist Watch",
+      "description": "The Women's Wrist Watch is a versatile and fashionable timepiece for everyday wear. With a comfortable strap and a simple yet elegant design, it complements various styles.",
+      "price": 129.99,
+      "discountPercentage": 17.34,
+      "rating": 2.93,
+      "stock": 55,
+      "brand": "Fashion Co.",
+      "category": "womens-watches",
+      "thumbnail": "https://cdn.dummyjson.com/products/images/womens-watches/Women's%20Wrist%20Watch/thumbnail.png",
+      "images": [
+        "https://cdn.dummyjson.com/products/images/womens-watches/Women's%20Wrist%20Watch/1.png",
+        "https://cdn.dummyjson.com/products/images/womens-watches/Women's%20Wrist%20Watch/2.png",
+        "https://cdn.dummyjson.com/products/images/womens-watches/Women's%20Wrist%20Watch/3.png"
+      ],
+      "colors": [],
+      "sizes": [],
+      "highlights": [],
+      "discountPrice": 107.449734,
+      "deleted": false
     }
   ],
   "categories": [
     {
-      "id": "1",
-      "value": "smartphones",
-      "label": "smartphones",
-      "checked": false
+      "value": "beauty",
+      "label": "beauty"
     },
     {
-      "id": "2",
-      "value": "laptops",
-      "label": "laptops",
-      "checked": false
-    },
-    {
-      "id": "3",
       "value": "fragrances",
-      "label": "fragrances",
-      "checked": false
+      "label": "fragrances"
     },
     {
-      "id": "4",
-      "value": "skincare",
-      "label": "skincare",
-      "checked": false
-    },
-    {
-      "id": "5",
-      "value": "groceries",
-      "label": "groceries",
-      "checked": false
-    },
-    {
-      "id": "6",
-      "value": "home-decoration",
-      "label": "home decoration",
-      "checked": false
-    },
-    {
-      "id": "7",
       "value": "furniture",
-      "label": "furniture",
-      "checked": false
+      "label": "furniture"
     },
     {
-      "id": "8",
-      "value": "tops",
-      "label": "tops",
-      "checked": false
+      "value": "laptops",
+      "label": "laptops"
     },
     {
-      "id": "9",
-      "value": "womens-dresses",
-      "label": "womens dresses",
-      "checked": false
-    },
-    {
-      "id": "10",
-      "value": "womens-shoes",
-      "label": "womens shoes",
-      "checked": false
-    },
-    {
-      "id": "11",
       "value": "mens-shirts",
-      "label": "mens shirts",
-      "checked": false
+      "label": "mens-shirts"
     },
     {
-      "id": "12",
       "value": "mens-shoes",
-      "label": "mens shoes",
-      "checked": false
+      "label": "mens-shoes"
     },
     {
-      "id": "13",
       "value": "mens-watches",
-      "label": "mens watches",
-      "checked": false
+      "label": "mens-watches"
     },
     {
-      "id": "14",
-      "value": "womens-watches",
-      "label": "womens watches",
-      "checked": false
+      "value": "mobile-accessories",
+      "label": "mobile-accessories"
     },
     {
-      "id": "15",
-      "value": "womens-bags",
-      "label": "womens bags",
-      "checked": false
-    },
-    {
-      "id": "16",
-      "value": "womens-jewellery",
-      "label": "womens jewellery",
-      "checked": false
-    },
-    {
-      "id": "17",
-      "value": "sunglasses",
-      "label": "sunglasses",
-      "checked": false
-    },
-    {
-      "id": "18",
-      "value": "automotive",
-      "label": "automotive",
-      "checked": false
-    },
-    {
-      "id": "19",
       "value": "motorcycle",
-      "label": "motorcycle",
-      "checked": false
+      "label": "motorcycle"
     },
     {
-      "id": "20",
-      "value": "lighting",
-      "label": "lighting",
-      "checked": false
+      "value": "skin-care",
+      "label": "skin-care"
+    },
+    {
+      "value": "smartphones",
+      "label": "smartphones"
+    },
+    {
+      "value": "sunglasses",
+      "label": "sunglasses"
+    },
+    {
+      "value": "tablets",
+      "label": "tablets"
+    },
+    {
+      "value": "womens-bags",
+      "label": "womens-bags"
+    },
+    {
+      "value": "womens-shoes",
+      "label": "womens-shoes"
+    },
+    {
+      "value": "womens-watches",
+      "label": "womens-watches"
     }
   ],
   "brands": [
     {
-      "id": "1",
+      "value": "Essence",
+      "label": "Essence"
+    },
+    {
+      "value": "Glamour Beauty",
+      "label": "Glamour Beauty"
+    },
+    {
+      "value": "Velvet Touch",
+      "label": "Velvet Touch"
+    },
+    {
+      "value": "Chic Cosmetics",
+      "label": "Chic Cosmetics"
+    },
+    {
+      "value": "Nail Couture",
+      "label": "Nail Couture"
+    },
+    {
+      "value": "Chanel",
+      "label": "Chanel"
+    },
+    {
+      "value": "Dior",
+      "label": "Dior"
+    },
+    {
+      "value": "Dolce & Gabbana",
+      "label": "Dolce & Gabbana"
+    },
+    {
+      "value": "Gucci",
+      "label": "Gucci"
+    },
+    {
+      "value": "Annibale Colombo",
+      "label": "Annibale Colombo"
+    },
+    {
+      "value": "Furniture Co.",
+      "label": "Furniture Co."
+    },
+    {
+      "value": "Knoll",
+      "label": "Knoll"
+    },
+    {
+      "value": "Bath Trends",
+      "label": "Bath Trends"
+    },
+    {
       "value": "Apple",
-      "label": "Apple",
-      "checked": false
+      "label": "Apple"
     },
     {
-      "id": "2",
-      "value": "Samsung",
-      "label": "Samsung",
-      "checked": false
+      "value": "Asus",
+      "label": "Asus"
     },
     {
-      "id": "3",
-      "value": "OPPO",
-      "label": "OPPO",
-      "checked": false
-    },
-    {
-      "id": "4",
       "value": "Huawei",
-      "label": "Huawei",
-      "checked": false
+      "label": "Huawei"
     },
     {
-      "id": "5",
-      "value": "Microsoft Surface",
-      "label": "Microsoft Surface",
-      "checked": false
+      "value": "Lenovo",
+      "label": "Lenovo"
     },
     {
-      "id": "6",
-      "value": "Infinix",
-      "label": "Infinix",
-      "checked": false
+      "value": "Dell",
+      "label": "Dell"
     },
     {
-      "id": "7",
-      "value": "HP Pavilion",
-      "label": "HP Pavilion",
-      "checked": false
+      "value": "Fashion Trends",
+      "label": "Fashion Trends"
     },
     {
-      "id": "8",
-      "value": "Impression of Acqua Di Gio",
-      "label": "Impression of Acqua Di Gio",
-      "checked": false
+      "value": "Gigabyte",
+      "label": "Gigabyte"
     },
     {
-      "id": "9",
-      "value": "Royal_Mirage",
-      "label": "Royal_Mirage",
-      "checked": false
+      "value": "Classic Wear",
+      "label": "Classic Wear"
     },
     {
-      "id": "10",
-      "value": "Fog Scent Xpressio",
-      "label": "Fog Scent Xpressio",
-      "checked": false
+      "value": "Casual Comfort",
+      "label": "Casual Comfort"
     },
     {
-      "id": "11",
-      "value": "Al Munakh",
-      "label": "Al Munakh",
-      "checked": false
+      "value": "Urban Chic",
+      "label": "Urban Chic"
     },
     {
-      "id": "12",
-      "value": "Lord - Al-Rehab",
-      "label": "Lord   Al Rehab",
-      "checked": false
+      "value": "Nike",
+      "label": "Nike"
     },
     {
-      "id": "13",
-      "value": "L'Oreal Paris",
-      "label": "L'Oreal Paris",
-      "checked": false
+      "value": "Puma",
+      "label": "Puma"
     },
     {
-      "id": "14",
-      "value": "Hemani Tea",
-      "label": "Hemani Tea",
-      "checked": false
+      "value": "Off White",
+      "label": "Off White"
     },
     {
-      "id": "15",
-      "value": "Dermive",
-      "label": "Dermive",
-      "checked": false
+      "value": "Fashion Timepieces",
+      "label": "Fashion Timepieces"
     },
     {
-      "id": "16",
-      "value": "ROREC White Rice",
-      "label": "ROREC White Rice",
-      "checked": false
+      "value": "Rolex",
+      "label": "Rolex"
     },
     {
-      "id": "17",
-      "value": "Fair & Clear",
-      "label": "Fair & Clear",
-      "checked": false
+      "value": "Amazon",
+      "label": "Amazon"
     },
     {
-      "id": "18",
-      "value": "Saaf & Khaas",
-      "label": "Saaf & Khaas",
-      "checked": false
+      "value": "Beats",
+      "label": "Beats"
     },
     {
-      "id": "19",
-      "value": "Bake Parlor Big",
-      "label": "Bake Parlor Big",
-      "checked": false
+      "value": "TechGear",
+      "label": "TechGear"
     },
     {
-      "id": "20",
-      "value": "Baking Food Items",
-      "label": "Baking Food Items",
-      "checked": false
+      "value": "GadgetMaster",
+      "label": "GadgetMaster"
     },
     {
-      "id": "21",
-      "value": "fauji",
-      "label": "fauji",
-      "checked": false
+      "value": "SnapTech",
+      "label": "SnapTech"
     },
     {
-      "id": "22",
-      "value": "Dry Rose",
-      "label": "Dry Rose",
-      "checked": false
+      "value": "ProVision",
+      "label": "ProVision"
     },
     {
-      "id": "23",
-      "value": "Boho Decor",
-      "label": "Boho Decor",
-      "checked": false
+      "value": "Generic Motors",
+      "label": "Generic Motors"
     },
     {
-      "id": "24",
-      "value": "Flying Wooden",
-      "label": "Flying Wooden",
-      "checked": false
+      "value": "Kawasaki",
+      "label": "Kawasaki"
     },
     {
-      "id": "25",
-      "value": "LED Lights",
-      "label": "LED Lights",
-      "checked": false
+      "value": "ScootMaster",
+      "label": "ScootMaster"
     },
     {
-      "id": "26",
-      "value": "luxury palace",
-      "label": "luxury palace",
-      "checked": false
+      "value": "SpeedMaster",
+      "label": "SpeedMaster"
     },
     {
-      "id": "27",
-      "value": "Golden",
-      "label": "Golden",
-      "checked": false
+      "value": "Attitude",
+      "label": "Attitude"
     },
     {
-      "id": "28",
-      "value": "Furniture Bed Set",
-      "label": "Furniture Bed Set",
-      "checked": false
+      "value": "Olay",
+      "label": "Olay"
     },
     {
-      "id": "29",
-      "value": "Ratttan Outdoor",
-      "label": "Ratttan Outdoor",
-      "checked": false
+      "value": "Vaseline",
+      "label": "Vaseline"
     },
     {
-      "id": "30",
-      "value": "Kitchen Shelf",
-      "label": "Kitchen Shelf",
-      "checked": false
+      "value": "Oppo",
+      "label": "Oppo"
     },
     {
-      "id": "31",
-      "value": "Multi Purpose",
-      "label": "Multi Purpose",
-      "checked": false
+      "value": "Realme",
+      "label": "Realme"
     },
     {
-      "id": "32",
-      "value": "AmnaMart",
-      "label": "AmnaMart",
-      "checked": false
+      "value": "Samsung",
+      "label": "Samsung"
     },
     {
-      "id": "33",
-      "value": "Professional Wear",
-      "label": "Professional Wear",
-      "checked": false
+      "value": "Vivo",
+      "label": "Vivo"
     },
     {
-      "id": "34",
-      "value": "Soft Cotton",
-      "label": "Soft Cotton",
-      "checked": false
+      "value": "Fashion Shades",
+      "label": "Fashion Shades"
     },
     {
-      "id": "35",
-      "value": "Top Sweater",
-      "label": "Top Sweater",
-      "checked": false
+      "value": "Fashion Fun",
+      "label": "Fashion Fun"
     },
     {
-      "id": "36",
-      "value": "RED MICKY MOUSE..",
-      "label": "RED MICKY MOUSE..",
-      "checked": false
+      "value": "Fashionista",
+      "label": "Fashionista"
     },
     {
-      "id": "37",
-      "value": "Digital Printed",
-      "label": "Digital Printed",
-      "checked": false
+      "value": "Heshe",
+      "label": "Heshe"
     },
     {
-      "id": "38",
-      "value": "Ghazi Fabric",
-      "label": "Ghazi Fabric",
-      "checked": false
+      "value": "Prada",
+      "label": "Prada"
     },
     {
-      "id": "39",
-      "value": "IELGY",
-      "label": "IELGY",
-      "checked": false
+      "value": "Elegance Collection",
+      "label": "Elegance Collection"
     },
     {
-      "id": "40",
-      "value": "IELGY fashion",
-      "label": "IELGY fashion",
-      "checked": false
+      "value": "Comfort Trends",
+      "label": "Comfort Trends"
     },
     {
-      "id": "41",
-      "value": "Synthetic Leather",
-      "label": "Synthetic Leather",
-      "checked": false
+      "value": "Calvin Klein",
+      "label": "Calvin Klein"
     },
     {
-      "id": "42",
-      "value": "Sandals Flip Flops",
-      "label": "Sandals Flip Flops",
-      "checked": false
+      "value": "Fashion Diva",
+      "label": "Fashion Diva"
     },
     {
-      "id": "43",
-      "value": "Maasai Sandals",
-      "label": "Maasai Sandals",
-      "checked": false
+      "value": "IWC",
+      "label": "IWC"
     },
     {
-      "id": "44",
-      "value": "Arrivals Genuine",
-      "label": "Arrivals Genuine",
-      "checked": false
+      "value": "Fashion Gold",
+      "label": "Fashion Gold"
     },
     {
-      "id": "45",
-      "value": "Vintage Apparel",
-      "label": "Vintage Apparel",
-      "checked": false
-    },
-    {
-      "id": "46",
-      "value": "FREE FIRE",
-      "label": "FREE FIRE",
-      "checked": false
-    },
-    {
-      "id": "47",
-      "value": "The Warehouse",
-      "label": "The Warehouse",
-      "checked": false
-    },
-    {
-      "id": "48",
-      "value": "Sneakers",
-      "label": "Sneakers",
-      "checked": false
-    },
-    {
-      "id": "49",
-      "value": "Rubber",
-      "label": "Rubber",
-      "checked": false
-    },
-    {
-      "id": "50",
-      "value": "Naviforce",
-      "label": "Naviforce",
-      "checked": false
-    },
-    {
-      "id": "51",
-      "value": "SKMEI 9117",
-      "label": "SKMEI 9117",
-      "checked": false
-    },
-    {
-      "id": "52",
-      "value": "Strap Skeleton",
-      "label": "Strap Skeleton",
-      "checked": false
-    },
-    {
-      "id": "53",
-      "value": "Stainless",
-      "label": "Stainless",
-      "checked": false
-    },
-    {
-      "id": "54",
-      "value": "Eastern Watches",
-      "label": "Eastern Watches",
-      "checked": false
-    },
-    {
-      "id": "55",
-      "value": "Luxury Digital",
-      "label": "Luxury Digital",
-      "checked": false
-    },
-    {
-      "id": "56",
-      "value": "Watch Pearls",
-      "label": "Watch Pearls",
-      "checked": false
-    },
-    {
-      "id": "57",
-      "value": "Bracelet",
-      "label": "Bracelet",
-      "checked": false
-    },
-    {
-      "id": "58",
-      "value": "LouisWill",
-      "label": "LouisWill",
-      "checked": false
-    },
-    {
-      "id": "59",
-      "value": "Copenhagen Luxe",
-      "label": "Copenhagen Luxe",
-      "checked": false
-    },
-    {
-      "id": "60",
-      "value": "Steal Frame",
-      "label": "Steal Frame",
-      "checked": false
-    },
-    {
-      "id": "61",
-      "value": "Darojay",
-      "label": "Darojay",
-      "checked": false
-    },
-    {
-      "id": "62",
-      "value": "Fashion Jewellery",
-      "label": "Fashion Jewellery",
-      "checked": false
-    },
-    {
-      "id": "63",
-      "value": "Cuff Butterfly",
-      "label": "Cuff Butterfly",
-      "checked": false
-    },
-    {
-      "id": "64",
-      "value": "Designer Sun Glasses",
-      "label": "Designer Sun Glasses",
-      "checked": false
-    },
-    {
-      "id": "65",
-      "value": "mastar watch",
-      "label": "mastar watch",
-      "checked": false
-    },
-    {
-      "id": "66",
-      "value": "Car Aux",
-      "label": "Car Aux",
-      "checked": false
-    },
-    {
-      "id": "67",
-      "value": "W1209 DC12V",
-      "label": "W1209 DC12V",
-      "checked": false
-    },
-    {
-      "id": "68",
-      "value": "TC Reusable",
-      "label": "TC Reusable",
-      "checked": false
-    },
-    {
-      "id": "69",
-      "value": "Neon LED Light",
-      "label": "Neon LED Light",
-      "checked": false
-    },
-    {
-      "id": "70",
-      "value": "METRO 70cc Motorcycle - MR70",
-      "label": "METRO 70cc Motorcycle   MR70",
-      "checked": false
-    },
-    {
-      "id": "71",
-      "value": "BRAVE BULL",
-      "label": "BRAVE BULL",
-      "checked": false
-    },
-    {
-      "id": "72",
-      "value": "shock absorber",
-      "label": "shock absorber",
-      "checked": false
-    },
-    {
-      "id": "73",
-      "value": "JIEPOLLY",
-      "label": "JIEPOLLY",
-      "checked": false
-    },
-    {
-      "id": "74",
-      "value": "Xiangle",
-      "label": "Xiangle",
-      "checked": false
-    },
-    {
-      "id": "75",
-      "value": "lightingbrilliance",
-      "label": "lightingbrilliance",
-      "checked": false
-    },
-    {
-      "id": "76",
-      "value": "Ifei Home",
-      "label": "Ifei Home",
-      "checked": false
-    },
-    {
-      "id": "77",
-      "value": "DADAWU",
-      "label": "DADAWU",
-      "checked": false
-    },
-    {
-      "id": "78",
-      "value": "YIOSI",
-      "label": "YIOSI",
-      "checked": false
-    },
-    {
-      "id": "79",
-      "value": "yios",
-      "label": "yios",
-      "checked": false
+      "value": "Fashion Co.",
+      "label": "Fashion Co."
     }
   ],
   "users": [

@@ -1,4 +1,4 @@
-import { BACKEND_URL } from "../../app/constants";
+const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
 
 export function fetchAllProductsByFilters(filter) {
   let queryString = "";
@@ -20,6 +20,7 @@ export function fetchAllProductsByFilters(filter) {
   // TODO : Server will filter deleted products in case of non-admin
   return new Promise(async (resolve) => {
     const url = `${BACKEND_URL}/products?` + queryString;
+    console.log(url);
 
     const response = await fetch(url);
     const data = await response.json();

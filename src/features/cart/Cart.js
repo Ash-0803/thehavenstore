@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Triangle } from "react-loader-spinner";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
@@ -13,7 +13,6 @@ import {
 import { selectUserInfo } from "../User/UserSlice";
 import {
   deleteItemFromCartAsync,
-  fetchItemsByUserIdAsync,
   selectCartStatus,
   selectItems,
   updateCartAsync,
@@ -30,9 +29,6 @@ export default function Cart({ page, values = null }) {
   const paymentMethod = useSelector(selectPaymentMethod);
   const status = useSelector(selectCartStatus);
 
-  useEffect(() => {
-    dispatch(fetchItemsByUserIdAsync());
-  }, [dispatch, userInfo]);
   const totalAmount = items.reduce(
     (amount, item) => discountedPrice(item.product) * item.quantity + amount,
     0
@@ -99,25 +95,14 @@ export default function Cart({ page, values = null }) {
               </p>
               <div className="mt-6">
                 {page === "checkout" ? (
-                  paymentMethod === "cash" ? (
-                    <Link
-                      to={`/order-success/${currentOrder?.id}`}
-                      // FIXME: Proper ID needs tobe set
-                      onClick={() => handleOrder()}
-                      className="flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-indigo-700"
-                    >
-                      Order Now
-                    </Link>
-                  ) : (
-                    <Link
-                      to={`/stripe-checkout/`}
-                      // FIXME: Proper ID needs to be set
-                      onClick={() => handleOrder()}
-                      className="flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-indigo-700"
-                    >
-                      Order Now
-                    </Link>
-                  )
+                  <Link
+                    to={`/order-success`}
+                    // FIXME: Proper ID needs to be set
+                    onClick={() => handleOrder()}
+                    className="flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-indigo-700"
+                  >
+                    Order Now
+                  </Link>
                 ) : (
                   <Link
                     to="/checkout"
@@ -169,16 +154,15 @@ function CartItem({ item }) {
 
   function incrementQty() {
     setQty((prev) => prev + 1);
+    dispatch(updateCartAsync({ id: item.id, quantity: qty }));
   }
   function decrementQty() {
     qty && setQty((prev) => prev - 1);
+    dispatch(updateCartAsync({ id: item.id, quantity: qty }));
   }
   const handleRemove = (e, id) => {
     dispatch(deleteItemFromCartAsync(id));
   };
-  useEffect(() => {
-    dispatch(updateCartAsync({ id: item.id, quantity: qty }));
-  }, [qty, dispatch, item.id]);
 
   return (
     <li key={item.id} className="flex py-6">

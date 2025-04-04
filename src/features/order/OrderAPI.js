@@ -1,5 +1,4 @@
-import { BACKEND_URL } from "../../app/constants";
-
+const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
 export function createOrder(item) {
   console.log(item);
   return new Promise(async (resolve) => {

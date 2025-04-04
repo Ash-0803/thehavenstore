@@ -57,7 +57,7 @@ export default function Navbar({ children }) {
                   >
                     <img
                       className="m-0 h-[29px] grayscale"
-                      src="/logo-trans.png"
+                      src="/thehaven-circle.png"
                       alt="Your Company"
                     />
                     <span className=" font-poiret text-3xl pl-2 font-bold hover:text-gray-900 transition-all ease-in-out">

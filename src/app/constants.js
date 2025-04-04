@@ -3,7 +3,6 @@ import { shieldTick, support, truckFast } from "../assets/icons";
 import { customer1, customer2 } from "../assets/images";
 
 export const ITEMS_PER_PAGE = 9;
-export const BACKEND_URL = "http://localhost:3001";
 export function discountedPrice(item) {
   return Math.round(item.price * (1 - item.discountPercentage / 100), 2);
 }

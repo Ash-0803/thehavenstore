@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { Outlet, useNavigate } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 import Footer from "./features/common/Footer";
 import Navbar from "./features/common/Nav";
 
@@ -17,7 +17,6 @@ function App() {
   const dispatch = useDispatch();
   const globalStatus = useSelector(selectGlobalStatus);
   const userToken = useSelector(selectLoggedInUserToken);
-  // const navigate = useNavigate();
 
   useEffect(() => {
     dispatch(checkAuthAsync());
@@ -30,28 +29,7 @@ function App() {
     }
   }, [dispatch, userToken]);
 
-  // useEffect(() => {
-  //   // Save the current URL before the page unloads
-  //   const handleBeforeUnload = () => {
-  //     localStorage.setItem("lastVisitedUrl", window.location.pathname);
-  //   };
-
-  //   window.addEventListener("beforeunload", handleBeforeUnload);
-
-  //   return () => {
-  //     window.removeEventListener("beforeunload", handleBeforeUnload);
-  //   };
-  // }, []);
-
-  // useEffect(() => {
-  //   // Navigate to the saved URL if a user is found
-  //   if (userToken) {
-  //     const lastVisitedUrl = localStorage.getItem("lastVisitedUrl");
-  //     if (lastVisitedUrl) {
-  //       navigate(lastVisitedUrl);
-  //     }
-  //   }
-  // }, [userToken, navigate]);
+  //TODO ; think of a way to remember last visited url.
 
   return (
     <div className="App bg-white">
