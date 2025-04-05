@@ -96,7 +96,7 @@ export default function Cart({ page, values = null }) {
               <div className="mt-6">
                 {page === "checkout" ? (
                   <Link
-                    to={`/order-success`}
+                    to={`/order-success/`}
                     // FIXME: Proper ID needs to be set
                     onClick={() => handleOrder()}
                     className="flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-indigo-700"

@@ -111,7 +111,7 @@ const router = createBrowserRouter(
           }
         />
         <Route
-          path="/order-success/:id"
+          path="/order-success/"
           element={
             <Protected>
               <OrderSuccessPage />
