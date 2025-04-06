@@ -1,16 +1,17 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
-import { ReviewCard, ServiceCard, Button } from "../components";
-import { shoe8, offer } from "../../../assets/images";
+import { offer, shoe8 } from "../../../assets/images";
+import { Button, ReviewCard, ServiceCard } from "../components";
 
+import { reviews, services } from "../../../app/constants";
 import { arrowRight } from "../../../assets/icons";
+import { ProductCard } from "../../product/ProductsList";
 import {
   fetchPopularProductsAsync,
   selectPopularProducts,
 } from "../extra slices/PopularProductsSlice";
-import { ProductCard } from "../../product/ProductsList";
-import { reviews, services } from "../../../app/constants";
+import { Link } from "react-router-dom";
 
 const CustomerReviews = () => {
   return (
@@ -130,17 +131,17 @@ const Subscribe = () => {
   return (
     <section
       id="contact-us"
-      className="max-container flex justify-between items-center max-lg:flex-col gap-10"
+      className="max-container flex justify-center items-center flex-col gap-10 h-[50dvh]"
     >
-      <h3 className="text-4xl leading-[68px] lg:max-w-md font-palanquin font-bold">
-        Sign Up for
-        <span className="text-coral-red"> Updates </span>& Newsletter
+      <h3 className="text-4xl leading-[68px]  font-palanquin font-bold">
+        Interesting enough to meet your
+        <span className="text-coral-red"> ugly </span> developer?
       </h3>
-      <div className="lg:max-w-[40%] w-full flex items-center max-sm:flex-col gap-5 p-2.5 sm:border sm:border-slate-gray rounded-full">
-        <input type="text" placeholder="subscribe@nike.com" className="input" />
-        <div className="flex max-sm:justify-end items-center max-sm:w-full">
-          <Button label="Sign Up" fullWidth />
-        </div>
+
+      <div className="flex max-sm:justify-end items-center max-sm:w-full mt-4">
+        <Link to="/contact">
+          <Button label="Contact" fullWidth />
+        </Link>
       </div>
     </section>
   );
@@ -185,10 +186,10 @@ const SuperQuality = () => {
 };
 
 export {
+  CustomerReviews,
   PopularProducts,
-  SuperQuality,
   Services,
   SpecialOffer,
-  CustomerReviews,
   Subscribe,
+  SuperQuality,
 };

@@ -31,6 +31,7 @@ import ProductPage from "./pages/ProductPage";
 import SignupPage from "./pages/SignupPage";
 import UserOrdersPage from "./pages/UserOrdersPage";
 import UserProfilePage from "./pages/UserProfilePage";
+import Contact from "./pages/Contact";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -118,6 +119,7 @@ const router = createBrowserRouter(
             </Protected>
           }
         />
+        <Route path="/contact" element={<Contact />} />
       </Route>
       <Route path="/signup" element={<SignupPage />} />
       <Route path="/login" element={<LoginPage />} />

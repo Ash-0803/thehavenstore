@@ -13,7 +13,7 @@ import { selectUserInfo } from "../User/UserSlice";
 
 const navigation = [
   { name: "HOME", href: "/", user: true },
-  { name: "TEAM", href: "#", user: true },
+  { name: "CONTACT", href: "/contact", user: true },
   { name: "ADMIN", href: "/admin", admin: true },
   { name: "ORDERS", href: "/admin/orders", admin: true },
 ];
@@ -58,7 +58,7 @@ export default function Navbar({ children }) {
                     <img
                       className="m-0 h-[29px] grayscale"
                       src="/thehaven-circle.png"
-                      alt="Your Company"
+                      alt="The haven store logo"
                     />
                     <span className=" font-poiret text-3xl pl-2 font-bold hover:text-gray-900 transition-all ease-in-out">
                       The

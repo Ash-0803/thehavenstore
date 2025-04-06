@@ -7,14 +7,17 @@ const Footer = () => {
     <footer className=" bg-black padding-x padding-t pb-8">
       <div className="flex justify-between items-start gap-20 flex-wrap max-lg:flex-col">
         <div className="flex flex-col items-start">
-          <Link to="/">
+          <Link to="/" className="flex-shrink-0 flex flex-row items-center ">
             <img
-              src="/logo-trans.png"
-              alt="logo"
-              width={150}
-              height={46}
-              className="m-0 grayscale "
+              className="m-0 h-[29px] grayscale"
+              src="/thehaven-circle.png"
+              alt="The Have Store logo"
             />
+            <span className=" font-poiret text-3xl pl-2 font-bold text-white hover:text-slate-gray transition-all ease-in-out">
+              The
+              <span className="text-coral-red hover:text-inherit">Haven</span>
+              Store
+            </span>
           </Link>
           <p className="mt-6 text-base leading-7 font-montserrat text-white-400 sm:max-w-sm">
             Get shoes ready for the new term at your nearest Nike store. Find

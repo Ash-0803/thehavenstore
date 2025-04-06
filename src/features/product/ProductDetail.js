@@ -1,6 +1,6 @@
-import { Dialog, RadioGroup, Transition } from "@headlessui/react";
+import { RadioGroup } from "@headlessui/react";
 import { StarIcon } from "@heroicons/react/20/solid";
-import { Fragment, useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 // import { Grid } from "react-loader-spinner";
 
 import { useDispatch, useSelector } from "react-redux";
@@ -14,6 +14,7 @@ import {
   selectShowDialog,
 } from "../cart/CartSlice";
 import { fetchProductByIdAsync, selectProductById } from "./ProductSlice";
+import AlertDialog from "../common/AlertDialog";
 
 // TODO: In server data we will add colors, sizes , highlights. to each product
 
@@ -92,8 +93,25 @@ export default function ProductDetail() {
 
   return (
     <div className="bg-white">
-      {dialog && <CartDialogue dialog={dialog} />}
-      {isItem && <CartDialogue isItem={isItem} setIsItem={setIsItem} />}
+      {dialog && (
+        <AlertDialog
+          isOpen={true}
+          message="The cart is updated successfully!"
+          onClose={() => dispatch(hideDialog())}
+          primaryButtonText="View Cart"
+          primaryButtonAction={() => navigate("/cart")}
+        />
+      )}
+
+      {isItem && (
+        <AlertDialog
+          isOpen={true}
+          message="This item is already present in the cart."
+          onClose={() => setIsItem(false)}
+          primaryButtonText="View Cart"
+          primaryButtonAction={() => navigate("/cart")}
+        />
+      )}
       {product && (
         <div className="pt-6">
           {/* Image gallery */}
@@ -364,117 +382,5 @@ export default function ProductDetail() {
         </div>
       )}
     </div>
-  );
-}
-
-function CartDialogue(props) {
-  const cancelButtonRef = useRef(null);
-  const dispatch = useDispatch();
-  const navigate = useNavigate();
-  const viewCart = () => {
-    navigate("/cart");
-    props.dialog && dispatch(hideDialog());
-    props.isItem && props.setIsItem(false);
-  };
-  const cancelButton = () => {
-    dispatch(hideDialog());
-  };
-  const cancelButton2 = () => {
-    props.setIsItem(false);
-  };
-  let dialog = {
-    open: props.dialog || false,
-    message: "The cart is updated successfully!",
-    cancelButton: cancelButton,
-  };
-
-  // TODO: add a dialog for the user when Item is already present in the cart
-
-  // console.log("dialog:", dialog.open);
-  // props.isItem ??
-  //   (dialog = {
-  //     open: props.isItem || false,
-  //     message: "This item is already present in the cart.",
-  //     cancelButton: cancelButton2,
-  //   });
-  // console.log("dialog:", dialog.open);
-
-  return (
-    <Transition.Root show={dialog.open} as={Fragment} onClose={cancelButton}>
-      <Dialog as="div" className="relative z-10" initialFocus={cancelButtonRef}>
-        <Transition.Child
-          as={Fragment}
-          show={dialog.open}
-          enter="ease-out duration-300"
-          enterFrom="opacity-0"
-          enterTo="opacity-100"
-          leave="ease-in duration-200"
-          leaveFrom="opacity-100"
-          leaveTo="opacity-0"
-        >
-          <div className="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" />
-        </Transition.Child>
-
-        <div className="fixed inset-0 z-10 w-screen overflow-y-auto">
-          <div className="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
-            <Transition.Child
-              as={Fragment}
-              show={dialog.open}
-              enter="ease-out duration-300"
-              enterFrom="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
-              enterTo="opacity-100 translate-y-0 sm:scale-100"
-              leave="ease-in duration-200"
-              leaveFrom="opacity-100 translate-y-0 sm:scale-100"
-              leaveTo="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
-            >
-              <Dialog.Panel className="relative transform overflow-hidden rounded-lg bg-white shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg">
-                <div className="bg-white pb-4 pt-5 sm:p-6 sm:pb-4">
-                  <div className="sm:flex sm:justify-center">
-                    {/* <div className="mx-auto flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-blue-100 sm:mx-0 sm:h-10 sm:w-10">
-                      <ExclamationTriangleIcon
-                        className="h-6 w-6 text-blue-600"
-                        aria-hidden="true"
-                      />
-                    </div> */}
-                    <div className="text-center sm:ml-4 sm:mt-0 sm:text-left">
-                      <Dialog.Title
-                        as="h2"
-                        className=" text-xl font-semibold leading-6 text-gray-900"
-                      >
-                        {dialog.message}
-                      </Dialog.Title>
-                      {/* <div className="mt-2">
-                        <p className="text-sm text-gray-500">
-                          Are you sure you want to deactivate your account? All
-                          of your data will be permanently removed. This action
-                          cannot be undone.
-                        </p>
-                      </div> */}
-                    </div>
-                  </div>
-                </div>
-                <div className="bg-gray-50 px-4 py-3 sm:flex sm:justify-center sm:gap-4 sm:px-6">
-                  <button
-                    type="button"
-                    className="inline-flex w-full justify-center rounded-md bg-gray-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-gray-500 sm:ml-3 sm:w-auto"
-                    onClick={() => viewCart()}
-                  >
-                    View Cart
-                  </button>
-                  <button
-                    type="button"
-                    className="mt-3 inline-flex w-full justify-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 sm:mt-0 sm:w-auto"
-                    onClick={() => dialog.cancelButton()}
-                    ref={cancelButtonRef}
-                  >
-                    Cancel
-                  </button>
-                </div>
-              </Dialog.Panel>
-            </Transition.Child>
-          </div>
-        </div>
-      </Dialog>
-    </Transition.Root>
   );
 }
