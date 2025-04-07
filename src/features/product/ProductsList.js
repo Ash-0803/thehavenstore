@@ -443,7 +443,7 @@ function MobileFilter({
 }
 function DesktopFilter({ filters, handleFilter, subCategories }) {
   return (
-    <form className="hidden lg:block">
+    <form className="hidden lg:block overflow-y-auto ">
       <h3 className="sr-only">Categories</h3>
       <ul className="space-y-4 border-b border-gray-200 pb-6 text-sm font-medium text-gray-900">
         {subCategories.map((category) => (

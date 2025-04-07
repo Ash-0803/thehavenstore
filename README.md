@@ -1,71 +1,78 @@
-# HeavenStore :
+# The Haven Store - E-Commerce Frontend
 
-> This repo contains only the Frontend of this Ecom Application.
-> If you wish to check the backend work that is done, click here: ![Ecom Backend](https://github.com/Ash-0803/ecom-backend)
+> This repository contains only the frontend of this E-Commerce application.
+> To explore the backend, visit the [Ecom Backend Repository](https://github.com/Ash-0803/ecom-backend).
 
-This project is not deployed yet, but if you wish to see the working demo, you may look at the preview below.
+While this project is not yet deployed, you can view working demonstrations and screenshots below.
 
-## Preview :
+## 📸 Screenshots & Previews
 
-Functionality is the same, but the UI has been changed, for the changed UI, I am including screenshots!
+The application has undergone UI enhancements while maintaining core functionality. Below are screenshots of key sections:
 
-|                                                  landing Page                                                  |                                                 Quality Page                                                 |                                                Catalog Page                                                |
-| :------------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------: |
-| ![Preview of the landing page gif](https://github.com/Ash-0803/thehavenstore/blob/master/gifs/LandingPage.jpg) | ![Preview of the landing page gif](https://github.com/Ash-0803/thehavenstore/blob/master/gifs/ShoeImage.jpg) | ![Preview of the landing page gif](https://github.com/Ash-0803/thehavenstore/blob/master/gifs/Catalog.jpg) |
+|                      Landing Page                      |                  Quality Section                  |               Product Catalog               |
+| :----------------------------------------------------: | :-----------------------------------------------: | :-----------------------------------------: |
+| ![Preview of the landing page](./gifs/LandingPage.jpg) | ![Quality section showcase](./gifs/ShoeImage.jpg) | ![Product catalog view](./gifs/Catalog.jpg) |
 
-## Landing Page:
+## ✨ Dynamic UI & Interactions
 
-![Preview of the landing page gif](https://github.com/Ash-0803/thehavenstore/blob/master/gifs/Preview.gif)
+### Landing Page Animation
 
-## Login And Signup :
+![Landing page animation](./gifs/Preview.gif)
 
-You can login and sign up in the application and the user will be registered on signup in the database. All of these functionalities are working for now, using a data.json, which will later be changed to the mongoDB.
+### Authentication Flow
 
-![Preview of the landing page gif](https://github.com/Ash-0803/thehavenstore/blob/master/gifs/Login.gif)
+The application features a complete authentication system with user registration and login functionality. User data is securely stored in the database.
 
-## Pagination and Filters :
+![Authentication demonstration](./gifs/Login.gif)
 
-Using the api calls, the pagination divides the data into a number of pages. And the filters are managed through the same api call.
-This allows the app to be more dynamic and flexible by allowing to manage both the pagination and filtering.
+### Smart Pagination & Filtering
 
-![Pagination and Filters gif](https://github.com/Ash-0803/thehavenstore/blob/master/gifs/Pagination%20and%20category%20filter.gif)
+The application implements API-driven pagination and filtering, allowing for efficient data loading and browsing. This approach enhances performance and provides a smoother user experience.
 
-# Getting Started with Create React App and Redux
+![Pagination and filtering demonstration](./gifs/Pagination%20and%20category%20filter.gif)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
+## 🚀 Key Features
 
-## Available Scripts
+- **Responsive Design**: Optimized for all device sizes
+- **Modern UI**: Clean, intuitive interface with smooth transitions
+- **Authentication**: Secure user registration and login
+- **Product Management**: Browsing, filtering, and cart functionality
+- **Order Processing**: Complete checkout flow with order confirmation
+- **Dynamic Filtering**: Real-time product filtering and sorting
+- **Contact Form**: Integrated messaging system for customer support
 
-In the project directory, executing:
+## 🔧 Technology Stack
 
-```javascript
-npm i
-npm start
-```
+- React.js
+- Redux & Redux Toolkit for state management
+- Tailwind CSS for styling
+- React Router for navigation
+- EmailJS for contact form functionality
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 🏁 Getting Started
 
-> Previously, this app used to run with the help of json server, but now, I have made it's backend functionally, so you'll have to run the backend alongside too, which you can find here : ![Ecom Backend](https://github.com/Ash-0803/ecom-backend)
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/).
 
-If you still wish to just see the demo of this app without using the backend,follow these steps:
+### Installation & Setup
 
-### Using the json-server
-
-1. you can use json-server with the help of command:
-
-   ```javascript
-   npm json
+1. Clone the repository
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Start the development server:
+   ```bash
+   npm start
    ```
 
-2. You'll have to go to the file,
-   ##### _`thehavenstore/src/app/constants.js`_
-   <br>
-3. and change the BACKEND_URL:
+The application will run at [http://localhost:3000](http://localhost:3000).
 
-   ```javascript
-   export const BACKEND_URL = "http://localhost:8080";
-   ```
+> **Note**: This application requires the backend server to be running. You can find the backend repository at [Ecom Backend](https://github.com/Ash-0803/ecom-backend).
 
-   The page will reload when you make changes.\
-   You may also see any lint errors in the console.
+## 📊 Performance Metrics
+
+_Our application is optimized for speed and efficiency:_
+
+![GTmetrix Performance Report](./gifs/Performance.png)
+
+We have used [GTmetrix](https://gtmetrix.com/) for detailed analysis.
