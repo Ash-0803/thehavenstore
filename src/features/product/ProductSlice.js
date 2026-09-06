@@ -81,14 +81,14 @@ export const productSlice = createSlice({
       })
       .addCase(fetchCategoriesAsync.fulfilled, (state, action) => {
         state.status = "idle";
-        state.categories = action.payload;
+        state.categories = Array.isArray(action.payload) ? action.payload : [];
       })
       .addCase(fetchBrandsAsync.pending, (state) => {
         state.status = "loading";
       })
       .addCase(fetchBrandsAsync.fulfilled, (state, action) => {
         state.status = "idle";
-        state.brands = action.payload;
+        state.brands = Array.isArray(action.payload) ? action.payload : [];
       })
       .addCase(fetchAllProductsByFiltersAsync.pending, (state, action) => {
         state.status = "loading";

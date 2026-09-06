@@ -402,7 +402,7 @@ function MobileFilter({
                         </h3>
                         <Disclosure.Panel className="pt-6">
                           <div className="space-y-6">
-                            {section.options &&
+                            {Array.isArray(section.options) &&
                               section.options.map((option, optionIdx) => (
                                 <div
                                   key={option.id}
@@ -477,7 +477,7 @@ function DesktopFilter({ filters, handleFilter, subCategories }) {
               </h3>
               <Disclosure.Panel className="pt-6">
                 <div className="space-y-4">
-                  {section.options &&
+                  {Array.isArray(section.options) &&
                     section.options.map((option, optionIdx) => (
                       <div key={option.id} className="flex items-center">
                         <input
