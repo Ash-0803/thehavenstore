@@ -114,12 +114,12 @@ export default function AdminProductsList() {
     {
       id: "category",
       name: "Category",
-      options: categories,
+      options: Array.isArray(categories) ? categories : [],
     },
     {
       id: "brand",
       name: "brand",
-      options: brands,
+      options: Array.isArray(brands) ? brands : [],
     },
   ];
 

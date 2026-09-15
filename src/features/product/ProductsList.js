@@ -108,12 +108,12 @@ export default function ProductsList() {
     {
       id: "category",
       name: "Category",
-      options: categories,
+      options: Array.isArray(categories) ? categories : [],
     },
     {
       id: "brand",
       name: "brand",
-      options: brands,
+      options: Array.isArray(brands) ? brands : [],
     },
   ];
 

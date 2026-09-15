@@ -129,11 +129,14 @@ export const productSlice = createSlice({
   },
 });
 export const { clearSelectedProduct } = productSlice.actions;
-export const selectAllProducts = (state) => state.product.products;
-export const selectCategories = (state) => state.product.categories;
-export const selectBrands = (state) => state.product.brands;
-export const selectTotalItems = (state) => state.product.totalItems;
-export const selectProductById = (state) => state.product.selectedProduct;
-export const selectProductStatus = (state) => state.product.status;
+export const selectAllProducts = (state) =>
+  Array.isArray(state?.product?.products) ? state.product.products : [];
+export const selectCategories = (state) =>
+  Array.isArray(state?.product?.categories) ? state.product.categories : [];
+export const selectBrands = (state) =>
+  Array.isArray(state?.product?.brands) ? state.product.brands : [];
+export const selectTotalItems = (state) => state?.product?.totalItems || 0;
+export const selectProductById = (state) => state?.product?.selectedProduct;
+export const selectProductStatus = (state) => state?.product?.status;
 
 export default productSlice.reducer;

@@ -72,7 +72,7 @@ export const orderSlice = createSlice({
       })
       .addCase(fetchAllOrdersAsync.rejected, (state, action) => {
         state.status = "rejected";
-        state.orders = { rejected: true };
+        state.orders = [];
       })
       .addCase(updateOrderAsync.pending, (state) => {
         state.status = "loading";
@@ -93,7 +93,8 @@ export const { resetCurrentOrder, setPaymentMethod, setSelectedAddress } =
 export const selectOrder = (state) => state.order.currentOrder;
 export const selectAddress = (state) => state.order.selectedAddress;
 export const selectPaymentMethod = (state) => state.order.paymentMethod;
-export const selectOrders = (state) => state.order.orders;
+export const selectOrders = (state) =>
+  Array.isArray(state?.order?.orders) ? state.order.orders : [];
 export const selectTotalOrders = (state) => state.order.totalOrders;
 
 export default orderSlice.reducer;

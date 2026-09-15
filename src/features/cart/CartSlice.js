@@ -110,7 +110,8 @@ export const counterSlice = createSlice({
 
 export const { hideDialog } = counterSlice.actions;
 
-export const selectItems = (state) => state.cart.items;
+export const selectItems = (state) =>
+  Array.isArray(state?.cart?.items) ? state.cart.items : [];
 export const selectShowDialog = (state) => state.cart.showDialog;
 export const selectCartStatus = (state) => state.cart.status;
 
