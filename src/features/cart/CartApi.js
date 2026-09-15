@@ -47,7 +47,7 @@ export function deleteItemFromCart(itemId) {
       credentials: "include",
       headers: { "content-type": "application/json" },
     });
-    const data = await response.json();
+    await response.json();
     resolve({ data: { id: itemId } });
   });
 }

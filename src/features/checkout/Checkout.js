@@ -17,12 +17,7 @@ export default function Checkout() {
   const paymentMethod = useSelector(selectPaymentMethod);
   const dispatch = useDispatch();
 
-  const {
-    register,
-    handleSubmit,
-    reset,
-    formState: { errors },
-  } = useForm();
+  const { register, handleSubmit, reset } = useForm();
 
   function handleAddress(add) {
     dispatch(setSelectedAddress(add));

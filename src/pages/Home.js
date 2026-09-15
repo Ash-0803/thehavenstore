@@ -1,7 +1,6 @@
 import ProductsList from "../features/product/ProductsList";
 import {
   CustomerReviews,
-  Hero,
   PopularProducts,
   Services,
   SpecialOffer,

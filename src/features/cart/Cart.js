@@ -7,10 +7,8 @@ import Modal from "../common/Modal";
 import {
   createOrderAsync,
   selectAddress,
-  selectOrder,
   selectPaymentMethod,
 } from "../order/OrderSlice";
-import { selectUserInfo } from "../User/UserSlice";
 import {
   deleteItemFromCartAsync,
   selectCartStatus,
@@ -20,8 +18,6 @@ import {
 
 export default function Cart({ page, values = null }) {
   const dispatch = useDispatch();
-  const userInfo = useSelector(selectUserInfo);
-  const currentOrder = useSelector(selectOrder);
   const items = useSelector(selectItems);
   console.log("items", items);
 

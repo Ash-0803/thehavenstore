@@ -66,7 +66,7 @@ export default function ProductsList() {
 
   useEffect(() => {
     dispatch(fetchAllProductsByFiltersAsync(filter));
-  }, [filter]);
+  }, [dispatch, filter]);
 
   useEffect(() => {
     dispatch(fetchBrandsAsync());

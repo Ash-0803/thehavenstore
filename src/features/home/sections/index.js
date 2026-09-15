@@ -42,15 +42,14 @@ const CustomerReviews = () => {
 };
 
 const PopularProducts = () => {
-  const filter = { _limit: 4, sort: "rating", order: "desc" };
-
   const dispatch = useDispatch();
-  const popularProducts = useSelector(selectPopularProducts).products;
+  const popularProducts = useSelector(selectPopularProducts)?.products;
   useEffect(() => {
     if (!popularProducts) {
+      const filter = { _limit: 4, sort: "rating", order: "desc" };
       dispatch(fetchPopularProductsAsync(filter));
     }
-  }, [dispatch, filter, popularProducts]);
+  }, [dispatch, popularProducts]);
   return (
     <section id="products" className="max-container max-sm:mt-12">
       <div className="flex flex-col justify-start gap-5">
